@@ -24,7 +24,7 @@ Providing as much detail as possible helps us investigate your request and respo
 
 ## Why I Build These Apps
 
-The apps I build come from real, everyday needs — moments where I, a friend, or a family member said, "I wish there was an app for that." I also got frustrated with how many apps today are built around ads and subscriptions, so I moved away from that model in favor of a one-time fee. Most of my apps use a freemium model, so you can try before you buy. I'm also building casual games, with some fun influence from my daughters along the way.
+The apps I build come from real, everyday needs — moments where I, a friend, or a family member said, "I wish there was an app for that." I also got frustrated with how many apps today are built around ads, so most of my apps favor a one-time fee instead. I use a freemium model so you can try before you buy, and for apps like Meduo, that means the core experience is free, with an optional subscription for advanced features. I'm also building casual games, with some fun influence from my daughters along the way.
 
 ### Apps (iPhone & iPad)
 
@@ -39,6 +39,7 @@ The apps I build come from real, everyday needs — moments where I, a friend, o
 | Title | Description | Release Date |
 | --- | --- | --- |
 | <img src="assets/images/icons/budgetxp-personal-finance.jpg" width="24" height="24" style="border-radius: 6px; vertical-align: middle; margin-right: 8px;"> [BudgetXP+: Desktop](https://apps.apple.com/us/app/budgetxp-desktop/id6812885419) | A powerful personal finance app built natively for macOS. Whether you're tracking everyday spending, setting monthly budgets, or watching your net worth grow, BudgetXP+ gives you the clarity and control to stay on top of your money. | TBD |
+| Scumble | A paint-like app for MacBook. | TBD |
 
 ### Games
 
