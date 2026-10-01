@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MealBound · Meal Planning &amp; Grocery Lists</title>
+<meta name="description" content="MealBound is your complete home meal planning companion. Build your recipe collection, plan the week ahead, and generate smart grocery lists.">
+<meta property="og:title" content="MealBound">
+<meta property="og:description" content="Build your recipe collection, plan the week ahead, and generate smart grocery lists.">
+<meta property="og:image" content="/assets/images/mealbound/icon-512.png">
+<meta name="apple-itunes-app" content="app-id=6813143038">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #0a68e8; --accent-soft: #e4edfc; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #6fb4ff; --accent-soft: #17284a; } }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .hero .text { display: grid; gap: 16px; justify-items: start; }
+  .hero .appicon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(10, 104, 232, .25); }
+  .hero .phone { justify-self: center; width: min(300px, 100%); border-radius: 36px; border: 1px solid var(--rule); }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .phone { width: min(260px, 80%); } }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
+  .shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
+  .plan .amount { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
+  .plan.pro { border-color: var(--accent); }
+  .incl { margin: 4px 0 0; padding-left: 20px; display: grid; gap: 4px; font-size: 15.5px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="text">
+      <img class="appicon" src="/assets/images/mealbound/icon-512.png" alt="MealBound app icon">
+      <h1>MealBound</h1>
+      <p class="lede">Your complete home meal planning companion. Build your recipe collection, plan the week ahead, and generate smart grocery lists.</p>
+      <div class="actions">
+        <a class="btn" href="https://apps.apple.com/us/app/mealbound/id6813143038">Download on the App Store</a>
+      </div>
+      <p class="price">Free to download · MealBound Pro $4.99 one-time · iPhone and iPad</p>
+    </div>
+    <img class="phone" src="/assets/images/mealbound/shot1.jpg" alt="MealBound weekly planner with breakfast, lunch, and dinner filled in for each day">
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Why MealBound</span>
+      <h2 id="story-h">Built out of dislike for meal planning</h2>
+    </div>
+    <div class="prose">
+      <p>MealBound started from how much I disliked making a weekly meal plan. Now there's an app that can make that decision for us: we entered our own recipes, and MealBound can search the web for new ideas when we need fresh ones.</p>
+      <p>With a family of picky eaters, we also wanted the freedom to tweak any recipe to our liking, so every recipe stays fully editable. And a grocery list we can check off as we shop means we stop forgetting what we came for.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Everything for meal night</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Recipe library</h3><p>Store recipes with photos, ingredients, step-by-step instructions, ratings, and notes.</p></div>
+      <div class="feature"><h3>Import from URL or photo</h3><p>Paste a recipe link or snap a photo of a printed recipe, and MealBound fills in the title, ingredients, and directions.</p></div>
+      <div class="feature"><h3>Discover recipes</h3><p>Search recipes from online recipe databases, with nutrition, dietary tags, and serving size, and add any of them to your library in one tap.</p></div>
+      <div class="feature"><h3>Weekly meal planner</h3><p>Map out breakfast, lunch, dinner, snacks, and desserts on a scrollable day-by-day canvas.</p></div>
+      <div class="feature"><h3>Auto-Plan</h3><p>Fill your entire week in one tap, respecting no-repeat windows, busy-slot preferences, and weekend-only recipes.</p></div>
+      <div class="feature"><h3>Smart grocery lists</h3><p>Generate a shopping list from your meal plan with ingredients merged and deduplicated, split automatically by your shopping days.</p></div>
+      <div class="feature"><h3>Voice and quick-add</h3><p>Add grocery items by speaking or with one-tap quick-add chips for common items.</p></div>
+      <div class="feature"><h3>Export and share</h3><p>Send a grocery list to Reminders so you can check it off while shopping, share it by AirDrop or Messages, or print a weekly meal plan for the fridge.</p></div>
+      <div class="feature"><h3>Home Screen widget</h3><p>See today's and tomorrow's meals at a glance without opening the app.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Your recipes stay yours</h2>
+    </div>
+    <div class="prose">
+      <p>MealBound has no account to create and no servers of its own. Your recipes, meal plan, and grocery lists are stored on your device and sync through your own iCloud, so they're available on your iPhone and iPad. MealBound never sees them.</p>
+      <p>Searching Discover or importing from a web address sends only your search terms or that address to find the recipe. MealBound works fully offline otherwise.</p>
+      <p><a href="/mealbound/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Screens</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><img src="/assets/images/mealbound/shot1.jpg" alt="Weekly planner with breakfast, lunch, and dinner filled in for each day" loading="lazy"><figcaption>Planner</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot2.jpg" alt="Recipe library filtered by dinner with star ratings" loading="lazy"><figcaption>Recipes</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot3.jpg" alt="Discover Recipes search results for chicken" loading="lazy"><figcaption>Discover</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot4.jpg" alt="Recipe detail with photo, tag, and ingredient list" loading="lazy"><figcaption>Recipe detail</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot5.jpg" alt="Grocery list with checked-off collected items" loading="lazy"><figcaption>Grocery list</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Try it free</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="label">Free</span>
+        <div class="amount">$0</div>
+        <p class="muted">Everything you need to get started.</p>
+        <ul class="incl">
+          <li>Up to 20 recipes</li>
+          <li>Weekly meal planner</li>
+          <li>Grocery lists with voice input</li>
+          <li>iCloud sync and Home Screen widget</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <span class="label">MealBound Pro</span>
+        <div class="amount">$4.99<span class="muted" style="font-size:16px;font-weight:600"> one-time</span></div>
+        <p class="muted">Everything unlocked, forever.</p>
+        <ul class="incl">
+          <li>Unlimited recipes</li>
+          <li>Auto-Plan your week</li>
+          <li>Discover and import recipes</li>
+          <li>Print meal plans</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/mealbound/press/">Press kit</a>
+      <a class="btn secondary" href="/mealbound/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/mealbound/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

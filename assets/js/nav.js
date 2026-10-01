@@ -7,7 +7,7 @@
       apps: [
         { name: "Meduo", blurb: "Family health records", href: "/meduo/", icon: "/assets/images/icons/meduo.png" },
         { name: "BudgetXP+", blurb: "Personal finance", href: "/budgetxp/", icon: "/assets/images/icons/budgetxp-personal-finance.jpg" },
-        { name: "MealBound", blurb: "Meal planning and grocery lists", href: "https://apps.apple.com/us/app/mealbound/id6813143038", icon: "/assets/images/icons/mealbound.jpg" },
+        { name: "MealBound", blurb: "Meal planning and grocery lists", href: "/mealbound/", icon: "/assets/images/icons/mealbound.jpg" },
       ],
     },
     {

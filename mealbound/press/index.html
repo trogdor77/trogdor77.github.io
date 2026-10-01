@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MealBound Press Kit · Rohr Software</title>
+<meta name="description" content="Press kit for MealBound, a home meal planning and grocery list app for iPhone and iPad.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column laid out like a recipe card (header, story, ingredient-list sections with mono labels), with a full-bleed screenshot strip. */
+:root {
+  --bg: #f5f8fc;
+  --surface: #ffffff;
+  --ink: #0f1d33;
+  --muted: #55657d;
+  --rule: #d8e1ee;
+  --accent: #0a68e8;
+  --accent-soft: #e4edfc;
+  --alert: #d4362f;
+  --todo-bg: #fff3c4;
+  --todo-fg: #6b4e00;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1322; --surface: #121d31; --ink: #e8eef8; --muted: #9aabc4; --rule: #24324b;
+    --accent: #6fb4ff; --accent-soft: #17284a; --alert: #ff6b61;
+    --todo-bg: #3d3210; --todo-fg: #ffdf80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1322; --surface: #121d31; --ink: #e8eef8; --muted: #9aabc4; --rule: #24324b;
+  --accent: #6fb4ff; --accent-soft: #17284a; --alert: #ff6b61;
+  --todo-bg: #3d3210; --todo-fg: #ffdf80;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding: 0 20px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+section { display: grid; gap: 24px; }
+.section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(10, 104, 232, .25); }
+.hero h1 { font-size: clamp(44px, 8vw, 72px); font-weight: 800; letter-spacing: -.03em; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin-top: 6px; max-width: 34ch; }
+.hero .meta { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; gap: 18px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+}
+
+/* Story */
+.story { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.story-text { display: grid; gap: 16px; max-width: 62ch; }
+.story-text p:first-child { font-size: 21px; line-height: 1.5; }
+.byline { color: var(--muted); font-style: italic; }
+.story-shot { border-radius: 24px; border: 1px solid var(--rule); width: 100%; max-width: 280px; justify-self: center; }
+@media (max-width: 760px) { .story { grid-template-columns: 1fr; } }
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+.feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature p { color: var(--muted); font-size: 15.5px; }
+
+/* Screenshots */
+.shots {
+  display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+}
+.shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
+.shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); background: var(--surface); }
+.shots figcaption { font-size: 14px; color: var(--muted); }
+
+/* Copy blocks */
+.copyblocks { display: grid; gap: 16px; }
+.copy {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; display: grid; gap: 10px;
+}
+.copy-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.copy p { font-size: 16px; }
+.copy button {
+  font: 600 13px var(--font-body); color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.copy button:hover { filter: brightness(.96); }
+
+/* Fact sheet */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.fact { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.fact .label { padding-top: 3px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .fact { grid-template-columns: 1fr; gap: 2px; } }
+
+.contact { display: grid; gap: 10px; }
+.contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
+footer { color: var(--muted); font-size: 14px; }
+@media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="/assets/images/mealbound/icon-512.png" alt="MealBound app icon">
+    <div>
+      <span class="label">Press kit</span>
+      <h1>MealBound</h1>
+      <p class="tagline">Your complete home meal planning companion. Build your recipe collection, plan the week ahead, and generate smart grocery lists.</p>
+      <div class="meta">
+        <span class="label">iPhone &amp; iPad</span>
+        <span class="label">Version 1.0</span>
+        <a href="https://apps.apple.com/us/app/mealbound/id6813143038" class="label">View on the App Store</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Prep notes</span>
+      <h2 id="story-h">Why MealBound exists</h2>
+    </div>
+    <div class="story">
+      <div class="story-text">
+        <p>MealBound started from how much I disliked making a weekly meal plan.</p>
+        <p>Now there's an app that can make that decision for us. We entered our own recipes, and MealBound can search the web for new ideas when we need fresh ones.</p>
+        <p>With a family of picky eaters, we also wanted the freedom to tweak any recipe to our liking, so every recipe stays fully editable. And a grocery list we can check off as we shop means we stop forgetting what we came for.</p>
+        <p class="byline">Alexander Rohr, founder and developer</p>
+      </div>
+      <img class="story-shot" src="/assets/images/mealbound/shot1.jpg" alt="MealBound weekly planner with breakfast, lunch, and dinner filled in for each day">
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Ingredients</span>
+      <h2 id="feat-h">What it does</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Recipe library</h3><p>Store recipes with photos, ingredients, step-by-step instructions, ratings, and notes.</p></div>
+      <div class="feature"><h3>Import from URL or photo</h3><p>Paste a recipe link or snap a photo of a printed recipe, and MealBound fills in the title, ingredients, and directions.</p></div>
+      <div class="feature"><h3>Discover recipes</h3><p>Search recipes from online recipe databases, with nutrition, dietary tags, and serving size, and add any of them to your library in one tap.</p></div>
+      <div class="feature"><h3>Weekly meal planner</h3><p>Map out breakfast, lunch, dinner, snacks, and desserts on a scrollable day-by-day canvas.</p></div>
+      <div class="feature"><h3>Auto-Plan</h3><p>Fill your entire week in one tap, respecting no-repeat windows, busy-slot preferences, and weekend-only recipes.</p></div>
+      <div class="feature"><h3>Smart grocery lists</h3><p>Generate a shopping list from your meal plan with ingredients merged and deduplicated, split automatically by your shopping days.</p></div>
+      <div class="feature"><h3>Voice and quick-add</h3><p>Add grocery items by speaking or with one-tap quick-add chips for common items.</p></div>
+      <div class="feature"><h3>Export and share</h3><p>Send a grocery list to Reminders so you can check it off while shopping, share it by AirDrop or Messages, or print a weekly meal plan for the fridge.</p></div>
+      <div class="feature"><h3>Private by design</h3><p>No MealBound servers and no account. Data syncs through the user's own iCloud, and the app works fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Plated</span>
+      <h2 id="shots-h">Screenshots</h2>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Full-resolution PNGs available on request.</p>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><img src="/assets/images/mealbound/shot1.jpg" alt="Weekly planner with breakfast, lunch, and dinner filled in for each day" loading="lazy"><figcaption>Planner</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot2.jpg" alt="Recipe library filtered by dinner with star ratings" loading="lazy"><figcaption>Recipes</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot3.jpg" alt="Discover Recipes search results for chicken" loading="lazy"><figcaption>Discover</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot4.jpg" alt="Recipe detail with photo, tag, and ingredient list" loading="lazy"><figcaption>Recipe detail</figcaption></figure>
+      <figure><img src="/assets/images/mealbound/shot5.jpg" alt="Grocery list with checked-off collected items" loading="lazy"><figcaption>Grocery list</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="copy-h">
+    <div class="section-head">
+      <span class="label">Ready to serve</span>
+      <h2 id="copy-h">Descriptions</h2>
+    </div>
+    <div class="copyblocks">
+      <div class="copy">
+        <div class="copy-top"><span class="label">One line</span><button type="button" data-copy="c1">Copy</button></div>
+        <p id="c1">MealBound is a home meal planning app for iPhone and iPad that builds your recipe collection, plans the week ahead, and generates smart grocery lists.</p>
+      </div>
+      <div class="copy">
+        <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
+        <p id="c2">MealBound takes the weekly "what's for dinner" question off your plate. It stores recipes you add by hand, import from any recipe website, or photograph, and lets you discover new ones from an online recipe database. Auto-Plan fills your week in one tap, respecting repeats and busy nights, and a smart grocery list merges ingredients and splits them by shopping day, ready to check off in Reminders. There are no MealBound servers or accounts; recipes, meal plans, and grocery lists stay in the user's own iCloud. MealBound was built by independent developer Alexander Rohr, out of a dislike for planning meals the old way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <div class="section-head">
+      <span class="label">Recipe card</span>
+      <h2 id="facts-h">Fact sheet</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
+      <div class="fact"><span class="label">Platforms</span><span>iPhone, iPad, Home Screen widget</span></div>
+      <div class="fact"><span class="label">Requires</span><span>iOS 26.5 and iPadOS 26.5 or later</span></div>
+      <div class="fact"><span class="label">Current version</span><span>1.0</span></div>
+      <div class="fact"><span class="label">Release date</span><span>September 22, 2026</span></div>
+      <div class="fact"><span class="label">Price</span><span>Free download; MealBound Pro $4.99 one-time</span></div>
+      <div class="fact"><span class="label">Free</span><span>Up to 20 recipes, weekly planner, grocery lists, widget, iCloud sync</span></div>
+      <div class="fact"><span class="label">Pro</span><span>Unlimited recipes, Auto-Plan, Discover &amp; import, printing, one-time purchase</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no MealBound servers, iCloud sync via CloudKit</span></div>
+      <div class="fact"><span class="label">Built with</span><span>SwiftUI, SwiftData, CloudKit, WidgetKit, StoreKit 2</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="label">Reservations</span>
+      <h2 id="contact-h">Press contact</h2>
+    </div>
+    <div class="contact">
+      <p>For interviews, review codes for MealBound Pro, or full-resolution assets:</p>
+      <p class="email">alex@rohrsoftware.dev</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about building a privacy-first meal planning app as a solo developer, and cooking for a family of picky eaters.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Alexander Rohr. MealBound does not verify the accuracy, nutrition, or safety of imported or discovered recipes; always review before cooking.</footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press ⌘C';
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>
