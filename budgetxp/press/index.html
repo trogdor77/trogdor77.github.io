@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BudgetXP+ Press Kit · Rohr Software</title>
+<meta name="description" content="Press kit for BudgetXP+, a personal finance app for iPhone and iPad.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column laid out like a bank statement (header, story, ledger-style sections with mono labels), with a full-bleed screenshot strip. */
+:root {
+  --bg: #f5f8fc;
+  --surface: #ffffff;
+  --ink: #0f1d33;
+  --muted: #55657d;
+  --rule: #d8e1ee;
+  --accent: #0a66d6;
+  --accent-soft: #e4edfc;
+  --alert: #d4362f;
+  --todo-bg: #fff3c4;
+  --todo-fg: #6b4e00;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1322; --surface: #121d31; --ink: #e8eef8; --muted: #9aabc4; --rule: #24324b;
+    --accent: #6fb0ff; --accent-soft: #17284a; --alert: #ff6b61;
+    --todo-bg: #3d3210; --todo-fg: #ffdf80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1322; --surface: #121d31; --ink: #e8eef8; --muted: #9aabc4; --rule: #24324b;
+  --accent: #6fb0ff; --accent-soft: #17284a; --alert: #ff6b61;
+  --todo-bg: #3d3210; --todo-fg: #ffdf80;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding: 0 20px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+section { display: grid; gap: 24px; }
+.section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(10, 102, 214, .25); }
+.hero h1 { font-size: clamp(44px, 8vw, 72px); font-weight: 800; letter-spacing: -.03em; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin-top: 6px; max-width: 34ch; }
+.hero .meta { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; gap: 18px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+}
+
+/* Story */
+.story { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.story-text { display: grid; gap: 16px; max-width: 62ch; }
+.story-text p:first-child { font-size: 21px; line-height: 1.5; }
+.byline { color: var(--muted); font-style: italic; }
+.story-shot { border-radius: 24px; border: 1px solid var(--rule); width: 100%; max-width: 280px; justify-self: center; }
+@media (max-width: 760px) { .story { grid-template-columns: 1fr; } }
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+.feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature p { color: var(--muted); font-size: 15.5px; }
+
+/* Screenshots */
+.shots {
+  display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+}
+.shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
+.shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); background: var(--surface); }
+.shots figcaption { font-size: 14px; color: var(--muted); }
+
+/* Copy blocks */
+.copyblocks { display: grid; gap: 16px; }
+.copy {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; display: grid; gap: 10px;
+}
+.copy-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.copy p { font-size: 16px; }
+.copy button {
+  font: 600 13px var(--font-body); color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.copy button:hover { filter: brightness(.96); }
+
+/* Fact sheet */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.fact { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.fact .label { padding-top: 3px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .fact { grid-template-columns: 1fr; gap: 2px; } }
+
+.contact { display: grid; gap: 10px; }
+.contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
+footer { color: var(--muted); font-size: 14px; }
+@media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="/assets/images/budgetxp/icon-512.png" alt="BudgetXP+ app icon: a white bar chart on a blue background">
+    <div>
+      <span class="label">Press kit</span>
+      <h1>BudgetXP+</h1>
+      <p class="tagline">Personal finance for iPhone and iPad: track accounts, set budgets, and understand your spending, right in your pocket.</p>
+      <div class="meta">
+        <span class="label">iPhone &amp; iPad</span>
+        <span class="label">Version 1.3.0</span>
+        <a href="https://apps.apple.com/us/app/budgetxp-personal-finance/id6802175358" class="label">View on the App Store</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Opening balance</span>
+      <h2 id="story-h">Why BudgetXP+ exists</h2>
+    </div>
+    <div class="story">
+      <div class="story-text">
+        <p>Twenty years ago, I wrote a Windows desktop app so my wife and I could track our spending and set money aside for a rainy day.</p>
+        <p>It worked, but only at the computer. A purchase made at the store had to be remembered and entered later, if it got entered at all.</p>
+        <p>BudgetXP+ is the fix for that: a budget that lives in your pocket, so a transaction gets logged the moment it happens. BudgetXP+ Desktop came next, syncing over iCloud so our accounts, budgets, and transactions stay in step everywhere we go — the best of both worlds.</p>
+        <p class="byline">Alexander Rohr, founder and developer</p>
+      </div>
+      <img class="story-shot" src="/assets/images/budgetxp/shot5.jpg" alt="BudgetXP+ spending report showing a category breakdown donut chart">
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Line items</span>
+      <h2 id="feat-h">What it does</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Account management</h3><p>Track checking, savings, money market, CDs, credit cards, and loans. Hide closed accounts and view totals at a glance.</p></div>
+      <div class="feature"><h3>Transaction tracking</h3><p>Log expenses and income in seconds with categories, autocomplete descriptions, and a smart duplicate detector.</p></div>
+      <div class="feature"><h3>Receipt scanning</h3><p>Photograph a receipt and let the app read the total, merchant, and card number automatically.</p></div>
+      <div class="feature"><h3>Budget goals</h3><p>Set monthly spending limits per category and track progress with live, color-coded cards on the dashboard.</p></div>
+      <div class="feature"><h3>Spending reports</h3><p>Visualize spending with donut charts, monthly trends, and a running net worth view.</p></div>
+      <div class="feature"><h3>Recurring transactions</h3><p>Schedule bills and income to repeat weekly, bi-weekly, monthly, or annually, and post them with a single tap.</p></div>
+      <div class="feature"><h3>Account transfers</h3><p>Record transfers between accounts and keep every balance accurate automatically.</p></div>
+      <div class="feature"><h3>CSV export</h3><p>Export your full transaction history and share it with any app or spreadsheet.</p></div>
+      <div class="feature"><h3>Private by design</h3><p>No BudgetXP+ servers and no account. Data syncs through the user's own iCloud and can be locked behind Face ID or Touch ID.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Statements</span>
+      <h2 id="shots-h">Screenshots</h2>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Full-resolution PNGs available on request.</p>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><img src="/assets/images/budgetxp/shot1.jpg" alt="Accounts snapshot with budget progress bars and account balances" loading="lazy"><figcaption>Snapshot</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot2.jpg" alt="Main Checking account detail with transaction history" loading="lazy"><figcaption>Account detail</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot3.jpg" alt="Recurring rent and paycheck transactions" loading="lazy"><figcaption>Recurring</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot4.jpg" alt="Transactions list with search and account filters" loading="lazy"><figcaption>Transactions</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot5.jpg" alt="Spending by category donut chart with monthly breakdown" loading="lazy"><figcaption>Spending</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="copy-h">
+    <div class="section-head">
+      <span class="label">Ready to use</span>
+      <h2 id="copy-h">Descriptions</h2>
+    </div>
+    <div class="copyblocks">
+      <div class="copy">
+        <div class="copy-top"><span class="label">One line</span><button type="button" data-copy="c1">Copy</button></div>
+        <p id="c1">BudgetXP+ is a personal finance app for iPhone and iPad that lets you track accounts, set budgets, and understand your spending.</p>
+      </div>
+      <div class="copy">
+        <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
+        <p id="c2">BudgetXP+ brings everyday budgeting into your pocket. It tracks checking, savings, credit card, and loan accounts, logs transactions in seconds with receipt scanning and duplicate detection, and sets monthly budget goals with live progress tracking. Recurring bills and income post with a single tap, and spending reports chart exactly where the money goes. There are no BudgetXP+ servers or accounts; data stays in the user's own iCloud and syncs automatically with the companion BudgetXP+ Desktop app for Mac. BudgetXP+ was built by independent developer Alexander Rohr, who wrote an earlier version of the same idea as a Windows desktop app twenty years ago.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <div class="section-head">
+      <span class="label">Balance sheet</span>
+      <h2 id="facts-h">Fact sheet</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
+      <div class="fact"><span class="label">Platforms</span><span>iPhone and iPad</span></div>
+      <div class="fact"><span class="label">Requires</span><span>iOS 17.5 and iPadOS 17.5 or later</span></div>
+      <div class="fact"><span class="label">Current version</span><span>1.3.0</span></div>
+      <div class="fact"><span class="label">Release date</span><span>August 26, 2026</span></div>
+      <div class="fact"><span class="label">Price</span><span>Free download; BudgetXP+ Pro $1.99 one-time</span></div>
+      <div class="fact"><span class="label">Free</span><span>Up to 3 accounts and 50 transactions, budgets, recurring bills, reports, CSV export</span></div>
+      <div class="fact"><span class="label">Pro</span><span>Unlimited accounts and transactions, one-time purchase, no subscription</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no BudgetXP+ servers, iCloud sync via CloudKit</span></div>
+      <div class="fact"><span class="label">Also available</span><span><a href="https://apps.apple.com/us/app/budgetxp-desktop/id6812885419">BudgetXP+ Desktop</a> for Mac</span></div>
+      <div class="fact"><span class="label">Built with</span><span>SwiftUI, SwiftData, CloudKit</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="label">Wire details</span>
+      <h2 id="contact-h">Press contact</h2>
+    </div>
+    <div class="contact">
+      <p>For interviews, review codes for BudgetXP+ Pro, or full-resolution assets:</p>
+      <p class="email">alex@rohrsoftware.dev</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about building a privacy-first finance app as a solo developer, and bringing a twenty-year-old personal project to iPhone, iPad, and Mac.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Alexander Rohr. BudgetXP+ is a personal budgeting tool and does not provide financial advice.</footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press ⌘C';
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>

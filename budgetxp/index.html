@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BudgetXP+ · Personal Finance</title>
+<meta name="description" content="BudgetXP+ is a personal finance app for iPhone and iPad. Track accounts, set budgets, log transactions, and understand your spending.">
+<meta property="og:title" content="BudgetXP+">
+<meta property="og:description" content="Personal finance for iPhone and iPad: accounts, budgets, and spending, all in your pocket.">
+<meta property="og:image" content="/assets/images/budgetxp/icon-512.png">
+<meta name="apple-itunes-app" content="app-id=6802175358">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #0a66d6; --accent-soft: #e4edfc; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #6fb0ff; --accent-soft: #17284a; } }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .hero .text { display: grid; gap: 16px; justify-items: start; }
+  .hero .appicon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(10, 102, 214, .25); }
+  .hero .phone { justify-self: center; width: min(300px, 100%); border-radius: 36px; border: 1px solid var(--rule); }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .phone { width: min(260px, 80%); } }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
+  .shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
+  .plan .amount { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
+  .plan.pro { border-color: var(--accent); }
+  .incl { margin: 4px 0 0; padding-left: 20px; display: grid; gap: 4px; font-size: 15.5px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="text">
+      <img class="appicon" src="/assets/images/budgetxp/icon-512.png" alt="BudgetXP+ app icon">
+      <h1>BudgetXP+</h1>
+      <p class="lede">Personal finance for iPhone and iPad: track accounts, set budgets, and understand your spending, right in your pocket.</p>
+      <div class="actions">
+        <a class="btn" href="https://apps.apple.com/us/app/budgetxp-personal-finance/id6802175358">Download on the App Store</a>
+      </div>
+      <p class="price">Free to download · BudgetXP+ Pro $1.99 one-time · iPhone and iPad</p>
+    </div>
+    <img class="phone" src="/assets/images/budgetxp/shot1.jpg" alt="BudgetXP+ accounts snapshot showing account totals and this month's budgets">
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Why BudgetXP+</span>
+      <h2 id="story-h">Twenty years in the making</h2>
+    </div>
+    <div class="prose">
+      <p>Twenty years ago, I wrote a Windows desktop app so my wife and I could track our spending and set money aside for a rainy day. It worked, but only at the computer — a purchase made at the store had to be remembered and entered later.</p>
+      <p>BudgetXP+ is the fix for that: a budget that lives in your pocket, so a transaction gets logged the moment it happens. BudgetXP+ Desktop came next, syncing over iCloud so our accounts, budgets, and transactions stay in step everywhere we go — the best of both worlds.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Everything you need, nothing you don't</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Account management</h3><p>Track checking, savings, money market, CDs, credit cards, and loans. Hide closed accounts and view totals at a glance.</p></div>
+      <div class="feature"><h3>Transaction tracking</h3><p>Log expenses and income in seconds with categories, autocomplete descriptions, and a smart duplicate detector.</p></div>
+      <div class="feature"><h3>Receipt scanning</h3><p>Photograph a receipt and let the app read the total, merchant, and card number automatically.</p></div>
+      <div class="feature"><h3>Budget goals</h3><p>Set monthly spending limits per category and track progress with live, color-coded cards on the dashboard.</p></div>
+      <div class="feature"><h3>Spending reports</h3><p>Visualize spending with donut charts, monthly trends, and a running net worth view.</p></div>
+      <div class="feature"><h3>Recurring transactions</h3><p>Schedule bills and income to repeat weekly, bi-weekly, monthly, or annually, and post them with a single tap.</p></div>
+      <div class="feature"><h3>Account transfers</h3><p>Record transfers between accounts and keep every balance accurate automatically.</p></div>
+      <div class="feature"><h3>CSV export</h3><p>Export your full transaction history and share it with any app or spreadsheet.</p></div>
+      <div class="feature"><h3>Bill reminders</h3><p>Get notified on each recurring bill's due date, at a time you choose.</p></div>
+      <div class="feature"><h3>Built for iPhone &amp; iPad</h3><p>Full iPad Split View support, automatic light and dark mode, and customizable categories with an icon picker.</p></div>
+      <div class="feature"><h3>Biometric lock</h3><p>Protect your financial data with Face ID or Touch ID. The app locks automatically when sent to the background.</p></div>
+      <div class="feature"><h3>Also on Mac</h3><p><a href="https://apps.apple.com/us/app/budgetxp-desktop/id6812885419">BudgetXP+ Desktop</a> is available separately on the Mac App Store, syncing automatically over iCloud.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Your money stays yours</h2>
+    </div>
+    <div class="prose">
+      <p>BudgetXP+ has no account to create and no servers of its own. Your accounts and transactions are stored on your device and sync through your own iCloud, so they're available on your iPhone, iPad, and Mac. BudgetXP+ never sees them.</p>
+      <p>Face ID or Touch ID can lock the app every time it opens.</p>
+      <p><a href="/budgetxp/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Screens</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><img src="/assets/images/budgetxp/shot1.jpg" alt="Accounts snapshot with budget progress bars and account balances" loading="lazy"><figcaption>Snapshot</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot2.jpg" alt="Main Checking account detail with transaction history" loading="lazy"><figcaption>Account detail</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot3.jpg" alt="Recurring rent and paycheck transactions" loading="lazy"><figcaption>Recurring</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot4.jpg" alt="Transactions list with search and account filters" loading="lazy"><figcaption>Transactions</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/shot5.jpg" alt="Spending by category donut chart with monthly breakdown" loading="lazy"><figcaption>Spending</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Try it free</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="label">Free</span>
+        <div class="amount">$0</div>
+        <p class="muted">Everything you need to get started.</p>
+        <ul class="incl">
+          <li>Up to 3 accounts and 50 transactions</li>
+          <li>Budgets, recurring bills, and reports</li>
+          <li>Receipt scanning and CSV export</li>
+          <li>iCloud sync and Face ID lock</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <span class="label">BudgetXP+ Pro</span>
+        <div class="amount">$1.99<span class="muted" style="font-size:16px;font-weight:600"> one-time</span></div>
+        <p class="muted">Everything unlocked, forever.</p>
+        <ul class="incl">
+          <li>Unlimited accounts and transactions</li>
+          <li>One-time purchase, no subscription</li>
+          <li>Syncs automatically with BudgetXP+ Desktop</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/budgetxp/press/">Press kit</a>
+      <a class="btn secondary" href="/budgetxp/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/budgetxp/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
