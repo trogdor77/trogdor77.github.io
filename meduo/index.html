@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meduo · Family Health Records</title>
+<meta name="description" content="Meduo is a private health record app for iPhone and iPad. Track medications, appointments, lab results, and symptoms for everyone you care for.">
+<meta property="og:title" content="Meduo">
+<meta property="og:description" content="Private health records for your whole family: your kids, yourself, and the parents you care for.">
+<meta property="og:image" content="/assets/images/meduo/icon-512.png">
+<meta name="apple-itunes-app" content="app-id=6815359075">
+<link rel="icon" href="/assets/images/meduo/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #1d63d8; --accent-soft: #e3edfc; --card-glass: rgba(20, 30, 50, .55); }
+  @media (prefers-color-scheme: dark) { :root { --accent: #6fa3ff; --accent-soft: #17284a; --card-glass: rgba(0, 0, 0, .45); } }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .hero .text { display: grid; gap: 16px; justify-items: start; }
+  .hero .appicon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(29, 99, 216, .25); }
+  .hero .phone { justify-self: center; width: min(300px, 100%); border-radius: 36px; border: 1px solid var(--rule); }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .phone { width: min(260px, 80%); } }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .split { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  @media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+  .lock {
+    border-radius: 34px; padding: 28px 22px 32px; justify-self: center;
+    background: linear-gradient(160deg, #2a4f8f, #1a2c52 55%, #3b2a55);
+    color: #fff; display: grid; gap: 18px; justify-items: center; max-width: 320px; width: 100%;
+  }
+  .lock .time { font-family: var(--font-display); font-size: 60px; font-weight: 700; line-height: 1; }
+  .lock .date { font-size: 15px; opacity: .85; margin-bottom: -10px; }
+  .widget { width: 100%; background: var(--card-glass); border-radius: 20px; padding: 14px 16px; display: grid; gap: 6px; font-size: 13px; line-height: 1.35; }
+  .widget .name { font-weight: 600; font-size: 15px; display: flex; justify-content: space-between; gap: 8px; }
+  .widget .blood { background: #e5484d; color: #fff; border-radius: 6px; padding: 0 6px; font-family: var(--font-mono); font-size: 12px; }
+  .widget .row { display: flex; gap: 8px; }
+  .widget .k { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; opacity: .7; width: 64px; flex: none; }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
+  .shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
+  .plan .amount { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
+  .plan.premium { border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul>
+      <li><a href="/#apps">Apps</a></li>
+      <li><a href="/meduo/" aria-current="page">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="text">
+      <img class="appicon" src="/assets/images/meduo/icon-512.png" alt="Meduo app icon">
+      <h1>Meduo</h1>
+      <p class="lede">Private health records for your whole family: your kids, yourself, and the parents you care for.</p>
+      <div class="actions">
+        <a class="btn" href="https://apps.apple.com/us/app/meduo/id6815359075">Download on the App Store</a>
+      </div>
+      <p class="price">Free to download · iPhone and iPad</p>
+    </div>
+    <img class="phone" src="/assets/images/meduo/shot1.jpg" alt="Meduo dashboard showing today's medications and upcoming appointments">
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Why Meduo</span>
+      <h2 id="story-h">Built from a family's own journal</h2>
+    </div>
+    <div class="prose">
+      <p>For years, my daughter had unexplained episodes of vomiting and vertigo. The journal we kept of every episode took her doctors through specialist after specialist, until she was finally diagnosed with vestibular migraines.</p>
+      <p>Meduo gives every family that kind of record, along with the medications, surgeries, and history a new doctor always asks about. My in-laws use it to care for an elderly parent. Whoever you look after, it keeps their health information in one place.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Everything a doctor asks about</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Family profiles</h3><p>A separate record for each person you care for, with one-tap switching.</p></div>
+      <div class="feature"><h3>Medication reminders</h3><p>Reminders say who the dose is for, and doses due at the same time arrive together. Scan a label's barcode to fill in details.</p></div>
+      <div class="feature"><h3>Health journal</h3><p>Daily entries in categories you choose: dizziness, sleep, mood, or anything else you need to track.</p></div>
+      <div class="feature"><h3>Lab results and vital trends</h3><p>Keep results over time and chart blood pressure, weight, glucose, and more.</p></div>
+      <div class="feature"><h3>Appointments and procedures</h3><p>Upcoming and past visits with calendar sync, plus surgeries with facility, surgeon, and outcome.</p></div>
+      <div class="feature"><h3>Vaccinations, conditions, allergies</h3><p>Searchable lists with dates, lot numbers, and providers.</p></div>
+      <div class="feature"><h3>One-tap PDF summary</h3><p>Export a complete health record to share with a new doctor, a specialist, or the ER.</p></div>
+      <div class="feature"><h3>Widgets</h3><p>Today's medications and appointments on your Home Screen.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="em-h">
+    <div class="section-head">
+      <span class="label">Lock Screen</span>
+      <h2 id="em-h">An emergency card on your Lock Screen</h2>
+    </div>
+    <div class="split">
+      <div class="prose">
+        <p>Meduo's Lock Screen widget shows your name, blood type, allergies, and emergency contact. A first responder can read it without unlocking your phone.</p>
+        <p class="muted">The example on this page uses sample information.</p>
+      </div>
+      <div class="lock" role="img" aria-label="Example of the Meduo Lock Screen emergency card">
+        <div class="date">Monday, October 5</div>
+        <div class="time">9:41</div>
+        <div class="widget">
+          <div class="name"><span>Alex</span><span class="blood">A+</span></div>
+          <div class="row"><span class="k">CONTACT</span><span>Sam (Spouse)</span></div>
+          <div class="row"><span class="k">PHONE</span><span>(555) 123-4567</span></div>
+          <div class="row"><span class="k">ALLERGIES</span><span>Penicillin, Sulfa</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Your records stay yours</h2>
+    </div>
+    <div class="prose">
+      <p>Meduo has no account to create and no servers of its own. Your records are stored on your device and sync through your own iCloud, so they're available on your iPhone and iPad. Meduo never sees them.</p>
+      <p>Face ID, Touch ID, or Optic ID is required every time the app opens.</p>
+      <p><a href="https://appland.info/app/33310/privacy-policy">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Screens</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><img src="/assets/images/meduo/shot1.jpg" alt="Dashboard with today's medications and upcoming appointments" loading="lazy"><figcaption>Dashboard</figcaption></figure>
+      <figure><img src="/assets/images/meduo/shot2.jpg" alt="Medication list grouped by maintenance and acute" loading="lazy"><figcaption>Medications</figcaption></figure>
+      <figure><img src="/assets/images/meduo/shot3.jpg" alt="Red blood cell trend chart with reference range" loading="lazy"><figcaption>Lab trends</figcaption></figure>
+      <figure><img src="/assets/images/meduo/shot4.jpg" alt="Lab results flagged as high, low, or normal" loading="lazy"><figcaption>Lab results</figcaption></figure>
+      <figure><img src="/assets/images/meduo/shot5.jpg" alt="Appointments list with an upcoming physical therapy visit" loading="lazy"><figcaption>Appointments</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Try it free</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="label">Free</span>
+        <div class="amount">$0</div>
+        <p class="muted">Download Meduo and start your health record.</p>
+      </div>
+      <div class="plan premium">
+        <span class="label">Meduo Premium</span>
+        <div class="amount">$19.99<span class="muted" style="font-size:16px;font-weight:600"> / year</span></div>
+        <p class="muted">Unlocks advanced features, including care for the whole family.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/meduo/press/">Press kit</a>
+      <a class="btn secondary" href="https://appland.info/app/33310/privacy-policy">Privacy policy</a>
+    </div>
+  </section>
+
+  <p class="muted" style="font-size:14px">Meduo is a personal record-keeping tool. It does not provide medical advice, diagnosis, or treatment.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

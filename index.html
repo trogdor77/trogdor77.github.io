@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rohr Software</title>
+<meta name="description" content="Independent iPhone, iPad, and Mac apps by Alexander Rohr: Meduo, BudgetXP+, MealBound, Fox Dash, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  .intro { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 32px; align-items: center; }
+  .intro img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; }
+  .intro .text { display: grid; gap: 12px; }
+  @media (max-width: 600px) { .intro { grid-template-columns: 1fr; gap: 20px; } .intro img { width: 96px; height: 96px; } }
+  .featured {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 20px; padding: 28px;
+    display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 24px; align-items: center;
+  }
+  .featured img { width: 96px; height: 96px; border-radius: 22px; }
+  .featured .text { display: grid; gap: 10px; }
+  @media (max-width: 600px) { .featured { grid-template-columns: 1fr; } .featured img { width: 72px; height: 72px; border-radius: 17px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul>
+      <li><a href="/#apps">Apps</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="intro">
+    <img src="/assets/images/profile.jpg" alt="Alexander Rohr">
+    <div class="text">
+      <span class="label">Independent apps for iPhone, iPad &amp; Mac</span>
+      <h1>Rohr Software</h1>
+      <p class="lede">Apps that come from real, everyday needs, built by Alexander Rohr.</p>
+    </div>
+  </header>
+
+  <section aria-labelledby="new-h">
+    <div class="section-head">
+      <span class="label">New</span>
+      <h2 id="new-h">Meduo</h2>
+    </div>
+    <div class="featured">
+      <img src="/assets/images/meduo/icon-512.png" alt="Meduo app icon">
+      <div class="text">
+        <h3>Private health records for your whole family</h3>
+        <p class="muted">Track medications, appointments, lab results, and symptoms for your kids, yourself, and the parents you care for. No accounts and no servers: your data stays in your own iCloud.</p>
+        <div class="actions">
+          <a class="btn" href="/meduo/">Learn more</a>
+          <a class="btn secondary" href="https://apps.apple.com/us/app/meduo/id6815359075">App Store</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps" aria-labelledby="apps-h">
+    <div class="section-head">
+      <span class="label">Catalog</span>
+      <h2 id="apps-h">Apps</h2>
+    </div>
+
+    <div class="group">
+      <h3>iPhone &amp; iPad</h3>
+      <div class="apps">
+        <article class="app">
+          <img class="icon" src="/assets/images/icons/meduo.png" alt="">
+          <h3>Meduo</h3>
+          <p>Track your family's medications, appointments, lab trends, and health journals.</p>
+          <div class="links"><a href="/meduo/">Details</a><a href="https://apps.apple.com/us/app/meduo/id6815359075">App Store</a><a href="/meduo/press/">Press kit</a></div>
+        </article>
+        <article class="app">
+          <img class="icon" src="/assets/images/icons/budgetxp-personal-finance.jpg" alt="">
+          <h3>BudgetXP+: Personal Finance</h3>
+          <p>Track accounts, set budgets, log transactions, and understand your spending.</p>
+          <div class="links"><a href="https://apps.apple.com/us/app/budgetxp-personal-finance/id6802175358">App Store</a></div>
+        </article>
+        <article class="app">
+          <img class="icon" src="/assets/images/icons/mealbound.jpg" alt="">
+          <h3>MealBound</h3>
+          <p>Build your recipe collection, plan the week ahead, and generate smart grocery lists.</p>
+          <div class="links"><a href="https://apps.apple.com/us/app/mealbound/id6813143038">App Store</a></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>Mac</h3>
+      <div class="apps">
+        <article class="app">
+          <img class="icon" src="/assets/images/icons/budgetxp-personal-finance.jpg" alt="">
+          <h3>BudgetXP+: Desktop</h3>
+          <p>Personal finance built natively for macOS: spending, monthly budgets, and net worth.</p>
+          <div class="links"><a href="https://apps.apple.com/us/app/budgetxp-desktop/id6812885419">Mac App Store</a></div>
+        </article>
+        <article class="app">
+          <span class="icon blank" aria-hidden="true">S</span>
+          <h3>Scumble</h3>
+          <p>A painting app for the Mac.</p>
+          <div class="links"><span class="pill">Coming soon</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>Games</h3>
+      <div class="apps">
+        <article class="app">
+          <img class="icon" src="/assets/images/icons/fox-dash.jpg" alt="">
+          <h3>Fox Dash: Wild Adventures</h3>
+          <p>A fast-paced endless runner across 10 worlds, with obstacles and characters to unlock.</p>
+          <div class="links"><a href="https://apps.apple.com/us/app/fox-dash-wild-adventures/id6808320477">App Store</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-h">
+    <div class="section-head">
+      <span class="label">About</span>
+      <h2 id="why-h">Why I build these apps</h2>
+    </div>
+    <div class="prose">
+      <p>The apps I build come from moments where I, a friend, or a family member said, "I wish there was an app for that."</p>
+      <p>I got frustrated with how many apps are built around ads, so most of my apps favor a one-time purchase instead, with a free version so you can try before you buy. For Meduo, the core experience is free, with an optional subscription for advanced features. I'm also building casual games, with some fun influence from my daughters along the way.</p>
+      <p><a href="/support/">Need help with an app?</a> Email <strong>rohr.software@rocketmail.com</strong>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/support/">Support</a> · <a href="/meduo/press/">Meduo press kit</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
