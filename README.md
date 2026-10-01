@@ -10,7 +10,7 @@ If you need help with one of our applications, have encountered a problem, or wo
 
 For support inquiries, please email:
 
-**[rohr.software@rocketmail.com](mailto:rohr.software@rocketmail.com)**
+**[support@rohrsoftware.dev](mailto:support@rohrsoftware.dev)**
 
 When contacting us, please include:
 
@@ -56,4 +56,4 @@ We welcome feedback and suggestions. If there's a feature you'd like to see in o
 Thank you for using our applications and taking the time to contact us. We appreciate your feedback and are committed to providing reliable, useful software.
 
 **Rohr Software**
-[rohr.software@rocketmail.com](mailto:rohr.software@rocketmail.com)
+[support@rohrsoftware.dev](mailto:support@rohrsoftware.dev)
