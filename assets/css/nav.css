@@ -1,0 +1,93 @@
+/* Site navigation and Products drop-down. Uses each page's color tokens. */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  margin: 0 -20px; padding: 0 20px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav.open { background: var(--bg); }
+.nav .wrap { max-width: 1040px; margin: 0 auto; padding-block: 0; }
+.nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 52px; }
+.nav .brand {
+  font-family: var(--font-display); font-weight: 800; font-size: 18px;
+  color: var(--ink); text-decoration: none; letter-spacing: -.01em;
+}
+.nav-links { list-style: none; display: flex; align-items: center; gap: 26px; margin: 0; padding: 0; }
+.nav-links a, .nav-products {
+  color: var(--muted); text-decoration: none; font: 600 15px var(--font-body);
+}
+.nav-links a:hover, .nav-links a[aria-current="page"], .nav-products:hover, .nav-products[aria-expanded="true"] { color: var(--ink); }
+.nav-products {
+  background: none; border: 0; padding: 6px 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chev {
+  width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); transition: transform .2s ease;
+}
+.nav-products[aria-expanded="true"] .chev { transform: translateY(1px) rotate(-135deg); }
+
+/* Drop-down panel */
+.nav-panel {
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--bg); border-bottom: 1px solid var(--rule);
+  padding: 28px 20px 36px;
+  box-shadow: 0 24px 40px -24px rgba(0, 0, 0, .25);
+  animation: nav-drop .22s ease-out;
+}
+.nav-panel-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px 40px; }
+.nav-col { display: grid; gap: 10px; align-content: start; }
+.nav-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.nav-col-title {
+  font: 500 12px var(--font-mono); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); margin: 0;
+}
+.nav-app {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; align-items: center;
+  padding: 8px; margin: 0 -8px; border-radius: 10px; text-decoration: none; color: var(--ink);
+}
+a.nav-app:hover, a.nav-app:focus-visible { background: var(--surface); }
+.nav-app.disabled { opacity: .6; }
+.nav-app-icon { width: 32px; height: 32px; border-radius: 8px; }
+.nav-app-icon.blank {
+  display: grid; place-items: center; background: var(--rule);
+  font: 800 15px var(--font-display); color: var(--muted);
+}
+.nav-app-text { display: grid; min-width: 0; }
+.nav-app-name { font: 700 16px var(--font-display); }
+.nav-app-blurb { font-size: 13.5px; color: var(--muted); }
+.nav-plain a { color: var(--ink); text-decoration: none; font: 700 16px var(--font-display); display: block; padding: 6px 0; }
+.nav-plain a:hover { color: var(--accent); }
+.nav-col-links { display: none; }
+
+/* Dims the page behind the open menu */
+.nav-scrim {
+  position: fixed; inset: 0; z-index: 40;
+  background: rgba(0, 0, 0, .18);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  animation: nav-fade .2s ease-out;
+}
+
+/* Phone: hamburger replaces the links, and the panel lists everything */
+.nav-menu { display: none; background: none; border: 0; width: 36px; height: 36px; padding: 0; cursor: pointer; position: relative; }
+.nav-menu span {
+  position: absolute; left: 9px; right: 9px; height: 1.5px; background: var(--ink); border-radius: 1px;
+  transition: transform .2s ease;
+}
+.nav-menu span:first-child { top: 14px; }
+.nav-menu span:last-child { top: 21px; }
+.nav-menu[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
+.nav-menu[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav-menu { display: block; }
+  .nav-col-links { display: grid; }
+  .nav-panel { max-height: calc(100vh - 52px); overflow-y: auto; }
+}
+
+@keyframes nav-drop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+@keyframes nav-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .nav-panel, .nav-scrim { animation: none; } .chev, .nav-menu span { transition: none; } }

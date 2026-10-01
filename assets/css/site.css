@@ -48,14 +48,6 @@ main.wrap { padding-block: 40px 72px; display: grid; gap: 72px; }
 .prose { display: grid; gap: 14px; max-width: 64ch; }
 .muted { color: var(--muted); }
 
-/* Nav */
-.nav { border-bottom: 1px solid var(--rule); }
-.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; flex-wrap: wrap; }
-.brand { font-family: var(--font-display); font-weight: 800; font-size: 19px; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
-.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
-.nav ul a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 15px; }
-.nav ul a:hover, .nav ul a[aria-current="page"] { color: var(--ink); }
-
 /* Sections */
 section { display: grid; gap: 24px; }
 .section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }

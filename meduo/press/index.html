@@ -146,14 +146,22 @@ section { display: grid; gap: 24px; }
 .contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
 footer { color: var(--muted); font-size: 14px; }
 @media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
-.sitenav { max-width: 980px; margin: 0 auto; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px; color: var(--muted); }
-.sitenav a { color: var(--muted); font-weight: 600; text-decoration: none; }
-.sitenav a:hover { color: var(--ink); }
 </style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
 </head>
 <body>
 
-<nav class="sitenav" aria-label="Main"><a href="/">Rohr Software</a><span>/</span><a href="/meduo/">Meduo</a><span>/</span><span aria-current="page">Press kit</span></nav>
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="wrap">
 
   <header class="hero">

@@ -26,14 +26,16 @@
   .featured .text { display: grid; gap: 10px; }
   @media (max-width: 600px) { .featured { grid-template-columns: 1fr; } .featured img { width: 72px; height: 72px; border-radius: 17px; } }
 </style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
 </head>
 <body>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap">
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
     <a class="brand" href="/">Rohr Software</a>
-    <ul>
-      <li><a href="/#apps">Apps</a></li>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
       <li><a href="/meduo/">Meduo</a></li>
       <li><a href="/support/">Support</a></li>
     </ul>
