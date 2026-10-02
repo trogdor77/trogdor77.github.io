@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BudgetXP+ Desktop Press Kit · Rohr Software</title>
+<meta name="description" content="Press kit for BudgetXP+ Desktop, a native personal finance app for macOS.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column laid out like a bank statement, matching the BudgetXP+ iOS press kit. */
+:root {
+  --bg: #f5f8fc;
+  --surface: #ffffff;
+  --ink: #0f1d33;
+  --muted: #55657d;
+  --rule: #d8e1ee;
+  --accent: #0a66d6;
+  --accent-soft: #e4edfc;
+  --alert: #d4362f;
+  --todo-bg: #fff3c4;
+  --todo-fg: #6b4e00;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1322; --surface: #121d31; --ink: #e8eef8; --muted: #9aabc4; --rule: #24324b;
+    --accent: #6fb0ff; --accent-soft: #17284a; --alert: #ff6b61;
+    --todo-bg: #3d3210; --todo-fg: #ffdf80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1322; --surface: #121d31; --ink: #e8eef8; --muted: #9aabc4; --rule: #24324b;
+  --accent: #6fb0ff; --accent-soft: #17284a; --alert: #ff6b61;
+  --todo-bg: #3d3210; --todo-fg: #ffdf80;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding: 0 20px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+.todo {
+  background: var(--todo-bg); color: var(--todo-fg);
+  padding: 1px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: .85em;
+}
+section { display: grid; gap: 24px; }
+.section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(10, 102, 214, .25); }
+.hero h1 { font-size: clamp(40px, 7vw, 64px); font-weight: 800; letter-spacing: -.03em; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin-top: 6px; max-width: 36ch; }
+.hero .meta { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; gap: 18px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+}
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+.feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature p { color: var(--muted); font-size: 15.5px; }
+
+/* Copy blocks */
+.copyblocks { display: grid; gap: 16px; }
+.copy {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; display: grid; gap: 10px;
+}
+.copy-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.copy p { font-size: 16px; }
+.copy button {
+  font: 600 13px var(--font-body); color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.copy button:hover { filter: brightness(.96); }
+
+/* Fact sheet */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.fact { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.fact .label { padding-top: 3px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .fact { grid-template-columns: 1fr; gap: 2px; } }
+
+.contact { display: grid; gap: 10px; }
+.contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="/assets/images/budgetxp/icon-512.png" alt="BudgetXP+ app icon">
+    <div>
+      <span class="label">Press kit <span class="todo">Pre-release</span></span>
+      <h1>BudgetXP+ Desktop</h1>
+      <p class="tagline">A native personal finance app for macOS: accounts, budgets, reconciliation, and reporting, synced automatically with BudgetXP+ on iPhone and iPad.</p>
+      <div class="meta">
+        <span class="label">macOS 15.6+</span>
+        <span class="label">Version 1.3</span>
+        <span class="label">Coming soon to the Mac App Store</span>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Line items</span>
+      <h2 id="feat-h">What it does</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Transaction ledger</h3><p>A sortable table view with multi-column sort, full-text search, and keyboard shortcuts for editing, duplicating, and adding transactions.</p></div>
+      <div class="feature"><h3>Reconciliation mode</h3><p>Enter your bank statement's closing balance and check off cleared transactions, with a running difference that updates live.</p></div>
+      <div class="feature"><h3>CSV import &amp; export</h3><p>Import any bank CSV export with smart column mapping, or export the current month to a properly formatted CSV. Print a monospaced ledger register.</p></div>
+      <div class="feature"><h3>Split transactions</h3><p>Divide one transaction across multiple categories, with a live remaining balance as you split.</p></div>
+      <div class="feature"><h3>Reports</h3><p>The same charts as iOS, sized for a wide desktop canvas, plus a 12-month net worth line chart.</p></div>
+      <div class="feature"><h3>Menu bar companion</h3><p>A persistent menu bar icon showing current net worth, account balances, and recent transactions.</p></div>
+      <div class="feature"><h3>Contact manager</h3><p>Store business contacts for your finances, such as a banker or accountant, right alongside your accounts.</p></div>
+      <div class="feature"><h3>Private by design</h3><p>No BudgetXP+ servers and no account. Data syncs through the user's own iCloud with the companion iPhone and iPad app.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="copy-h">
+    <div class="section-head">
+      <span class="label">Ready to use</span>
+      <h2 id="copy-h">Descriptions</h2>
+    </div>
+    <div class="copyblocks">
+      <div class="copy">
+        <div class="copy-top"><span class="label">One line</span><button type="button" data-copy="c1">Copy</button></div>
+        <p id="c1">BudgetXP+ Desktop is a native personal finance app for macOS with a transaction ledger, reconciliation mode, and reports, synced with BudgetXP+ on iPhone and iPad.</p>
+      </div>
+      <div class="copy">
+        <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
+        <p id="c2">BudgetXP+ Desktop brings the full BudgetXP+ picture to the Mac: a sortable transaction ledger with full-text search, bank-statement reconciliation, split transactions, CSV import and export, and a 12-month net worth chart, plus a menu bar companion for an at-a-glance balance. It shares the same accounts and transactions as BudgetXP+ for iPhone and iPad, kept in sync automatically over iCloud. There are no BudgetXP+ servers or accounts. BudgetXP+ Desktop was built by independent developer Alexander Rohr as the Mac half of a personal finance app that started as a Windows desktop project twenty years ago.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <div class="section-head">
+      <span class="label">Balance sheet</span>
+      <h2 id="facts-h">Fact sheet</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
+      <div class="fact"><span class="label">Platform</span><span>Mac</span></div>
+      <div class="fact"><span class="label">Requires</span><span>macOS 15.6 or later</span></div>
+      <div class="fact"><span class="label">Current version</span><span>1.3</span></div>
+      <div class="fact"><span class="label">Release date</span><span>TBD</span></div>
+      <div class="fact"><span class="label">Price</span><span>Free download; BudgetXP+ Pro $12.99 one-time</span></div>
+      <div class="fact"><span class="label">Free</span><span>Up to 3 accounts and 50 transactions, reconciliation, reports, CSV import/export</span></div>
+      <div class="fact"><span class="label">Pro</span><span>Unlimited accounts and transactions, one-time purchase, no subscription</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no BudgetXP+ servers, iCloud sync via CloudKit</span></div>
+      <div class="fact"><span class="label">Also available</span><span><a href="/budgetxp/">BudgetXP+</a> for iPhone and iPad</span></div>
+      <div class="fact"><span class="label">Built with</span><span>SwiftUI, AppKit, SwiftData, CloudKit</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="label">Wire details</span>
+      <h2 id="contact-h">Press contact</h2>
+    </div>
+    <div class="contact">
+      <p>For interviews, early access, or assets ahead of launch:</p>
+      <p class="email">alex@rohrsoftware.dev</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about bringing a twenty-year-old personal finance project natively to the Mac, and building a two-platform app as a solo developer.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Alexander Rohr. BudgetXP+ Desktop is a personal budgeting tool and does not provide financial advice.</footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press ⌘C';
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>

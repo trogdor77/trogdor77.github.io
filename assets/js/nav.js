@@ -13,14 +13,14 @@
     {
       name: "Mac",
       apps: [
-        { name: "BudgetXP+ Desktop", blurb: "Personal finance for macOS", href: "https://apps.apple.com/us/app/budgetxp-desktop/id6812885419", icon: "/assets/images/icons/budgetxp-personal-finance.jpg" },
+        { name: "BudgetXP+ Desktop", blurb: "Personal finance for macOS", href: "/budgetxp/desktop/", icon: "/assets/images/icons/budgetxp-personal-finance.jpg" },
         { name: "Scumble", blurb: "Painting app, coming soon", href: null, icon: null },
       ],
     },
     {
       name: "Games",
       apps: [
-        { name: "Fox Dash", blurb: "Endless runner for iPhone and iPad", href: "https://apps.apple.com/us/app/fox-dash-wild-adventures/id6808320477", icon: "/assets/images/icons/fox-dash.jpg" },
+        { name: "Fox Dash", blurb: "Endless runner for iPhone and iPad", href: "/foxdash/", icon: "/assets/images/icons/fox-dash.jpg" },
       ],
     },
     // {

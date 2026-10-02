@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fox Dash · Wild Adventures</title>
+<meta name="description" content="Fox Dash is a fast-paced endless runner across 10 beautifully crafted worlds, each packed with unique obstacles and characters to unlock.">
+<meta property="og:title" content="Fox Dash">
+<meta property="og:description" content="A fast-paced endless runner across 10 worlds, with 30+ characters to unlock.">
+<meta property="og:image" content="/assets/images/foxdash/icon-512.png">
+<meta name="apple-itunes-app" content="app-id=6808320477">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #d9640a; --accent-soft: #fbe7d6; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #ff9d57; --accent-soft: #3a2314; } }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr); gap: 48px; align-items: center; }
+  .hero .text { display: grid; gap: 16px; justify-items: start; }
+  .hero .appicon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(217, 100, 10, .25); }
+  .hero .screen { width: 100%; border-radius: 20px; border: 1px solid var(--rule); }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
+
+  .worlds { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .world { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; display: grid; gap: 4px; }
+  .world .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .world .t { font-weight: 700; }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 300px; scroll-snap-align: start; display: grid; gap: 8px; }
+  .shots img { width: 100%; border-radius: 16px; border: 1px solid var(--rule); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="text">
+      <img class="appicon" src="/assets/images/foxdash/icon-512.png" alt="Fox Dash app icon">
+      <h1>Fox Dash</h1>
+      <p class="lede">A fast-paced endless runner across 10 beautifully crafted worlds, each packed with unique obstacles and characters to unlock.</p>
+      <div class="actions">
+        <a class="btn" href="https://apps.apple.com/us/app/fox-dash-wild-adventures/id6808320477">Download on the App Store</a>
+      </div>
+      <p class="price">$1.99 · iPhone and iPad</p>
+    </div>
+    <img class="screen" src="/assets/images/foxdash/shot1.jpg" alt="Fox Dash main menu with the fox character in the forest world">
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Why Fox Dash</span>
+      <h2 id="story-h">A father-daughter project</h2>
+    </div>
+    <div class="prose">
+      <p>My daughter has a love for foxes, so we decided to make a game together. What started as one fox grew into more than 30 characters, from other fox species all the way to dragons.</p>
+      <p>It was a fun project to build with her, and we wanted to share it with the world.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="worlds-h">
+    <div class="section-head">
+      <span class="label">10 worlds</span>
+      <h2 id="worlds-h">Every world plays differently</h2>
+    </div>
+    <div class="worlds">
+      <div class="world"><span class="n">WORLD 1</span><div class="t">Forest</div></div>
+      <div class="world"><span class="n">WORLD 2</span><div class="t">Space</div></div>
+      <div class="world"><span class="n">WORLD 3</span><div class="t">Desert</div></div>
+      <div class="world"><span class="n">WORLD 4</span><div class="t">Ocean</div></div>
+      <div class="world"><span class="n">WORLD 5</span><div class="t">Arctic</div></div>
+      <div class="world"><span class="n">WORLD 6</span><div class="t">Dino</div></div>
+      <div class="world"><span class="n">WORLD 7</span><div class="t">Farm</div></div>
+      <div class="world"><span class="n">WORLD 8</span><div class="t">Rooftops</div></div>
+      <div class="world"><span class="n">WORLD 9</span><div class="t">Park</div></div>
+      <div class="world"><span class="n">WORLD 10</span><div class="t">Fantasy</div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Simple to play, hard to master</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>One-tap controls</h3><p>Tap to jump, double tap to double jump. Timing and knowing each world's obstacles separate a good run from a great one.</p></div>
+      <div class="feature"><h3>30+ characters</h3><p>Play as a fox, raccoon, bear, penguin, husky, T-Rex, and many more. Reach score milestones to unlock new characters, free, just by playing.</p></div>
+      <div class="feature"><h3>Legendary dragons</h3><p>The rarest characters in the game. Earn enough points to unlock the Royal Dragon, Ice Dragon, Storm Dragon, Lava Dragon, Shadow Dragon, and more.</p></div>
+      <div class="feature"><h3>Daily challenges</h3><p>New missions every day. Complete them to earn star points and unlock even more characters without spending a dime.</p></div>
+      <div class="feature"><h3>Game Center</h3><p>Leaderboards for every world, plus achievements to hunt down.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Screens</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="Game screenshots, scroll sideways">
+      <figure><img src="/assets/images/foxdash/shot1.jpg" alt="Main menu with the fox character in the forest world" loading="lazy"><figcaption>Forest world</figcaption></figure>
+      <figure><img src="/assets/images/foxdash/shot2.jpg" alt="World selection screen showing all 10 worlds" loading="lazy"><figcaption>Select World</figcaption></figure>
+      <figure><img src="/assets/images/foxdash/shot3.jpg" alt="Character picker with the fox selected and other animals to unlock" loading="lazy"><figcaption>Choose Your Runner</figcaption></figure>
+      <figure><img src="/assets/images/foxdash/shot4.jpg" alt="Space Dash gameplay with the fox in a spacesuit" loading="lazy"><figcaption>Space world</figcaption></figure>
+      <figure><img src="/assets/images/foxdash/shot5.jpg" alt="Raccoon character unlocked celebration after a run" loading="lazy"><figcaption>Unlocking characters</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">No ads, no tracking</h2>
+    </div>
+    <div class="prose">
+      <p>Fox Dash has no account, no ads, and no third-party analytics. Your progress stays on your device. Leaderboards and achievements are handled entirely by Apple Game Center, and signing in is optional.</p>
+      <p><a href="/foxdash/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/foxdash/press/">Press kit</a>
+      <a class="btn secondary" href="/foxdash/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/foxdash/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
