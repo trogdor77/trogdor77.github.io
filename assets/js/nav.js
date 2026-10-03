@@ -14,7 +14,7 @@
       name: "Mac",
       apps: [
         { name: "BudgetXP+ Desktop", blurb: "Personal finance for macOS", href: "/budgetxp/desktop/", icon: "/assets/images/icons/budgetxp-personal-finance.jpg" },
-        { name: "Scumble", blurb: "Painting app, coming soon", href: null, icon: null },
+        { name: "Scumble", blurb: "Painting app, coming soon", href: null, icon: "/assets/images/icons/scumble.png" },
       ],
     },
     {
