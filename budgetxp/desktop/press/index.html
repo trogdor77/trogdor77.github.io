@@ -85,6 +85,13 @@ section { display: grid; gap: 24px; }
 .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
 .feature p { color: var(--muted); font-size: 15.5px; }
 
+/* Screenshots (Mac windows, wide) */
+.shots { display: flex; gap: 22px; overflow-x: auto; padding-bottom: 14px; scroll-snap-type: x mandatory; }
+.shots figure { margin: 0; flex: 0 0 min(560px, 86%); scroll-snap-align: start; display: grid; gap: 10px; }
+.shots img { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 24px rgba(10, 40, 100, .22)); }
+.shots figcaption { font-size: 14px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+
 /* Copy blocks */
 .copyblocks { display: grid; gap: 16px; }
 .copy {
@@ -130,13 +137,13 @@ footer { color: var(--muted); font-size: 14px; }
   <header class="hero">
     <img src="/assets/images/budgetxp/icon-512.png" alt="BudgetXP+ app icon">
     <div>
-      <span class="label">Press kit <span class="todo">Pre-release</span></span>
+      <span class="label">Press kit</span>
       <h1>BudgetXP+ Desktop</h1>
       <p class="tagline">A native personal finance app for macOS: accounts, budgets, reconciliation, and reporting, synced automatically with BudgetXP+ on iPhone and iPad.</p>
       <div class="meta">
         <span class="label">macOS 15.6+</span>
-        <span class="label">Version 1.3</span>
-        <span class="label">Coming soon to the Mac App Store</span>
+        <span class="label">Version 1.0</span>
+        <a href="https://apps.apple.com/us/app/budgetxp-desktop/id6812885419?mt=12" class="label">View on the Mac App Store</a>
       </div>
     </div>
   </header>
@@ -155,6 +162,22 @@ footer { color: var(--muted); font-size: 14px; }
       <div class="feature"><h3>Menu bar companion</h3><p>A persistent menu bar icon showing current net worth, account balances, and recent transactions.</p></div>
       <div class="feature"><h3>Contact manager</h3><p>Store business contacts for your finances, such as a banker or accountant, right alongside your accounts.</p></div>
       <div class="feature"><h3>Private by design</h3><p>No BudgetXP+ servers and no account. Data syncs through the user's own iCloud with the companion iPhone and iPad app.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Statements</span>
+      <h2 id="shots-h">Screenshots</h2>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Full-resolution PNGs available on request.</p>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><img src="/assets/images/budgetxp/desktop/shot1.png" alt="Spending reports with a category donut chart and breakdown" width="1600" height="948" loading="lazy"><figcaption>Reports</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/shot2.png" alt="Monthly budgets with progress bars per category" width="1600" height="948" loading="lazy"><figcaption>Budgets</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/shot3.png" alt="Adding several transactions at once, including a split transaction" width="1600" height="948" loading="lazy"><figcaption>Fast entry and split transactions</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/shot4.png" alt="Recurring transactions with a Post All Due button" width="1600" height="948" loading="lazy"><figcaption>Recurring bills and income</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/shot5.png" alt="Editing a category and its monthly budget limit" width="1600" height="948" loading="lazy"><figcaption>Categories</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/shot6.png" alt="Contact manager listing vendors with website and username" width="1600" height="948" loading="lazy"><figcaption>Contacts</figcaption></figure>
     </div>
   </section>
 
@@ -183,9 +206,10 @@ footer { color: var(--muted); font-size: 14px; }
     <div class="facts">
       <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
       <div class="fact"><span class="label">Platform</span><span>Mac</span></div>
+      <div class="fact"><span class="label">Download</span><span><a href="https://apps.apple.com/us/app/budgetxp-desktop/id6812885419?mt=12">Mac App Store</a></span></div>
       <div class="fact"><span class="label">Requires</span><span>macOS 15.6 or later</span></div>
-      <div class="fact"><span class="label">Current version</span><span>1.3</span></div>
-      <div class="fact"><span class="label">Release date</span><span>TBD</span></div>
+      <div class="fact"><span class="label">Current version</span><span>1.0</span></div>
+      <div class="fact"><span class="label">Release date</span><span>October 5, 2026</span></div>
       <div class="fact"><span class="label">Price</span><span>Free download; BudgetXP+ Pro $12.99 one-time</span></div>
       <div class="fact"><span class="label">Free</span><span>Up to 3 accounts and 50 transactions, reconciliation, reports, CSV import/export</span></div>
       <div class="fact"><span class="label">Pro</span><span>Unlimited accounts and transactions, one-time purchase, no subscription</span></div>
@@ -201,7 +225,7 @@ footer { color: var(--muted); font-size: 14px; }
       <h2 id="contact-h">Press contact</h2>
     </div>
     <div class="contact">
-      <p>For interviews, early access, or assets ahead of launch:</p>
+      <p>For interviews, review codes for BudgetXP+ Pro, or full-resolution assets:</p>
       <p class="email">alex@rohrsoftware.dev</p>
       <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about bringing a twenty-year-old personal finance project natively to the Mac, and building a two-platform app as a solo developer.</p>
     </div>
