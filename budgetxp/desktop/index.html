@@ -37,6 +37,10 @@
   .shots figure { margin: 0; flex: 0 0 min(560px, 86%); scroll-snap-align: start; display: grid; gap: 10px; }
   .shots img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 10px 24px rgba(10, 40, 100, .18); }
 
+  .release { display: grid; gap: 8px; }
+  .release h3 { display: flex; align-items: baseline; gap: 12px; }
+  .release ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 16px; }
+
   .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
   .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
   .plan .amount { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
@@ -106,6 +110,22 @@
       <div class="feature"><h3>Fast entry</h3><p>Add several transactions at once in a spreadsheet-style grid, with autocomplete, bulk actions, and ATM-style currency entry.</p></div>
       <div class="feature"><h3>Contact manager</h3><p>Keep vendor and creditor details, such as a website, username, and password, right alongside your accounts.</p></div>
       <div class="feature"><h3>Also on iPhone &amp; iPad</h3><p><a href="/budgetxp/">BudgetXP+</a> is available separately for iPhone and iPad, syncing automatically over iCloud.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="new-h">
+    <div class="section-head">
+      <span class="label">What's new</span>
+      <h2 id="new-h">Latest update</h2>
+    </div>
+    <div class="release">
+      <h3>Version 1.6</h3>
+      <ul>
+        <li>Your net worth now appears right in the menu bar. One click opens a quick view of balances and recent transactions, and you can hide the number any time in Settings.</li>
+        <li>Reconciliation no longer shows "-$0.00" when your balances match exactly.</li>
+        <li>The CSV import window is taller, so the column mapping and the preview of your first rows both fit without scrolling.</li>
+        <li>Bug fixes and polish.</li>
+      </ul>
     </div>
   </section>
 
