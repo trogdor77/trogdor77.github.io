@@ -31,12 +31,11 @@
   .feature p { color: var(--muted); font-size: 15.5px; }
 
   .macshot { margin: 0; }
-  .macshot img { width: 100%; height: auto; display: block; filter: drop-shadow(0 18px 40px rgba(10, 40, 100, .28)); }
+  .macshot img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 18px 40px rgba(10, 40, 100, .22); }
 
   .shots { display: flex; gap: 22px; overflow-x: auto; padding-bottom: 14px; scroll-snap-type: x mandatory; }
   .shots figure { margin: 0; flex: 0 0 min(560px, 86%); scroll-snap-align: start; display: grid; gap: 10px; }
-  .shots img { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 24px rgba(10, 40, 100, .22)); }
-  .shots figcaption { font-size: 14px; color: var(--muted); }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 10px 24px rgba(10, 40, 100, .18); }
 
   .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
   .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
@@ -77,7 +76,7 @@
   </header>
 
   <figure class="macshot">
-    <img src="/assets/images/budgetxp/desktop/shot1.png" alt="BudgetXP+ Desktop spending reports with a category donut chart and breakdown, beside a sidebar of accounts and net worth" width="1600" height="948">
+    <img src="/assets/images/budgetxp/desktop/store/sync.jpg" alt="BudgetXP+ Desktop on a Mac with BudgetXP+ on an iPhone beside it, both showing the same accounts and net worth. Mac and iPhone, always in sync." width="1600" height="1000">
   </figure>
 
   <section aria-labelledby="story-h">
@@ -103,7 +102,7 @@
       <div class="feature"><h3>CSV import &amp; export</h3><p>Import any bank CSV export with smart column mapping, or export the current month to a properly formatted CSV.</p></div>
       <div class="feature"><h3>Split transactions</h3><p>Divide one transaction across multiple categories, with a live remaining balance as you split.</p></div>
       <div class="feature"><h3>Reports</h3><p>The same charts as iOS, sized for a wide desktop canvas, plus a 12-month net worth line chart.</p></div>
-      <div class="feature"><h3>Menu bar companion</h3><p>A persistent menu bar icon showing your current net worth, account balances, and recent transactions.</p></div>
+      <div class="feature"><h3>Menu bar companion</h3><p>Your net worth sits right in the menu bar, and one click opens a quick view of account balances and recent transactions. You can hide the number in Settings.</p></div>
       <div class="feature"><h3>Fast entry</h3><p>Add several transactions at once in a spreadsheet-style grid, with autocomplete, bulk actions, and ATM-style currency entry.</p></div>
       <div class="feature"><h3>Contact manager</h3><p>Keep vendor and creditor details, such as a website, username, and password, right alongside your accounts.</p></div>
       <div class="feature"><h3>Also on iPhone &amp; iPad</h3><p><a href="/budgetxp/">BudgetXP+</a> is available separately for iPhone and iPad, syncing automatically over iCloud.</p></div>
@@ -116,11 +115,14 @@
       <h2 id="shots-h">A look inside</h2>
     </div>
     <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
-      <figure><img src="/assets/images/budgetxp/desktop/shot2.png" alt="Monthly budgets with progress bars per category and total spent versus remaining" width="1600" height="948" loading="lazy"><figcaption>Budgets</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/desktop/shot3.png" alt="Adding several transactions at once in a grid, including one purchase split across two categories" width="1600" height="948" loading="lazy"><figcaption>Fast entry and split transactions</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/desktop/shot4.png" alt="Recurring transactions with a banner showing three due, and a Post All Due button" width="1600" height="948" loading="lazy"><figcaption>Recurring bills and income</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/desktop/shot5.png" alt="Editing a category and its monthly budget limit" width="1600" height="948" loading="lazy"><figcaption>Categories</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/desktop/shot6.png" alt="Contact manager listing vendors with website, username, and masked password" width="1600" height="948" loading="lazy"><figcaption>Contacts</figcaption></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/reports.jpg" alt="Spending reports with a category donut chart and breakdown. See where every dollar goes." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/split.jpg" alt="Adding a Costco purchase split across Food &amp; Dining, Housing, and Shopping, balanced to the penny. Split any purchase." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/budgets.jpg" alt="Monthly budgets with progress rings that shift from green to orange to red. Know where you stand." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/reconcile.jpg" alt="Reconciliation with a statement balance and a running difference of zero. Reconcile to the penny." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/menubar.jpg" alt="The menu bar companion showing net worth, account balances, and recent transactions. Net worth, one click away." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/recurring.jpg" alt="Recurring bills and paychecks waiting to be posted with one click. Bills on autopilot." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/appearance.jpg" alt="The same ledger split down the middle, half in dark mode and half in light mode. Light or dark, your choice." width="1600" height="1000" loading="lazy"></figure>
+      <figure><img src="/assets/images/budgetxp/desktop/store/csv.jpg" alt="The CSV import sheet with column mapping and a preview of the first rows. Import from any bank." width="1600" height="1000" loading="lazy"></figure>
     </div>
   </section>
 
