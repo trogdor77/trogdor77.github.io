@@ -95,8 +95,10 @@ section { display: grid; gap: 24px; }
   scroll-snap-type: x mandatory;
 }
 .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
-.shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); background: var(--surface); }
+.shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(10, 40, 100, .18); }
 .shots figcaption { font-size: 14px; color: var(--muted); }
+.shots.wide figure { flex: 0 0 min(560px, 86%); }
+.shots-label { margin: 22px 0 10px; }
 
 /* Copy blocks */
 .copyblocks { display: grid; gap: 16px; }
@@ -149,7 +151,7 @@ footer { color: var(--muted); font-size: 14px; }
       <p class="tagline">Personal finance for iPhone and iPad: track accounts, set budgets, and understand your spending, right in your pocket.</p>
       <div class="meta">
         <span class="label">iPhone &amp; iPad</span>
-        <span class="label">Version 1.3.0</span>
+        <span class="label">Version 1.6</span>
         <a href="https://apps.apple.com/us/app/budgetxp-personal-finance/id6802175358" class="label">View on the App Store</a>
       </div>
     </div>
@@ -193,14 +195,28 @@ footer { color: var(--muted); font-size: 14px; }
     <div class="section-head">
       <span class="label">Statements</span>
       <h2 id="shots-h">Screenshots</h2>
-      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Full-resolution PNGs available on request.</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Click any image to download the full-resolution PNG.</p>
     </div>
-    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
-      <figure><img src="/assets/images/budgetxp/shot1.jpg" alt="Accounts snapshot with budget progress bars and account balances" loading="lazy"><figcaption>Snapshot</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/shot2.jpg" alt="Main Checking account detail with transaction history" loading="lazy"><figcaption>Account detail</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/shot3.jpg" alt="Recurring rent and paycheck transactions" loading="lazy"><figcaption>Recurring</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/shot4.jpg" alt="Transactions list with search and account filters" loading="lazy"><figcaption>Transactions</figcaption></figure>
-      <figure><img src="/assets/images/budgetxp/shot5.jpg" alt="Spending by category donut chart with monthly breakdown" loading="lazy"><figcaption>Spending</figcaption></figure>
+    <p class="label shots-label">iPhone</p>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-snapshot.png" download><img src="/assets/images/budgetxp/store/iphone-snapshot.jpg" alt="Snapshot with account totals, this month's budgets, and balances. Your money, in your pocket." width="660" height="1434" loading="lazy"></a><figcaption>Snapshot</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-spending.png" download><img src="/assets/images/budgetxp/store/iphone-spending.jpg" alt="Spending by category donut chart with a week, month, and three month selector. See where every dollar goes." width="660" height="1434" loading="lazy"></a><figcaption>Spending</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-budgets.png" download><img src="/assets/images/budgetxp/store/iphone-budgets.jpg" alt="The edit screen for a category with a monthly budget limit. Set a limit for every category." width="660" height="1434" loading="lazy"></a><figcaption>Category budgets</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-receipt.png" download><img src="/assets/images/budgetxp/store/iphone-receipt.jpg" alt="Confirming a transaction filled in from a photographed receipt. Snap a receipt, skip the typing." width="660" height="1434" loading="lazy"></a><figcaption>Receipt capture</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-recurring.png" download><img src="/assets/images/budgetxp/store/iphone-recurring.jpg" alt="Main Checking with a Due Today card and a Post button for a paycheck. Bills and paychecks on autopilot." width="660" height="1434" loading="lazy"></a><figcaption>Recurring bills and income</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-sync.png" download><img src="/assets/images/budgetxp/store/iphone-sync.jpg" alt="BudgetXP+ on iPhone beside BudgetXP+ Desktop on a Mac, showing the same accounts. iPhone and Mac, always in sync." width="660" height="1434" loading="lazy"></a><figcaption>iPhone and Mac in sync</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-private.png" download><img src="/assets/images/budgetxp/store/iphone-private.jpg" alt="Settings with App Lock turned on and iCloud Sync active. Private by design, locked by you." width="660" height="1434" loading="lazy"></a><figcaption>App Lock and privacy</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/iphone-appearance.png" download><img src="/assets/images/budgetxp/store/iphone-appearance.jpg" alt="The same account screen split down the middle, half in dark mode and half in light mode. Made for light and dark." width="660" height="1434" loading="lazy"></a><figcaption>Light and dark mode</figcaption></figure>
+    </div>
+    <p class="label shots-label">iPad</p>
+    <div class="shots wide" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-split.png" download><img src="/assets/images/budgetxp/store/ipad-split.jpg" alt="BudgetXP+ on iPad with an account sidebar, the Main Checking ledger, and this month's budgets. Your money, on the big screen." width="1600" height="1200" loading="lazy"></a><figcaption>Split view</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-spending.png" download><img src="/assets/images/budgetxp/store/ipad-spending.jpg" alt="Spending by category on iPad with a donut chart and a ranked breakdown. See where every dollar goes." width="1600" height="1200" loading="lazy"></a><figcaption>Spending</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-transactions.png" download><img src="/assets/images/budgetxp/store/ipad-transactions.jpg" alt="Transactions on iPad with search, account filter chips, and a Due Today block. Find anything instantly." width="1600" height="1200" loading="lazy"></a><figcaption>Transactions</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-recurring.png" download><img src="/assets/images/budgetxp/store/ipad-recurring.jpg" alt="iPad sidebar badge showing two items due, and a Due Today card with Post buttons. Bills and paychecks on autopilot." width="1600" height="1200" loading="lazy"></a><figcaption>Recurring bills and income</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-sync.png" download><img src="/assets/images/budgetxp/store/ipad-sync.jpg" alt="BudgetXP+ on iPad beside BudgetXP+ Desktop on a Mac. iPad and Mac, always in sync." width="1600" height="1200" loading="lazy"></a><figcaption>iPad and Mac in sync</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-private.png" download><img src="/assets/images/budgetxp/store/ipad-private.jpg" alt="iPad Settings with App Lock on and iCloud Sync active. Private by design, locked by you." width="1600" height="1200" loading="lazy"></a><figcaption>App Lock and privacy</figcaption></figure>
+      <figure><a href="/assets/images/budgetxp/store/full/ipad-appearance.png" download><img src="/assets/images/budgetxp/store/ipad-appearance.jpg" alt="The iPad account screen split between dark mode and light mode. Made for light and dark." width="1600" height="1200" loading="lazy"></a><figcaption>Light and dark mode</figcaption></figure>
     </div>
   </section>
 
@@ -230,7 +246,7 @@ footer { color: var(--muted); font-size: 14px; }
       <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
       <div class="fact"><span class="label">Platforms</span><span>iPhone and iPad</span></div>
       <div class="fact"><span class="label">Requires</span><span>iOS 17.5 and iPadOS 17.5 or later</span></div>
-      <div class="fact"><span class="label">Current version</span><span>1.3.0</span></div>
+      <div class="fact"><span class="label">Current version</span><span>1.6</span></div>
       <div class="fact"><span class="label">Release date</span><span>August 26, 2026</span></div>
       <div class="fact"><span class="label">Price</span><span>Free download; BudgetXP+ Pro $1.99 one-time</span></div>
       <div class="fact"><span class="label">Free</span><span>Up to 3 accounts and 50 transactions, budgets, recurring bills, reports, CSV export</span></div>
