@@ -118,7 +118,9 @@ section { display: grid; gap: 24px; }
   scroll-snap-type: x mandatory;
 }
 .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
-.shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); background: var(--surface); }
+.shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(10, 40, 100, .18); }
+.shots.wide figure { flex: 0 0 min(560px, 86%); }
+.shots-label { margin: 22px 0 10px; }
 .shots figcaption { font-size: 14px; color: var(--muted); }
 
 /* Copy blocks */
@@ -228,16 +230,30 @@ footer { color: var(--muted); font-size: 14px; }
     <div class="section-head">
       <span class="label">Imaging</span>
       <h2 id="shots-h">Screenshots</h2>
-      <p class="lock-caption">Full-resolution PNGs (1260 × 2736) available on request.</p>
+      <p class="lock-caption">Click any image to download the full-resolution PNG.</p>
     </div>
-    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
-      <figure><img src="/assets/images/meduo/shot1.jpg" alt="Dashboard with today's medications and upcoming appointments" loading="lazy"><figcaption>Dashboard</figcaption></figure>
-      <figure><img src="/assets/images/meduo/shot2.jpg" alt="Medication list grouped by maintenance and acute" loading="lazy"><figcaption>Medications</figcaption></figure>
-      <figure><img src="/assets/images/meduo/shot3.jpg" alt="Red blood cell trend chart with reference range" loading="lazy"><figcaption>Lab trends</figcaption></figure>
-      <figure><img src="/assets/images/meduo/shot4.jpg" alt="Lab results flagged as high, low, or normal" loading="lazy"><figcaption>Lab results</figcaption></figure>
-      <figure><img src="/assets/images/meduo/shot5.jpg" alt="Appointments list with an upcoming physical therapy visit" loading="lazy"><figcaption>Appointments</figcaption></figure>
-      <figure><img src="/assets/images/meduo/shot7.jpg" alt="Editing an appointment with provider, date, and conflicting calendar events" loading="lazy"><figcaption>Scheduling</figcaption></figure>
-      <figure><img src="/assets/images/meduo/shot6.jpg" alt="Onboarding screen: Manage care for your entire family" loading="lazy"><figcaption>Onboarding</figcaption></figure>
+    <p class="label shots-label">iPhone</p>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><a href="/assets/images/meduo/store/full/iphone-dashboard.png" download><img src="/assets/images/meduo/store/iphone-dashboard.jpg" alt="Meduo dashboard with a switcher for four family members, today's medications, and upcoming appointments" width="660" height="1434" loading="lazy"></a><figcaption>Family dashboard</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-lockscreen.png" download><img src="/assets/images/meduo/store/iphone-lockscreen.jpg" alt="A Lock Screen reminder that names the person the dose is for, above a Medical ID card" width="660" height="1434" loading="lazy"></a><figcaption>Reminders</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-medications.png" download><img src="/assets/images/meduo/store/iphone-medications.jpg" alt="The medication list for one person, with doses, prescribers, pharmacies, and refill dates" width="660" height="1434" loading="lazy"></a><figcaption>Medications</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-conflict.png" download><img src="/assets/images/meduo/store/iphone-conflict.jpg" alt="A new appointment form listing everything else scheduled that day, with a warning icon" width="660" height="1434" loading="lazy"></a><figcaption>Conflicts</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-journal.png" download><img src="/assets/images/meduo/store/iphone-journal.jpg" alt="A list of journals for symptoms, sleep, exercise, and mood, with entry counts" width="660" height="1434" loading="lazy"></a><figcaption>Health journal</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-vitals.png" download><img src="/assets/images/meduo/store/iphone-vitals.jpg" alt="A blood pressure trend chart over 90 days with the list of readings behind it" width="660" height="1434" loading="lazy"></a><figcaption>Vitals</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-pdf.png" download><img src="/assets/images/meduo/store/iphone-pdf.jpg" alt="A health summary PDF opened on iPhone, with the emergency contact and active medications" width="660" height="1434" loading="lazy"></a><figcaption>PDF summary</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-appearance.png" download><img src="/assets/images/meduo/store/iphone-appearance.jpg" alt="The dashboard split down the middle, half in dark mode and half in light mode" width="660" height="1434" loading="lazy"></a><figcaption>Light and dark</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-widgets.png" download><img src="/assets/images/meduo/store/iphone-widgets.jpg" alt="Two Home Screen widgets: upcoming medications and appointments, and a Medical ID card" width="660" height="1434" loading="lazy"></a><figcaption>Widgets</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/iphone-private.png" download><img src="/assets/images/meduo/store/iphone-private.jpg" alt="The Meduo lock screen asking to unlock with Face ID" width="660" height="1434" loading="lazy"></a><figcaption>App Lock</figcaption></figure>
+    </div>
+    <p class="label shots-label">iPad</p>
+    <div class="shots wide" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><a href="/assets/images/meduo/store/full/ipad-dashboard.png" download><img src="/assets/images/meduo/store/ipad-dashboard.jpg" alt="Meduo on iPad with a sidebar of four family members beside the dashboard" width="1600" height="1200" loading="lazy"></a><figcaption>Family dashboard</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/ipad-medications.png" download><img src="/assets/images/meduo/store/ipad-medications.jpg" alt="Six medications for one person in a wide list with doses, prescribers, and refill dates" width="1600" height="1200" loading="lazy"></a><figcaption>Medications</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/ipad-conflict.png" download><img src="/assets/images/meduo/store/ipad-conflict.jpg" alt="Editing an appointment on iPad with another visit listed under That Day" width="1600" height="1200" loading="lazy"></a><figcaption>Conflicts</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/ipad-journal.png" download><img src="/assets/images/meduo/store/ipad-journal.jpg" alt="A journal with three dated entries and pattern statistics" width="1600" height="1200" loading="lazy"></a><figcaption>Health journal</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/ipad-clinical.png" download><img src="/assets/images/meduo/store/ipad-clinical.jpg" alt="Allergies, vitals, surgeries, and lab results for one person on iPad" width="1600" height="1200" loading="lazy"></a><figcaption>Clinical record</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/ipad-vitals.png" download><img src="/assets/images/meduo/store/ipad-vitals.jpg" alt="A blood pressure trend chart and the full list of readings on iPad" width="1600" height="1200" loading="lazy"></a><figcaption>Vitals</figcaption></figure>
+      <figure><a href="/assets/images/meduo/store/full/ipad-pdf.png" download><img src="/assets/images/meduo/store/ipad-pdf.jpg" alt="The Clinical screen beside the exported health summary PDF on iPad" width="1600" height="1200" loading="lazy"></a><figcaption>PDF summary</figcaption></figure>
     </div>
   </section>
 
