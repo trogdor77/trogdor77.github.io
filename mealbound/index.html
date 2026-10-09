@@ -18,13 +18,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
-  :root { --accent: #0a68e8; --accent-soft: #e4edfc; }
-  @media (prefers-color-scheme: dark) { :root { --accent: #6fb4ff; --accent-soft: #17284a; } }
+  :root { --accent: #0b7a57; --accent-soft: #dff3ea; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #5fd3a0; --accent-soft: #12332a; } }
 
   .hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
   .hero .text { display: grid; gap: 16px; justify-items: start; }
-  .hero .appicon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(10, 104, 232, .25); }
-  .hero .phone { justify-self: center; width: min(300px, 100%); border-radius: 36px; border: 1px solid var(--rule); }
+  .hero .appicon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(14, 144, 105, .28); }
+  .hero .phone { justify-self: center; width: min(300px, 100%); height: auto; border-radius: 16px; box-shadow: 0 10px 24px rgba(8, 70, 50, .18); }
   .price { font-size: 15px; color: var(--muted); }
   @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .phone { width: min(260px, 80%); } }
 
@@ -34,8 +34,12 @@
 
   .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
   .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; }
-  .shots img { width: 100%; border-radius: 22px; border: 1px solid var(--rule); }
-  .shots figcaption { font-size: 14px; color: var(--muted); }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(8, 70, 50, .18); }
+  .shots.wide figure { flex: 0 0 min(560px, 86%); }
+
+  .release { display: grid; gap: 8px; }
+  .release h3 { display: flex; align-items: baseline; gap: 12px; }
+  .release ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 16px; }
 
   .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
   .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
@@ -65,13 +69,13 @@
     <div class="text">
       <img class="appicon" src="/assets/images/mealbound/icon-512.png" alt="MealBound app icon">
       <h1>MealBound</h1>
-      <p class="lede">Your complete home meal planning companion. Build your recipe collection, plan the week ahead, and generate smart grocery lists.</p>
+      <p class="lede">Your complete home meal planning companion. Build your recipe collection, plan the week ahead, cook step by step, and shop by aisle.</p>
       <div class="actions">
         <a class="btn" href="https://apps.apple.com/us/app/mealbound/id6813143038">Download on the App Store</a>
       </div>
-      <p class="price">Free to download · MealBound Pro $4.99 one-time · iPhone and iPad</p>
+      <p class="price">Free to download · MealBound Pro $4.99 one-time · iPhone, iPad, and Apple Watch</p>
     </div>
-    <img class="phone" src="/assets/images/mealbound/shot1.jpg" alt="MealBound weekly planner with breakfast, lunch, and dinner filled in for each day">
+    <img class="phone" src="/assets/images/mealbound/store/iphone-autoplan.jpg" alt="Week Planned alert over the weekly planner after Auto-Plan filled 19 meals. Plan a week in one tap." width="660" height="1434">
   </header>
 
   <section aria-labelledby="story-h">
@@ -97,8 +101,16 @@
       <div class="feature"><h3>Discover recipes</h3><p>Search recipes from online recipe databases, with nutrition, dietary tags, and serving size, and add any of them to your library in one tap.</p></div>
       <div class="feature"><h3>Weekly meal planner</h3><p>Map out breakfast, lunch, dinner, snacks, and desserts on a scrollable day-by-day canvas.</p></div>
       <div class="feature"><h3>Auto-Plan</h3><p>Fill your entire week in one tap, respecting no-repeat windows, busy-slot preferences, and weekend-only recipes.</p></div>
+      <div class="feature"><h3>Copy last week</h3><p>Repeat last week's plan on the week you are looking at. Only empty slots are filled, so nothing you planned gets replaced.</p></div>
+      <div class="feature"><h3>Leftovers night</h3><p>Mark a meal as leftovers, with suggestions from the last two nights, or pick a night for Auto-Plan to leave open. Leftovers add nothing to your grocery list.</p></div>
+      <div class="feature"><h3>Cook Mode</h3><p>Cook one big step at a time with the screen kept awake. Times in a step, like "simmer 20 minutes", become one-tap timers that alert you even if the app is in the background.</p></div>
       <div class="feature"><h3>Smart grocery lists</h3><p>Generate a shopping list from your meal plan with ingredients merged and deduplicated, split automatically by your shopping days.</p></div>
+      <div class="feature"><h3>Shop by aisle</h3><p>Lists group into store sections like Produce, Dairy, and Pantry, in the order you walk the store. Change any item's aisle yourself.</p></div>
+      <div class="feature"><h3>Pantry staples</h3><p>Salt, oil, and other things you always have stay off generated lists. Edit the list in Settings, or swipe an item to say you always have it.</p></div>
       <div class="feature"><h3>Voice and quick-add</h3><p>Add grocery items by speaking or with one-tap quick-add chips for common items.</p></div>
+      <div class="feature"><h3>Meal reminders</h3><p>Get a note with tonight's dinner, and a heads-up the evening before listing tomorrow's meals, so there is time to thaw or prep.</p></div>
+      <div class="feature"><h3>Ask Siri</h3><p>Say "What's for dinner in MealBound?" to hear tonight's plan, or ask about tomorrow, without opening the app.</p></div>
+      <div class="feature"><h3>Apple Watch</h3><p>See the next few days of meals and check items off your grocery list from your wrist. Checks sync back to your iPhone.</p></div>
       <div class="feature"><h3>Export and share</h3><p>Send a grocery list to Reminders so you can check it off while shopping, share it by AirDrop or Messages, or print a weekly meal plan for the fridge.</p></div>
       <div class="feature"><h3>Home Screen widget</h3><p>See today's and tomorrow's meals at a glance without opening the app.</p></div>
     </div>
@@ -110,23 +122,65 @@
       <h2 id="priv-h">Your recipes stay yours</h2>
     </div>
     <div class="prose">
-      <p>MealBound has no account to create and no servers of its own. Your recipes, meal plan, and grocery lists are stored on your device and sync through your own iCloud, so they're available on your iPhone and iPad. MealBound never sees them.</p>
+      <p>MealBound has no account to create and no servers of its own. Your recipes, meal plan, and grocery lists are stored on your device and sync through your own iCloud, so they're available on your iPhone and iPad. MealBound never sees them. Reminders and timers are scheduled on your device, and your Apple Watch gets its information straight from your iPhone.</p>
       <p>Searching Discover or importing from a web address sends only your search terms or that address to find the recipe. MealBound works fully offline otherwise.</p>
       <p><a href="/mealbound/privacy/">Read the privacy policy</a></p>
     </div>
   </section>
 
+  <section aria-labelledby="new-h">
+    <div class="section-head">
+      <span class="label">What's new</span>
+      <h2 id="new-h">Latest update</h2>
+    </div>
+    <div class="release">
+      <h3>Version 2.1</h3>
+      <ul>
+        <li>Cook Mode: cook one big step at a time with the screen kept awake, and start timers for the times written in a recipe.</li>
+        <li>Shop by aisle: grocery lists now group into store sections, and you can change any item's aisle.</li>
+        <li>Pantry staples: salt, oil, and other things you always have stay off generated grocery lists. Edit the list in Settings.</li>
+        <li>Meal reminders: tonight's dinner, and a note the evening before about tomorrow's meals.</li>
+        <li>Copy Last Week, plus leftovers meals and a leftovers night for Auto-Plan.</li>
+        <li>Ask Siri "What's for dinner in MealBound?"</li>
+        <li>New Apple Watch app with your meal plan and a grocery list you can check off.</li>
+        <li>A new app icon, and the widget now shows it.</li>
+        <li>Fixed "Last cooked" counting meals that were only planned for later.</li>
+      </ul>
+    </div>
+  </section>
+
   <section aria-labelledby="shots-h">
     <div class="section-head">
-      <span class="label">Screens</span>
+      <span class="label">On iPhone</span>
       <h2 id="shots-h">A look inside</h2>
     </div>
-    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
-      <figure><img src="/assets/images/mealbound/shot1.jpg" alt="Weekly planner with breakfast, lunch, and dinner filled in for each day" loading="lazy"><figcaption>Planner</figcaption></figure>
-      <figure><img src="/assets/images/mealbound/shot2.jpg" alt="Recipe library filtered by dinner with star ratings" loading="lazy"><figcaption>Recipes</figcaption></figure>
-      <figure><img src="/assets/images/mealbound/shot3.jpg" alt="Discover Recipes search results for chicken" loading="lazy"><figcaption>Discover</figcaption></figure>
-      <figure><img src="/assets/images/mealbound/shot4.jpg" alt="Recipe detail with photo, tag, and ingredient list" loading="lazy"><figcaption>Recipe detail</figcaption></figure>
-      <figure><img src="/assets/images/mealbound/shot5.jpg" alt="Grocery list with checked-off collected items" loading="lazy"><figcaption>Grocery list</figcaption></figure>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><img src="/assets/images/mealbound/store/iphone-autoplan.jpg" alt="Week Planned alert over the weekly planner after Auto-Plan filled 19 meals. Plan a week in one tap." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-planner.jpg" alt="The weekly planner with a meal and photo for breakfast, lunch, and dinner each day, including a leftovers night. Plan your week." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-recipes.jpg" alt="A recipe with a large photo, prep and cook times, servings, rating, and ingredients. Every recipe, all in one place." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-cook.jpg" alt="Cook Mode showing one recipe step in large type with a Start timer button. Cook one step at a time." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-timers.jpg" alt="Cook Mode with a running 34:51 countdown timer and a second timer ready to start. Timers start with a tap." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-aisles.jpg" alt="A grocery list grouped by aisle with Produce, Bakery, and Meat and Seafood sections. Shop by aisle." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-leftovers.jpg" alt="Choosing a meal slot with Leftovers options suggested from recent dinners. Leftovers night, built in." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-reminders.jpg" alt="A notification banner reading Tonight's dinner, Chicken Tacos is on the menu, over the planner. Dinner, remembered." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-widget.jpg" alt="The MealBound Home Screen widget showing today's breakfast, lunch, and dinner. Dinner at a glance." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-siri.jpg" alt="Siri showing the answer Tonight you're having Chicken Tacos. Just ask Siri." width="660" height="1434" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/iphone-watch.jpg" alt="A grocery list on iPhone with the same list open on Apple Watch. Check it off from your wrist." width="660" height="1434" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="ipad-h">
+    <div class="section-head">
+      <span class="label">On iPad</span>
+      <h2 id="ipad-h">Room to spread out</h2>
+    </div>
+    <div class="shots wide" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><img src="/assets/images/mealbound/store/ipad-autoplan.jpg" alt="Auto-Plan on iPad with the Week Planned alert over a filled week with photos. Plan a week in one tap." width="1600" height="1200" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/ipad-planner.jpg" alt="The iPad planner showing several days of meals with photos. Plan your week at a glance." width="1600" height="1200" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/ipad-recipes.jpg" alt="A recipe on iPad with ingredients on the left and numbered steps on the right. Recipes, with room to breathe." width="1600" height="1200" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/ipad-cook.jpg" alt="Cook Mode on iPad with a running timer and large step text. Cook with confidence." width="1600" height="1200" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/ipad-aisles.jpg" alt="The grocery list on iPad grouped by aisle. Shop by aisle." width="1600" height="1200" loading="lazy"></figure>
+      <figure><img src="/assets/images/mealbound/store/ipad-leftovers.jpg" alt="The meal picker on iPad with Leftovers options. Leftovers night, built in." width="1600" height="1200" loading="lazy"></figure>
     </div>
   </section>
 
@@ -143,8 +197,9 @@
         <ul class="incl">
           <li>Up to 20 recipes</li>
           <li>Weekly meal planner</li>
-          <li>Grocery lists with voice input</li>
-          <li>iCloud sync and Home Screen widget</li>
+          <li>Grocery lists by aisle, with voice input</li>
+          <li>Cook Mode, meal reminders, and Siri</li>
+          <li>iCloud sync, widget, and Apple Watch</li>
         </ul>
       </div>
       <div class="plan pro">
