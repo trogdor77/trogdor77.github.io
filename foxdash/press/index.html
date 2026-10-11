@@ -81,7 +81,7 @@ section { display: grid; gap: 24px; }
 .story-text { display: grid; gap: 16px; max-width: 62ch; }
 .story-text p:first-child { font-size: 21px; line-height: 1.5; }
 .byline { color: var(--muted); font-style: italic; }
-.story-shot { border-radius: 16px; border: 1px solid var(--rule); width: 100%; }
+.story-shot { border-radius: 16px; box-shadow: 0 10px 24px rgba(40, 20, 4, .22); width: 100%; height: auto; }
 @media (max-width: 760px) { .story { grid-template-columns: 1fr; } }
 
 /* World grid */
@@ -100,8 +100,9 @@ section { display: grid; gap: 24px; }
   display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px;
   scroll-snap-type: x mandatory;
 }
-.shots figure { margin: 0; flex: 0 0 300px; scroll-snap-align: start; display: grid; gap: 8px; }
-.shots img { width: 100%; border-radius: 16px; border: 1px solid var(--rule); background: var(--surface); }
+.shots figure { margin: 0; flex: 0 0 min(520px, 86%); scroll-snap-align: start; display: grid; gap: 8px; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(40, 20, 4, .22); }
+.shots a { display: block; }
 .shots figcaption { font-size: 14px; color: var(--muted); }
 
 /* Copy blocks */
@@ -155,7 +156,7 @@ footer { color: var(--muted); font-size: 14px; }
       <p class="tagline">A fast-paced endless runner across 10 beautifully crafted worlds, each packed with unique obstacles and characters to unlock.</p>
       <div class="meta">
         <span class="label">iPhone &amp; iPad</span>
-        <span class="label">Version 1.0</span>
+        <span class="label">Version 2.5</span>
         <a href="https://apps.apple.com/us/app/fox-dash-wild-adventures/id6808320477" class="label">View on the App Store</a>
       </div>
     </div>
@@ -173,7 +174,7 @@ footer { color: var(--muted); font-size: 14px; }
         <p>It was a fun project to build with her, and we wanted to share it with the world.</p>
         <p class="byline">Alexander Rohr, founder and developer</p>
       </div>
-      <img class="story-shot" src="/assets/images/foxdash/shot3.jpg" alt="Character picker with the fox selected and other animals to unlock">
+      <img class="story-shot" src="/assets/images/foxdash/store/iphone-characters.jpg" alt="The character picker showing a sea otter, arctic fox, penguin, polar bear, stegosaurus, and brachiosaurus." width="1200" height="552">
     </div>
   </section>
 
@@ -202,9 +203,9 @@ footer { color: var(--muted); font-size: 14px; }
       <h2 id="feat-h">What it does</h2>
     </div>
     <div class="features">
-      <div class="feature"><h3>One-tap controls</h3><p>Tap to jump, double tap to double jump. Timing and knowing each world's obstacles separate a good run from a great one.</p></div>
-      <div class="feature"><h3>30+ characters</h3><p>Play as a fox, raccoon, bear, penguin, husky, T-Rex, and many more, each unlocked by reaching score milestones.</p></div>
-      <div class="feature"><h3>Legendary dragons</h3><p>The rarest characters in the game. Earn enough points to unlock the Royal Dragon, Ice Dragon, Storm Dragon, Lava Dragon, Shadow Dragon, and more.</p></div>
+      <div class="feature"><h3>One-tap controls</h3><p>Tap to jump, with a twist in every world: dive in the ocean, duck on the ice, fly with a fire button in Fantasy, or double jump in the park.</p></div>
+      <div class="feature"><h3>37 characters</h3><p>Play as a fox, raccoon, bear, penguin, husky, T-Rex, and many more, each unlocked by reaching score milestones.</p></div>
+      <div class="feature"><h3>Legendary dragons</h3><p>Eight dragons that glide and roar, unlocked with earned points. The Crystal Dragon is also sold in the Store.</p></div>
       <div class="feature"><h3>Daily challenges</h3><p>New missions every day, earning star points toward characters without spending a dime.</p></div>
       <div class="feature"><h3>Game Center</h3><p>Leaderboards for every world, plus achievements to hunt down.</p></div>
       <div class="feature"><h3>No ads, no tracking</h3><p>A one-time purchase, no account, no analytics, and no third-party tracking.</p></div>
@@ -215,14 +216,30 @@ footer { color: var(--muted); font-size: 14px; }
     <div class="section-head">
       <span class="label">Screens</span>
       <h2 id="shots-h">Screenshots</h2>
-      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Full-resolution PNGs available on request.</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Click any image to download the full-resolution PNG.</p>
     </div>
-    <div class="shots" tabindex="0" aria-label="Game screenshots, scroll sideways">
-      <figure><img src="/assets/images/foxdash/shot1.jpg" alt="Main menu with the fox character in the forest world" loading="lazy"><figcaption>Forest world</figcaption></figure>
-      <figure><img src="/assets/images/foxdash/shot2.jpg" alt="World selection screen showing all 10 worlds" loading="lazy"><figcaption>Select World</figcaption></figure>
-      <figure><img src="/assets/images/foxdash/shot3.jpg" alt="Character picker with the fox selected and other animals to unlock" loading="lazy"><figcaption>Choose Your Runner</figcaption></figure>
-      <figure><img src="/assets/images/foxdash/shot4.jpg" alt="Space Dash gameplay with the fox in a spacesuit" loading="lazy"><figcaption>Space world</figcaption></figure>
-      <figure><img src="/assets/images/foxdash/shot5.jpg" alt="Raccoon character unlocked celebration after a run" loading="lazy"><figcaption>Unlocking characters</figcaption></figure>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><a href="/assets/images/foxdash/store/full/iphone-run-dive-fly.png" download><img src="/assets/images/foxdash/store/iphone-run-dive-fly.jpg" alt="Desert run with the fox jumping over a cobra. Run, dive, and fly across ten worlds." width="1200" height="552" loading="lazy"></a><figcaption>Run, dive, and fly</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-worlds.png" download><img src="/assets/images/foxdash/store/iphone-worlds.jpg" alt="The world picker showing all ten worlds, from Forest to Fantasy." width="1200" height="552" loading="lazy"></a><figcaption>Ten unique worlds</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-ocean.png" download><img src="/assets/images/foxdash/store/iphone-ocean.jpg" alt="The fox in a bubble diving past fish and a jellyfish in the Ocean world." width="1200" height="552" loading="lazy"></a><figcaption>Dive beneath the waves</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-space.png" download><img src="/assets/images/foxdash/store/iphone-space.jpg" alt="The fox in a spacesuit dodging asteroids in the Space world." width="1200" height="552" loading="lazy"></a><figcaption>Blast through space</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-arctic.png" download><img src="/assets/images/foxdash/store/iphone-arctic.jpg" alt="The fox running past a snowman under the northern lights in the Arctic world." width="1200" height="552" loading="lazy"></a><figcaption>Race across the ice</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-characters.png" download><img src="/assets/images/foxdash/store/iphone-characters.jpg" alt="The character picker showing a sea otter, arctic fox, penguin, polar bear, stegosaurus, and brachiosaurus." width="1200" height="552" loading="lazy"></a><figcaption>Collect 30+ characters</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-dragons.png" download><img src="/assets/images/foxdash/store/iphone-dragons.jpg" alt="The character picker showing six legendary dragons." width="1200" height="552" loading="lazy"></a><figcaption>Legendary dragons</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-fantasy.png" download><img src="/assets/images/foxdash/store/iphone-fantasy.jpg" alt="A dragon flying over purple mountains with a fire button in the Fantasy world." width="1200" height="552" loading="lazy"></a><figcaption>Breathe fire in Fantasy</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-challenges.png" download><img src="/assets/images/foxdash/store/iphone-challenges.jpg" alt="The Today's Challenges panel with easy, medium, and hard missions." width="1200" height="552" loading="lazy"></a><figcaption>New challenges every day</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/iphone-rooftops.png" download><img src="/assets/images/foxdash/store/iphone-rooftops.jpg" alt="A dragon running across city rooftops at night." width="1200" height="552" loading="lazy"></a><figcaption>Rooftops</figcaption></figure>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><a href="/assets/images/foxdash/store/full/ipad-run-dive-fly.png" download><img src="/assets/images/foxdash/store/ipad-run-dive-fly.jpg" alt="Desert run on iPad with a dragon." width="1200" height="900" loading="lazy"></a><figcaption>Run, dive, and fly</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-worlds.png" download><img src="/assets/images/foxdash/store/ipad-worlds.jpg" alt="The world picker on iPad." width="1200" height="900" loading="lazy"></a><figcaption>Ten unique worlds</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-ocean.png" download><img src="/assets/images/foxdash/store/ipad-ocean.jpg" alt="An orca and fish in the Ocean world on iPad." width="1200" height="900" loading="lazy"></a><figcaption>Dive beneath the waves</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-space.png" download><img src="/assets/images/foxdash/store/ipad-space.jpg" alt="Astronaut fox dodging asteroids in space on iPad." width="1200" height="900" loading="lazy"></a><figcaption>Blast through space</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-arctic.png" download><img src="/assets/images/foxdash/store/ipad-arctic.jpg" alt="The fox and a snowman under the aurora on iPad." width="1200" height="900" loading="lazy"></a><figcaption>Race across the ice</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-characters.png" download><img src="/assets/images/foxdash/store/ipad-characters.jpg" alt="The character picker on iPad showing six animals." width="1200" height="900" loading="lazy"></a><figcaption>Collect 30+ characters</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-dragons.png" download><img src="/assets/images/foxdash/store/ipad-dragons.jpg" alt="The character picker on iPad showing six dragons." width="1200" height="900" loading="lazy"></a><figcaption>Legendary dragons</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-fantasy.png" download><img src="/assets/images/foxdash/store/ipad-fantasy.jpg" alt="A dragon flying in the Fantasy world on iPad." width="1200" height="900" loading="lazy"></a><figcaption>Breathe fire in Fantasy</figcaption></figure>
+      <figure><a href="/assets/images/foxdash/store/full/ipad-challenges.png" download><img src="/assets/images/foxdash/store/ipad-challenges.jpg" alt="The challenges panel on iPad." width="1200" height="900" loading="lazy"></a><figcaption>New challenges every day</figcaption></figure>
     </div>
   </section>
 
@@ -251,12 +268,12 @@ footer { color: var(--muted); font-size: 14px; }
     <div class="facts">
       <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
       <div class="fact"><span class="label">Platforms</span><span>iPhone and iPad</span></div>
-      <div class="fact"><span class="label">Requires</span><span>iOS 26.5 and iPadOS 26.5 or later</span></div>
-      <div class="fact"><span class="label">Current version</span><span>1.0</span></div>
-      <div class="fact"><span class="label">Release date</span><span>September 20, 2026</span></div>
+      <div class="fact"><span class="label">Requires</span><span>iOS 17.0 and iPadOS 17.0 or later</span></div>
+      <div class="fact"><span class="label">Current version</span><span>2.5</span></div>
+      <div class="fact"><span class="label">First released</span><span>September 20, 2026</span></div>
       <div class="fact"><span class="label">Price</span><span>$1.99</span></div>
       <div class="fact"><span class="label">In-app purchases</span><span>Crystal Dragon character, point bundles</span></div>
-      <div class="fact"><span class="label">Worlds</span><span>10, with 30+ unlockable characters</span></div>
+      <div class="fact"><span class="label">Worlds</span><span>10, with 37 unlockable characters including 8 dragons</span></div>
       <div class="fact"><span class="label">Privacy</span><span>No account, no ads, no third-party tracking</span></div>
       <div class="fact"><span class="label">Built with</span><span>SpriteKit, Game Center, StoreKit 2</span></div>
     </div>
