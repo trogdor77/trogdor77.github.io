@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scumble Press Kit · Rohr Software</title>
+<meta name="description" content="Press kit for Scumble, a layered image editor for macOS.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column, in the violet of the Scumble icon. */
+:root {
+  --bg: #f7f5ff;
+  --surface: #ffffff;
+  --ink: #1a1433;
+  --muted: #5f5878;
+  --rule: #e1dcf3;
+  --accent: #5b45e6;
+  --accent-soft: #ece8ff;
+  --alert: #d4362f;
+  --todo-bg: #fff3c4;
+  --todo-fg: #6b4e00;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0c1f; --surface: #181330; --ink: #eeeaff; --muted: #a79fc4; --rule: #2b2450;
+    --accent: #a99bff; --accent-soft: #231d4d; --alert: #ff6b61;
+    --todo-bg: #3d3210; --todo-fg: #ffdf80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0c1f; --surface: #181330; --ink: #eeeaff; --muted: #a79fc4; --rule: #2b2450;
+  --accent: #a99bff; --accent-soft: #231d4d; --alert: #ff6b61;
+  --todo-bg: #3d3210; --todo-fg: #ffdf80;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding: 0 20px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+.todo {
+  background: var(--todo-bg); color: var(--todo-fg);
+  padding: 1px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: .85em;
+}
+section { display: grid; gap: 24px; }
+.section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(91, 69, 230, .28); }
+.hero h1 { font-size: clamp(40px, 7vw, 64px); font-weight: 800; letter-spacing: -.03em; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin-top: 6px; max-width: 36ch; }
+.hero .meta { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; gap: 18px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+}
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+.feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature p { color: var(--muted); font-size: 15.5px; }
+
+/* Screenshots (Mac windows, wide) */
+.shots { display: flex; gap: 22px; overflow-x: auto; padding-bottom: 14px; scroll-snap-type: x mandatory; }
+.shots figure { margin: 0; flex: 0 0 min(560px, 86%); scroll-snap-align: start; display: grid; gap: 10px; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 10px 24px rgba(40, 20, 100, .2); }
+.shots figure a { display: block; border-radius: 14px; }
+.shots figcaption { font-size: 14px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+
+/* Copy blocks */
+.copyblocks { display: grid; gap: 16px; }
+.copy {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; display: grid; gap: 10px;
+}
+.copy-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.copy p { font-size: 16px; }
+.copy button {
+  font: 600 13px var(--font-body); color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.copy button:hover { filter: brightness(.96); }
+
+/* Fact sheet */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.fact { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.fact .label { padding-top: 3px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .fact { grid-template-columns: 1fr; gap: 2px; } }
+
+.contact { display: grid; gap: 10px; }
+.contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="/assets/images/scumble/icon-512.png" alt="Scumble app icon">
+    <div>
+      <span class="label">Press kit</span>
+      <h1>Scumble</h1>
+      <p class="tagline">A layered image editor for the Mac. Paint, select, add text, adjust colors, and apply effects, with a live preview and every edit undoable.</p>
+      <div class="meta">
+        <span class="label">macOS 15.6+</span>
+        <span class="label">Coming soon</span>
+        <a href="/scumble/" class="label">Product page</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Materials</span>
+      <h2 id="feat-h">What it does</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Layers</h3><p>Add, duplicate, merge, reorder, and hide layers, with opacity and blend modes, and rotate, zoom, flip, or nudge a layer by itself.</p></div>
+      <div class="feature"><h3>Selections</h3><p>Rectangle and ellipse selections, Lasso (freehand or polygon), and Magic Wand, combined with add, subtract, intersect, and invert.</p></div>
+      <div class="feature"><h3>Paint and fill</h3><p>A paintbrush and eraser with adjustable width, a paint bucket with tolerance, and a color picker that can average nearby pixels.</p></div>
+      <div class="feature"><h3>Text, bubbles, and pills</h3><p>Plain text, speech bubbles, or pills in any installed font, with chosen text and background colors, dragged into place.</p></div>
+      <div class="feature"><h3>Shapes and gradients</h3><p>Rectangle, rounded rectangle, ellipse, triangle, line, and arrow as an outline, a fill, or both, and five kinds of gradient.</p></div>
+      <div class="feature"><h3>Adjustments</h3><p>Brightness and Contrast, Hue and Saturation, Curves, Levels, Exposure, and more, each with a live preview on the picture.</p></div>
+      <div class="feature"><h3>Forty effects</h3><p>Oil painting, sketches, blurs, glow, distortions, noise, and fractals in nine categories, with a live preview and Repeat Last Effect.</p></div>
+      <div class="feature"><h3>Private by design</h3><p>No account, no ads, no analytics, and no network connections of its own. Pictures stay on the Mac, in the files the user chooses.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Gallery</span>
+      <h2 id="shots-h">Screenshots</h2>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Click any image to download the full-resolution 2880 x 1800 PNG.</p>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure><a href="/assets/images/scumble/store/full/paint.png" download><img src="/assets/images/scumble/store/paint.jpg" alt="A path of fallen leaves with a speech bubble that says Golden hour, an arrow, a ring, and a pill" width="1600" height="1000" loading="lazy"></a><figcaption>Paint, type, and make it yours</figcaption></figure>
+      <figure><a href="/assets/images/scumble/store/full/select.png" download><img src="/assets/images/scumble/store/select.jpg" alt="A lasso selection traced around a red maple leaf, with the selection tools in the toolbar" width="1600" height="1000" loading="lazy"></a><figcaption>Select exactly what you want</figcaption></figure>
+      <figure><a href="/assets/images/scumble/store/full/adjust.png" download><img src="/assets/images/scumble/store/adjust.jpg" alt="The Curves dialog open over an autumn sky photo, with the picture updating live" width="1600" height="1000" loading="lazy"></a><figcaption>Fix the light, see it as you drag</figcaption></figure>
+      <figure><a href="/assets/images/scumble/store/full/effects.png" download><img src="/assets/images/scumble/store/effects.jpg" alt="The Oil Painting effect applied to a row of autumn trees, with its dialog open" width="1600" height="1000" loading="lazy"></a><figcaption>Forty effects, one click away</figcaption></figure>
+      <figure><a href="/assets/images/scumble/store/full/layers.png" download><img src="/assets/images/scumble/store/layers.jpg" alt="A yellow tree with four layers in the Layers panel: a caption, shapes, a warm glow, and the photo" width="1600" height="1000" loading="lazy"></a><figcaption>Layers keep every idea apart</figcaption></figure>
+      <figure><a href="/assets/images/scumble/store/full/gradient.png" download><img src="/assets/images/scumble/store/gradient.jpg" alt="A violet gradient fading over orange maple leaves, with the Gradient tool selected" width="1600" height="1000" loading="lazy"></a><figcaption>Blend color your own way</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="copy-h">
+    <div class="section-head">
+      <span class="label">Ready to use</span>
+      <h2 id="copy-h">Descriptions</h2>
+    </div>
+    <div class="copyblocks">
+      <div class="copy">
+        <div class="copy-top"><span class="label">One line</span><button type="button" data-copy="c1">Copy</button></div>
+        <p id="c1">Scumble is a layered image editor for the Mac with selections, text, adjustments, and 40 effects, free to download with an optional one-time upgrade.</p>
+      </div>
+      <div class="copy">
+        <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
+        <p id="c2">Scumble is an image editor for the Mac for the everyday jobs: cropping a screenshot, touching up a photo, adding a caption or a speech bubble, cutting something out, or making a small piece of artwork. It keeps a picture in layers, offers rectangle, ellipse, lasso, and magic wand selections, and has text, shapes, gradients, adjustments such as Curves and Levels, and forty effects, each with a live preview and an undo. Scumble has no account, no ads, and no analytics, and the pictures stay on the Mac. It is free to download, with a single one-time purchase, Scumble Pro, that unlocks the effects, advanced adjustments, lasso and magic wand, gradients, saving with layers, more file formats, and very large images. Scumble was built by independent developer Alexander Rohr.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <div class="section-head">
+      <span class="label">At a glance</span>
+      <h2 id="facts-h">Fact sheet</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
+      <div class="fact"><span class="label">Platform</span><span>Mac</span></div>
+      <div class="fact"><span class="label">Download</span><span>Coming soon to the Mac App Store</span></div>
+      <div class="fact"><span class="label">Requires</span><span>macOS 15.6 or later</span></div>
+      <div class="fact"><span class="label">Category</span><span>Graphics &amp; Design</span></div>
+      <div class="fact"><span class="label">Price</span><span>Free download; Scumble Pro one-time purchase, no subscription</span></div>
+      <div class="fact"><span class="label">Free</span><span>Painting, shapes, text, layers, basic adjustments, rectangle and ellipse selection, PNG and JPEG</span></div>
+      <div class="fact"><span class="label">Pro</span><span>40 effects, Curves, Levels and more, Lasso and Magic Wand, gradients, saving with layers, HEIC, TIFF, GIF and BMP, images over 4096 pixels</span></div>
+      <div class="fact"><span class="label">Opens</span><span>PNG, JPEG, HEIC, TIFF, GIF, BMP, WebP, and Scumble files</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no ads, no analytics, no network connections of its own. <a href="/scumble/privacy/">Privacy policy</a></span></div>
+      <div class="fact"><span class="label">Terms</span><span><a href="/scumble/terms/">Terms &amp; Conditions</a></span></div>
+      <div class="fact"><span class="label">Built with</span><span>SwiftUI, AppKit, Core Graphics, Core Image, StoreKit</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="credits-h">
+    <div class="section-head">
+      <span class="label">Attribution</span>
+      <h2 id="credits-h">Image credits</h2>
+    </div>
+    <div class="contact">
+      <p>The sample pictures in the screenshots are free stock photos from <a href="https://www.pexels.com">Pexels</a>, used under the <a href="https://www.pexels.com/license/">Pexels License</a>:</p>
+      <p>Stephen Leonardi, <a href="https://www.pexels.com/photo/golden-autumn-pathway-in-a-serene-urban-park-29583180/">Golden Autumn Pathway in a Serene Urban Park</a><br>Антон Злобин, <a href="https://www.pexels.com/photo/red-maple-leaf-on-ground-in-autumn-18562756/">Red Maple Leaf on Ground in Autumn</a><br>Ray Suarez, <a href="https://www.pexels.com/photo/colorful-autumn-trees-in-tranquil-park-setting-34947040/">Colorful Autumn Trees in Tranquil Park Setting</a><br>Barış Yiğit, <a href="https://www.pexels.com/photo/tree-in-autumn-18530475/">Tree in Autumn</a><br>Hicran Çabuk, <a href="https://www.pexels.com/photo/vibrant-autumn-leaves-in-a-tranquil-park-setting-35163043/">Vibrant Autumn Leaves in a Tranquil Park Setting</a><br>臻 宋, <a href="https://www.pexels.com/photo/orange-maple-leaves-in-a-fall-5992963/">Orange Maple Leaves in a Fall</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="label">Contact</span>
+      <h2 id="contact-h">Press contact</h2>
+    </div>
+    <div class="contact">
+      <p>For interviews, review codes for Scumble Pro, or full-resolution assets:</p>
+      <p class="email">alex@rohrsoftware.dev</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about building a Mac image editor as a solo developer.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Alexander Rohr. Scumble is a trademark of its developer; sample photos belong to their photographers.</footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press ⌘C';
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>
