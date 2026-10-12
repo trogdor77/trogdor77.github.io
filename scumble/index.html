@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scumble · Image Editor for Mac</title>
+<meta name="description" content="Scumble is a layered image editor for the Mac: paint, select, add text, adjust colors, and apply effects, with every edit undoable. Your images stay on your Mac.">
+<meta property="og:title" content="Scumble">
+<meta property="og:description" content="A layered image editor for the Mac with selections, text, adjustments, and 40 effects.">
+<meta property="og:image" content="/assets/images/scumble/icon-512.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #5b45e6; --accent-soft: #ece8ff; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #a99bff; --accent-soft: #231d4d; } }
+
+  .hero { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 32px; align-items: center; }
+  .hero .appicon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(91, 69, 230, .28); }
+  .hero .text { display: grid; gap: 14px; justify-items: start; }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 600px) { .hero { grid-template-columns: 1fr; justify-items: start; } }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .macshot { margin: 0; }
+  .macshot img { width: 100%; height: auto; display: block; }
+
+  .shots { display: flex; gap: 22px; overflow-x: auto; padding-bottom: 14px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 min(760px, 90%); scroll-snap-align: start; display: grid; gap: 10px; }
+  .shots img { width: 100%; height: auto; display: block; }
+  .shots figcaption { color: var(--muted); font-size: 15px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/">Rohr Software</a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <img class="appicon" src="/assets/images/scumble/icon-512.png" alt="Scumble app icon">
+    <div class="text">
+      <span class="label">Coming soon for Mac</span>
+      <h1>Scumble</h1>
+      <p class="lede">A layered image editor for the Mac. Paint, select, add text, adjust colors, and apply effects, with every edit undoable.</p>
+      <div class="actions">
+        <a class="btn secondary" href="/support/">Get support</a>
+        <a class="btn secondary" href="/scumble/privacy/">Privacy policy</a>
+      </div>
+      <p class="price">macOS 15 or later · Works offline · No account</p>
+    </div>
+  </header>
+
+  <figure class="macshot">
+    <img src="/assets/images/scumble/main.png" alt="The Scumble window with a sunset illustration, a speech bubble that says Golden hour, the tool strip on the left, the color palette along the bottom, and the layers panel on the right." width="1760" height="1229">
+  </figure>
+
+  <section aria-labelledby="what-h">
+    <div class="section-head">
+      <span class="label">What it is</span>
+      <h2 id="what-h">An editor for the everyday jobs</h2>
+    </div>
+    <div class="prose">
+      <p>Scumble is for the quick work that doesn't need a heavyweight editor: cropping a screenshot, touching up a photo, adding a caption or a speech bubble, cutting something out, or making a small piece of artwork.</p>
+      <p>It keeps your picture in layers, so you can change your mind, and everything you do can be undone. It works on your Mac alone, with no account to create and no internet connection needed.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Built natively for the Mac</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Layers</h3><p>Add, duplicate, merge, reorder by dragging, hide, and set each layer's opacity and blend mode.</p></div>
+      <div class="feature"><h3>Selections</h3><p>Rectangle and ellipse selections. Cut, copy, paste, fill, erase, or crop to the selection, and painting stays inside it.</p></div>
+      <div class="feature"><h3>Paint and fill</h3><p>A paintbrush and eraser with adjustable width, and a paint bucket with a tolerance setting.</p></div>
+      <div class="feature"><h3>Text, bubbles, and pills</h3><p>Add plain text, a speech bubble, or a pill. Choose the size, bold, text color, and background color, and drag it into place.</p></div>
+      <div class="feature"><h3>Twelve adjustments</h3><p>Curves, Levels, Hue / Saturation, Exposure, Brightness / Contrast, and more, each with a live preview on your picture.</p></div>
+      <div class="feature"><h3>Forty effects</h3><p>Blurs, distortions, noise, glow, sketches, fractals, and more in nine categories, with a live preview and Repeat Last Effect.</p></div>
+      <div class="feature"><h3>A palette in every window</h3><p>Each window has its own color, a ready palette, and a place for your custom colors, with a hue, opacity, and hex editor.</p></div>
+      <div class="feature"><h3>Size and canvas</h3><p>Resize the image, change the canvas size from any anchor, flip, rotate, and flatten.</p></div>
+      <div class="feature"><h3>PNG, JPEG, and layers</h3><p>Open and save PNG and JPEG, or save a Scumble file to keep every layer for later.</p></div>
+      <div class="feature"><h3>Import from iPhone or iPad</h3><p>Bring in a photo or a scan from your nearby iPhone or iPad with Continuity Camera.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Screens</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+      <figure>
+        <img src="/assets/images/scumble/select.png" alt="An ellipse selection around the sun in a sunset illustration, with the selection size shown in the status bar." width="1760" height="1229" loading="lazy">
+        <figcaption>Select an area, then cut it, fill it, or keep your painting inside it.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/images/scumble/adjust.png" alt="The Curves adjustment open over a sunset illustration, with an S-shaped curve that adds contrast." width="1760" height="1229" loading="lazy">
+        <figcaption>Adjustments update the picture as you drag.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/images/scumble/effect.png" alt="The Crystallize effect applied to the background of a sunset illustration, with its dialog open and the text layer left sharp on top." width="1760" height="1229" loading="lazy">
+        <figcaption>Effects work on the layer you choose, so text and shapes stay crisp.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Your images stay yours</h2>
+    </div>
+    <div class="prose">
+      <p>Scumble has no account, no ads, no analytics, and no network connection. It opens and saves only the files you choose, and the developer never sees your images.</p>
+      <p><a href="/scumble/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/scumble/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/scumble/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
