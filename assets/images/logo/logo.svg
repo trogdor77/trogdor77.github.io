@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <title>Rohr Software</title>
+  <defs><clipPath id="eye"><path d="M-14 33Q32 -6 78 33Q32 72 -14 33Z"/></clipPath></defs>
+  <rect width="64" height="64" rx="14" fill="#141a24"/>
+  <g clip-path="url(#eye)">
+    <rect width="64" height="64" fill="#ff8a1f"/>
+    <circle cx="32" cy="33" r="19" fill="#e05a00"/>
+    <circle cx="32" cy="33" r="14.5" fill="#ffc83d"/>
+    <ellipse cx="32" cy="33" rx="5.5" ry="22" fill="#141a24"/>
+  </g>
+  <circle cx="38.5" cy="25" r="3.2" fill="#fff"/>
+</svg>
