@@ -37,6 +37,12 @@
   .shots figure { margin: 0; flex: 0 0 min(760px, 90%); scroll-snap-align: start; display: grid; gap: 10px; }
   .shots img { width: 100%; height: auto; display: block; }
   .shots figcaption { color: var(--muted); font-size: 15px; }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
+  .plan .amount { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
+  .plan.pro { border-color: var(--accent); }
+  .incl { margin: 4px 0 0; padding-left: 20px; display: grid; gap: 4px; font-size: 15.5px; }
 </style>
 <link rel="stylesheet" href="/assets/css/nav.css">
 <script src="/assets/js/nav.js" defer></script>
@@ -66,7 +72,7 @@
         <a class="btn secondary" href="/support/">Get support</a>
         <a class="btn secondary" href="/scumble/privacy/">Privacy policy</a>
       </div>
-      <p class="price">macOS 15 or later · Works offline · No account</p>
+      <p class="price">macOS 15.6 or later · Works offline · No account</p>
     </div>
   </header>
 
@@ -125,13 +131,45 @@
     </div>
   </section>
 
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Free, with an optional upgrade</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="label">Free</span>
+        <div class="amount">$0</div>
+        <p class="muted">A real editor, not a trial.</p>
+        <ul class="incl">
+          <li>Brush, eraser, bucket, shapes, text, and color picker</li>
+          <li>Layers, undo, rulers, and rectangle and ellipse selection</li>
+          <li>Brightness, hue, black and white, invert, and sepia</li>
+          <li>Open any picture, save PNG and JPEG</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <span class="label">Scumble Pro</span>
+        <div class="amount">One-time<span class="muted" style="font-size:16px;font-weight:600"> purchase</span></div>
+        <p class="muted">No subscription. Yours for good.</p>
+        <ul class="incl">
+          <li>All 40 effects</li>
+          <li>Curves, Levels, and the other adjustments</li>
+          <li>Lasso, Magic Wand, and combining selections</li>
+          <li>Gradients</li>
+          <li>Save with layers, HEIC, TIFF, GIF, BMP, and very large images</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section aria-labelledby="priv-h">
     <div class="section-head">
       <span class="label">Privacy</span>
       <h2 id="priv-h">Your images stay yours</h2>
     </div>
     <div class="prose">
-      <p>Scumble has no account, no ads, no analytics, and no network connection. It opens and saves only the files you choose, and the developer never sees your images.</p>
+      <p>Scumble has no account, no ads, and no analytics, and it makes no network connections of its own. It opens and saves only the files you choose, and the developer never sees your images.</p>
       <p><a href="/scumble/privacy/">Read the privacy policy</a></p>
     </div>
   </section>
