@@ -11,7 +11,7 @@
 .nav .wrap { max-width: 1040px; margin: 0 auto; padding-block: 0; }
 .nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 52px; }
 .nav .brand {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; gap: 12px;
   font-family: var(--font-display); font-weight: 800; font-size: 18px;
   color: var(--ink); text-decoration: none; letter-spacing: -.01em;
 }

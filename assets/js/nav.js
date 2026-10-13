@@ -61,7 +61,7 @@
 
   nav.innerHTML = `
     <div class="wrap nav-bar">
-      <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="26" height="26"><span>Rohr Software</span></a>
+      <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="36" height="36"><span>Rohr Software</span></a>
       <ul class="nav-links">
         <li><button class="nav-products" type="button" aria-expanded="false" aria-controls="nav-panel">Products<span class="chev" aria-hidden="true"></span></button></li>
         ${LINKS.map((l) => `<li><a href="${l.href}"${current(l.href)}>${l.name}</a></li>`).join("")}
