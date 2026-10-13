@@ -26,6 +26,13 @@
   .featured img { width: 96px; height: 96px; border-radius: 22px; }
   .featured .text { display: grid; gap: 10px; }
   @media (max-width: 600px) { .featured { grid-template-columns: 1fr; } .featured img { width: 72px; height: 72px; border-radius: 17px; } }
+  .featured-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .featured-row .featured { padding: 22px; gap: 18px; align-items: start; }
+  .featured-row .featured img { width: 72px; height: 72px; border-radius: 17px; }
+  .featured-row .featured h3 { font-size: 18px; }
+  .featured-row .featured .text { height: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .featured-row .featured .text .actions { margin-top: auto; padding-top: 6px; }
+  @media (max-width: 860px) { .featured-row { grid-template-columns: 1fr; } }
 </style>
 <link rel="stylesheet" href="/assets/css/nav.css">
 <script src="/assets/js/nav.js" defer></script>
@@ -57,16 +64,31 @@
   <section aria-labelledby="new-h">
     <div class="section-head">
       <span class="label">New</span>
-      <h2 id="new-h">Meduo</h2>
+      <h2 id="new-h">Meduo and Scumble</h2>
     </div>
-    <div class="featured">
-      <img src="/assets/images/meduo/icon-512.png" alt="Meduo app icon">
-      <div class="text">
-        <h3>Private health records for your whole family</h3>
-        <p class="muted">Track medications, appointments, lab results, and symptoms for your kids, yourself, and the parents you care for. No accounts and no servers: your data stays in your own iCloud.</p>
-        <div class="actions">
-          <a class="btn" href="/meduo/">Learn more</a>
-          <a class="btn secondary" href="https://apps.apple.com/us/app/meduo/id6815359075">App Store</a>
+    <div class="featured-row">
+      <div class="featured">
+        <img src="/assets/images/meduo/icon-512.png" alt="Meduo app icon">
+        <div class="text">
+          <span class="label">Meduo · iPhone &amp; iPad</span>
+          <h3>Private health records for your whole family</h3>
+          <p class="muted">Track medications, appointments, lab results, and symptoms for your kids, yourself, and the parents you care for. No accounts and no servers: your data stays in your own iCloud.</p>
+          <div class="actions">
+            <a class="btn" href="/meduo/">Learn more</a>
+            <a class="btn secondary" href="https://apps.apple.com/us/app/meduo/id6815359075">App Store</a>
+          </div>
+        </div>
+      </div>
+      <div class="featured">
+        <img src="/assets/images/scumble/icon-512.png" alt="Scumble app icon">
+        <div class="text">
+          <span class="label">Scumble · Mac · Coming soon</span>
+          <h3>A layered image editor for your Mac</h3>
+          <p class="muted">Paint, select, add text, adjust colors, and apply effects, with every edit undoable. No account and no internet connection needed.</p>
+          <div class="actions">
+            <a class="btn" href="/scumble/">Learn more</a>
+            <a class="btn secondary" href="/scumble/press/">Press kit</a>
+          </div>
         </div>
       </div>
     </div>
