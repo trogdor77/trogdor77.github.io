@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Land the Plane Press Kit · Rohr Software</title>
+<meta name="description" content="Press kit for Land the Plane, a slingshot landing game for iPhone and iPad.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column styled like a flight briefing (header, step cards, world grid, stat sheet), in sky blue. */
+:root {
+  --bg: #f3f8fd;
+  --surface: #ffffff;
+  --ink: #14233a;
+  --muted: #51627a;
+  --rule: #d3e2f0;
+  --accent: #1a6bc2;
+  --accent-soft: #e1eefb;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1624; --surface: #132238; --ink: #eaf2fb; --muted: #9fb4cc; --rule: #243752;
+    --accent: #7cc0ff; --accent-soft: #13263d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1624; --surface: #132238; --ink: #eaf2fb; --muted: #9fb4cc; --rule: #243752;
+  --accent: #7cc0ff; --accent-soft: #13263d;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding: 0 20px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+section { display: grid; gap: 24px; }
+.section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(26, 107, 194, .3); }
+.hero h1 { font-size: clamp(44px, 8vw, 72px); font-weight: 800; letter-spacing: -.03em; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin-top: 6px; max-width: 36ch; }
+.hero .meta { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; gap: 18px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+}
+
+/* Story */
+.story-text { display: grid; gap: 16px; max-width: 62ch; }
+.story-text p:first-child { font-size: 21px; line-height: 1.5; }
+.byline { color: var(--muted); font-style: italic; }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; counter-reset: step; }
+.step { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; display: grid; gap: 6px; align-content: start; counter-increment: step; }
+.step::before { content: "Step " counter(step); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.step p { color: var(--muted); font-size: 15.5px; }
+
+/* World grid */
+.worlds { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.world { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+.world .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.world .t { font-weight: 700; }
+.world .d { font-size: 14px; color: var(--muted); line-height: 1.4; }
+.world.free { border-color: var(--accent); }
+.world.free .n { color: var(--accent); }
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+.feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature p { color: var(--muted); font-size: 15.5px; }
+
+/* Assets */
+.assets { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.assets img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 8px 20px rgba(20, 35, 58, .2); }
+.assets .links { display: grid; gap: 8px; flex: 1 1 280px; }
+
+/* Copy blocks */
+.copyblocks { display: grid; gap: 16px; }
+.copy {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; display: grid; gap: 10px;
+}
+.copy-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.copy p { font-size: 16px; }
+.copy button {
+  font: 600 13px var(--font-body); color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.copy button:hover { filter: brightness(.96); }
+
+/* Fact sheet */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.fact { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.fact .label { padding-top: 3px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .fact { grid-template-columns: 1fr; gap: 2px; } }
+
+.contact { display: grid; gap: 10px; }
+.contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="36" height="36"><span>Rohr Software</span></a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="/assets/images/landtheplane/icon-512.png" alt="Land the Plane app icon">
+    <div>
+      <span class="label">Press kit</span>
+      <h1>Land the Plane</h1>
+      <p class="tagline">Launch with a slingshot, glide over the hazards, and set the plane down gently on the runway.</p>
+      <div class="meta">
+        <span class="label">iPhone &amp; iPad</span>
+        <span class="label">iOS 17+</span>
+        <span class="label">Coming soon</span>
+        <a href="/landtheplane/" class="label">Product page</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Origin</span>
+      <h2 id="story-h">Why Land the Plane exists</h2>
+    </div>
+    <div class="story-text">
+      <p>The idea came from a carpool line. Alexander was on a business call, waiting to pick up his daughter, and the call kept going. His wife, sitting next to him, said &ldquo;Land the plane.&rdquo;</p>
+      <p>The comment stuck with him, and it became the inspiration for a game built around bringing a plane in for a gentle landing.</p>
+      <p class="byline">Alexander Rohr, founder and developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="play-h">
+    <div class="section-head">
+      <span class="label">Briefing</span>
+      <h2 id="play-h">How it plays</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Launch</h3><p>Drag back anywhere on the screen and let go. The farther the pull, the harder the plane flies.</p></div>
+      <div class="step"><h3>Fly</h3><p>Hold the top of the screen to climb and the bottom to dive. Climbing costs speed, and diving gets it back.</p></div>
+      <div class="step"><h3>Slow down</h3><p>Tap flaps to bleed off speed for a short approach.</p></div>
+      <div class="step"><h3>Land</h3><p>Touch down gently on the runway to finish the level, and earn up to three stars.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="worlds-h">
+    <div class="section-head">
+      <span class="label">Flight plan</span>
+      <h2 id="worlds-h">14 worlds, 154 levels</h2>
+    </div>
+    <div class="worlds">
+      <div class="world free"><span class="n">WORLD 1 · FREE</span><div class="t">Countryside</div><div class="d">Learn to fly</div></div>
+      <div class="world free"><span class="n">WORLD 2 · FREE</span><div class="t">Airport</div><div class="d">Busy runways and sloped strips</div></div>
+      <div class="world free"><span class="n">WORLD 3 · FREE</span><div class="t">High Seas</div><div class="d">Land on a moving carrier</div></div>
+      <div class="world"><span class="n">WORLD 4</span><div class="t">Volcano</div><div class="d">Ride the thermals</div></div>
+      <div class="world"><span class="n">WORLD 5</span><div class="t">Frozen North</div><div class="d">Slippery ice runways</div></div>
+      <div class="world"><span class="n">WORLD 6</span><div class="t">Spooky Forest</div><div class="d">Ghosts, bats, and a haunted house</div></div>
+      <div class="world"><span class="n">WORLD 7</span><div class="t">Space</div><div class="d">New planet, new gravity</div></div>
+      <div class="world"><span class="n">WORLD 8</span><div class="t">Big City</div><div class="d">Rooftop landings</div></div>
+      <div class="world"><span class="n">WORLD 9</span><div class="t">Pirates</div><div class="d">Cannons, forts, and treasure</div></div>
+      <div class="world"><span class="n">WORLD 10</span><div class="t">Tropical</div><div class="d">Beaches, lagoons, and rafts</div></div>
+      <div class="world"><span class="n">WORLD 11</span><div class="t">Cave</div><div class="d">Mind the roof</div></div>
+      <div class="world"><span class="n">WORLD 12</span><div class="t">Canyons</div><div class="d">Arches, tunnels, and trains</div></div>
+      <div class="world"><span class="n">WORLD 13</span><div class="t">Desert</div><div class="d">Dunes, ruins, and sandstorms</div></div>
+      <div class="world"><span class="n">WORLD 14</span><div class="t">Storm</div><div class="d">The ultimate challenge</div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Systems</span>
+      <h2 id="feat-h">What it does</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Slingshot launch</h3><p>One drag sets the power. Then it is climb, dive, and flaps to line up the touchdown.</p></div>
+      <div class="feature"><h3>Hazards in every world</h3><p>Lava bombs, ice chunks, ghosts, bats, asteroids, cannonballs, lightning, and tornadoes, depending on the world.</p></div>
+      <div class="feature"><h3>Runways that move</h3><p>Carriers, trains, rafts, and floating ice floes, with an arrestor wire to catch.</p></div>
+      <div class="feature"><h3>New planets, new gravity</h3><p>In Space, each planet has its own gravity and air.</p></div>
+      <div class="feature"><h3>Daily challenges</h3><p>Three new challenges a day, easy, medium, and hard, that pay out points.</p></div>
+      <div class="feature"><h3>Plane shop</h3><p>Spend earned points on plane skins, smoke trails, and slingshots, from common to epic.</p></div>
+      <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads, no analytics, and it plays fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="assets-h">
+    <div class="section-head">
+      <span class="label">Assets</span>
+      <h2 id="assets-h">App icon</h2>
+    </div>
+    <div class="assets">
+      <img src="/assets/images/landtheplane/icon-512.png" alt="Land the Plane app icon: a small plane climbing through a bright blue sky with clouds" width="128" height="128">
+      <div class="links">
+        <p><a href="/assets/images/landtheplane/icon-1024.png" download>Download the icon, 1024 x 1024 PNG</a></p>
+        <p><a href="/assets/images/landtheplane/icon-512.png" download>Download the icon, 512 x 512 PNG</a></p>
+        <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Gameplay screenshots will be added here closer to release. Contact below if you need something sooner.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="copy-h">
+    <div class="section-head">
+      <span class="label">Ready to use</span>
+      <h2 id="copy-h">Descriptions</h2>
+    </div>
+    <div class="copyblocks">
+      <div class="copy">
+        <div class="copy-top"><span class="label">One line</span><button type="button" data-copy="c1">Copy</button></div>
+        <p id="c1">Land the Plane is an iPhone and iPad game where you launch a little plane with a slingshot and set it down gently on the runway, across 14 worlds.</p>
+      </div>
+      <div class="copy">
+        <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
+        <p id="c2">Land the Plane is a game for iPhone and iPad about one thing: landing. Players drag back to launch a little plane with a slingshot, then climb, dive, and use flaps to bring it down gently on the runway for up to three stars. 154 levels across 14 worlds mix in moving carriers, trains, and ice floes, lava bombs, ghosts, and asteroids, and even planets with their own gravity. The first three worlds are free, and a one-time purchase unlocks the rest along with daily challenges and a plane shop. There are no ads, no accounts, and no tracking. Land the Plane was built by independent developer Alexander Rohr, and the name comes from a real moment: a business call that would not end, and his wife, sitting next to him in the carpool line, saying &ldquo;land the plane.&rdquo;</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <div class="section-head">
+      <span class="label">Stat sheet</span>
+      <h2 id="facts-h">Fact sheet</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
+      <div class="fact"><span class="label">Platforms</span><span>iPhone and iPad, landscape</span></div>
+      <div class="fact"><span class="label">Requires</span><span>iOS 17.0 and iPadOS 17.0 or later</span></div>
+      <div class="fact"><span class="label">Release</span><span>Coming soon to the App Store</span></div>
+      <div class="fact"><span class="label">Category</span><span>Games</span></div>
+      <div class="fact"><span class="label">Price</span><span>Free download</span></div>
+      <div class="fact"><span class="label">In-app purchase</span><span>Unlock All Worlds, $3.99 one time, no subscription</span></div>
+      <div class="fact"><span class="label">Free</span><span>Countryside, Airport, and High Seas (33 levels)</span></div>
+      <div class="fact"><span class="label">Content</span><span>14 worlds, 154 levels, 3 stars per level</span></div>
+      <div class="fact"><span class="label">Shop</span><span>41 plane skins, 13 smoke trails, 13 slingshots</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no ads, no analytics, no network connections of its own. <a href="/landtheplane/privacy/">Privacy policy</a></span></div>
+      <div class="fact"><span class="label">Terms</span><span><a href="/landtheplane/terms/">Terms &amp; Conditions</a></span></div>
+      <div class="fact"><span class="label">Built with</span><span>SpriteKit, StoreKit 2</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="credits-h">
+    <div class="section-head">
+      <span class="label">Attribution</span>
+      <h2 id="credits-h">Credits</h2>
+    </div>
+    <div class="contact">
+      <p>Heading font: Luckiest Guy by Astigmatic, under the Apache License 2.0. Music and sound effects are synthesized in the game itself.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="logo-h">
+    <div class="section-head">
+      <span class="label">Developer</span>
+      <h2 id="logo-h">Rohr Software logo</h2>
+    </div>
+    <div class="contact">
+      <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+        <img src="/assets/images/logo/logo-512.png" alt="Rohr Software logo, a dragon eye" width="128" height="128">
+        <div style="display:grid;gap:10px;flex:1 1 280px">
+          <p>The logo of Rohr Software, Alexander Rohr's independent company and the developer of Land the Plane. You are welcome to use it alongside coverage of Land the Plane. Please don't recolor or stretch it.</p>
+          <p><a href="/assets/images/logo/logo.svg" download>Download SVG</a> · <a href="/assets/images/logo/logo-512.png" download>Download PNG, 512 x 512</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="label">Control tower</span>
+      <h2 id="contact-h">Press contact</h2>
+    </div>
+    <div class="contact">
+      <p>For interviews, promo codes, or full-resolution assets:</p>
+      <p class="email">alex@rohrsoftware.dev</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about building Land the Plane as a solo developer, and the carpool-line story behind the name.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Alexander Rohr. Land the Plane is a trademark of its developer.</footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press ⌘C';
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>

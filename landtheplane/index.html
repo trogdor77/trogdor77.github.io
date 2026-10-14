@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Land the Plane · Rohr Software</title>
+<meta name="description" content="Land the Plane is an iPhone and iPad game about launching a little plane with a slingshot and setting it down gently on the runway, across 14 worlds and 154 levels.">
+<meta property="og:title" content="Land the Plane">
+<meta property="og:description" content="Launch with a slingshot, glide over the hazards, and land gently. 14 worlds, 154 levels, no ads.">
+<meta property="og:image" content="/assets/images/landtheplane/icon-512.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #1a6bc2; --accent-soft: #e1eefb; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #7cc0ff; --accent-soft: #13263d; } }
+
+  .hero { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 40px; align-items: center; }
+  .hero .appicon { width: 168px; height: 168px; border-radius: 38px; box-shadow: 0 14px 34px rgba(26, 107, 194, .3); }
+  .hero .text { display: grid; gap: 14px; justify-items: start; }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 640px) { .hero { grid-template-columns: 1fr; gap: 24px; } .hero .appicon { width: 112px; height: 112px; border-radius: 26px; } }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 20px; display: grid; gap: 6px; align-content: start; counter-increment: step; }
+  .step::before { content: "Step " counter(step); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .step p { color: var(--muted); font-size: 15.5px; }
+
+  .worlds { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+  .world { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+  .world .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .world .t { font-weight: 700; }
+  .world .d { font-size: 14px; color: var(--muted); line-height: 1.4; }
+  .world.free { border-color: var(--accent); }
+  .world.free .n { color: var(--accent); }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .tier { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+  .tier.pro { border-color: var(--accent); }
+  .tier .amount { font-family: var(--font-display); font-weight: 800; font-size: 28px; letter-spacing: -.01em; }
+  .tier ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15.5px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="36" height="36"><span>Rohr Software</span></a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <img class="appicon" src="/assets/images/landtheplane/icon-512.png" alt="Land the Plane app icon">
+    <div class="text">
+      <span class="label">Coming soon for iPhone and iPad</span>
+      <h1>Land the Plane</h1>
+      <p class="lede">Launch with a slingshot, glide over the hazards, and set the plane down gently on the runway. 14 worlds of trickier and trickier landings.</p>
+      <div class="actions">
+        <a class="btn secondary" href="/landtheplane/press/">Press kit</a>
+        <a class="btn secondary" href="/landtheplane/privacy/">Privacy policy</a>
+      </div>
+      <p class="price">First three worlds free · One-time unlock for the rest · iOS 17 or later · Works offline</p>
+    </div>
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Why Land the Plane</span>
+      <h2 id="story-h">A phrase that stuck</h2>
+    </div>
+    <div class="prose">
+      <p>I was sitting in the carpool line, waiting to pick up my daughter, on a business call that just kept going. Someone on the call would not wrap up. My wife, sitting next to me, finally said it out loud: &ldquo;Land the plane.&rdquo;</p>
+      <p>It was a comment that stuck with me, and it became the inspiration for the game. Every level is about the same thing: launch, fly, and finally bring it in for a gentle landing.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="play-h">
+    <div class="section-head">
+      <span class="label">How it plays</span>
+      <h2 id="play-h">One launch, one landing</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Launch</h3><p>Drag back anywhere on the screen and let go. The farther you pull, the harder the plane flies.</p></div>
+      <div class="step"><h3>Fly</h3><p>Hold the top of the screen to climb and the bottom to dive. Climbing costs speed, and diving gets it back.</p></div>
+      <div class="step"><h3>Slow down</h3><p>Tap flaps to bleed off speed for a short approach, then line up with the runway.</p></div>
+      <div class="step"><h3>Land</h3><p>Touch down gently on the runway to finish the level, and earn up to three stars for a clean landing.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="worlds-h">
+    <div class="section-head">
+      <span class="label">14 worlds</span>
+      <h2 id="worlds-h">Every world changes the rules</h2>
+    </div>
+    <div class="worlds">
+      <div class="world free"><span class="n">WORLD 1 · FREE</span><div class="t">Countryside</div><div class="d">Learn to fly</div></div>
+      <div class="world free"><span class="n">WORLD 2 · FREE</span><div class="t">Airport</div><div class="d">Busy runways and sloped strips</div></div>
+      <div class="world free"><span class="n">WORLD 3 · FREE</span><div class="t">High Seas</div><div class="d">Land on a moving carrier</div></div>
+      <div class="world"><span class="n">WORLD 4</span><div class="t">Volcano</div><div class="d">Ride the thermals</div></div>
+      <div class="world"><span class="n">WORLD 5</span><div class="t">Frozen North</div><div class="d">Slippery ice runways</div></div>
+      <div class="world"><span class="n">WORLD 6</span><div class="t">Spooky Forest</div><div class="d">Ghosts, bats, and a haunted house</div></div>
+      <div class="world"><span class="n">WORLD 7</span><div class="t">Space</div><div class="d">New planet, new gravity</div></div>
+      <div class="world"><span class="n">WORLD 8</span><div class="t">Big City</div><div class="d">Rooftop landings</div></div>
+      <div class="world"><span class="n">WORLD 9</span><div class="t">Pirates</div><div class="d">Cannons, forts, and treasure</div></div>
+      <div class="world"><span class="n">WORLD 10</span><div class="t">Tropical</div><div class="d">Beaches, lagoons, and rafts</div></div>
+      <div class="world"><span class="n">WORLD 11</span><div class="t">Cave</div><div class="d">Mind the roof</div></div>
+      <div class="world"><span class="n">WORLD 12</span><div class="t">Canyons</div><div class="d">Arches, tunnels, and trains</div></div>
+      <div class="world"><span class="n">WORLD 13</span><div class="t">Desert</div><div class="d">Dunes, ruins, and sandstorms</div></div>
+      <div class="world"><span class="n">WORLD 14</span><div class="t">Storm</div><div class="d">The ultimate challenge</div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Easy to learn, hard to land</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>154 levels</h3><p>Eleven levels in every world, from a gentle first flight to the storm finale, with night landings along the way.</p></div>
+      <div class="feature"><h3>Hazards that fly back</h3><p>Dodge lava bombs, ice chunks, ghosts, bats, asteroids, cannonballs, lightning, and tornadoes, depending on where you are.</p></div>
+      <div class="feature"><h3>Runways that move</h3><p>Land on a carrier at sea, a rolling train, a bobbing raft, or a floating ice floe, and catch the arrestor wire.</p></div>
+      <div class="feature"><h3>New planets, new gravity</h3><p>In Space, each planet has its own gravity and air, so the same flying skills need a different touch.</p></div>
+      <div class="feature"><h3>Daily challenges</h3><p>Three new challenges every day, easy, medium, and hard, that pay out points for finishing them.</p></div>
+      <div class="feature"><h3>Plane shop</h3><p>Spend your points on plane skins, smoke trails, and slingshots, from common to epic. Everything is earned by playing.</p></div>
+      <div class="feature"><h3>Made for both screens</h3><p>Plays in landscape on iPhone and iPad, with settings for music, sound, vibration, and on-screen pitch buttons.</p></div>
+      <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads, and no analytics. The game works fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Free to start, one purchase to unlock</h2>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Free</h3>
+        <p class="amount">$0</p>
+        <ul>
+          <li>Countryside, Airport, and High Seas</li>
+          <li>33 levels, with stars and records</li>
+          <li>Music, sound, and vibration settings</li>
+        </ul>
+      </div>
+      <div class="tier pro">
+        <h3>Unlock All Worlds</h3>
+        <p class="amount">$3.99 <span class="muted" style="font-size:15px;font-weight:600">one time</span></p>
+        <ul>
+          <li>All 14 worlds, and every world added later</li>
+          <li>Daily challenges and the plane shop</li>
+          <li>No subscription, restorable on any device with the same Apple Account</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Stays on your device</h2>
+    </div>
+    <div class="prose">
+      <p>Land the Plane has no account, no ads, and no third-party analytics. Your stars, points, and settings are saved on your device, and the game makes no network connections of its own.</p>
+      <p><a href="/landtheplane/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/landtheplane/press/">Press kit</a>
+      <a class="btn secondary" href="/landtheplane/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/landtheplane/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

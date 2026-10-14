@@ -21,6 +21,7 @@
       name: "Games",
       apps: [
         { name: "Fox Dash", blurb: "Endless runner for iPhone and iPad", href: "/foxdash/", icon: "/assets/images/icons/fox-dash.jpg" },
+        { name: "Land the Plane", blurb: "Landing game, coming soon", href: "/landtheplane/", icon: "/assets/images/icons/landtheplane.png" },
       ],
     },
     // {
