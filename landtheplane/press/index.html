@@ -97,6 +97,14 @@ section { display: grid; gap: 24px; }
 .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
 .feature p { color: var(--muted); font-size: 15.5px; }
 
+/* Screenshots */
+.shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+.shots figure { margin: 0; flex: 0 0 min(520px, 86%); scroll-snap-align: start; display: grid; gap: 8px; align-content: start; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(10, 30, 60, .22); }
+.shots a { display: block; }
+.shots figcaption { font-size: 14px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+
 /* Assets */
 .assets { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 .assets img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 8px 20px rgba(20, 35, 58, .2); }
@@ -218,8 +226,41 @@ footer { color: var(--muted); font-size: 14px; }
       <div class="feature"><h3>Runways that move</h3><p>Carriers, trains, rafts, and floating ice floes, with an arrestor wire to catch.</p></div>
       <div class="feature"><h3>New planets, new gravity</h3><p>In Space, each planet has its own gravity and air.</p></div>
       <div class="feature"><h3>Daily challenges</h3><p>Three new challenges a day, easy, medium, and hard, that pay out points.</p></div>
-      <div class="feature"><h3>Plane shop</h3><p>Spend earned points on plane skins, smoke trails, and slingshots, from common to epic.</p></div>
+      <div class="feature"><h3>Plane shop</h3><p>Spend earned points on more than 80 plane skins, smoke trails, and slingshots, from common to legendary.</p></div>
+      <div class="feature"><h3>Game Center achievements</h3><p>47 achievements for landings, streaks, special runways, and night flights.</p></div>
       <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads, no analytics, and it plays fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Screens</span>
+      <h2 id="shots-h">Screenshots</h2>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Click any image to download the full-resolution PNG. iPhone files are 2868 x 1320, iPad files are 2752 x 2064.</p>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-launch.png" download><img src="/assets/images/landtheplane/store/iphone-launch.jpg" alt="Pulling back the slingshot on the first level, with the aim arc showing the launch path." width="1600" height="736" loading="lazy"></a><figcaption>Pull back and let go</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-haunted.png" download><img src="/assets/images/landtheplane/store/iphone-haunted.jpg" alt="The plane gliding under a glowing full moon in the Spooky Forest, with a ghost drifting nearby." width="1600" height="736" loading="lazy"></a><figcaption>Haunted moonlit nights</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-cave.png" download><img src="/assets/images/landtheplane/store/iphone-cave.jpg" alt="The plane flying past a flickering torch in a dark cave with glowing crystals below." width="1600" height="736" loading="lazy"></a><figcaption>Fly by torchlight</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-storm.png" download><img src="/assets/images/landtheplane/store/iphone-storm.jpg" alt="A forked bolt of lightning striking beside the plane in heavy rain." width="1600" height="736" loading="lazy"></a><figcaption>Fly through the storm</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-space.png" download><img src="/assets/images/landtheplane/store/iphone-space.jpg" alt="The plane gliding over the surface of Mars with a planet hanging in the sky." width="1600" height="736" loading="lazy"></a><figcaption>New planet, new gravity</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-carrier.png" download><img src="/assets/images/landtheplane/store/iphone-carrier.jpg" alt="The plane lining up its approach to a grey aircraft carrier with a glowing deck." width="1600" height="736" loading="lazy"></a><figcaption>Land on a moving carrier</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-volcano.png" download><img src="/assets/images/landtheplane/store/iphone-volcano.jpg" alt="The plane flying over a volcano with lava rivers and lava bombs in the air." width="1600" height="736" loading="lazy"></a><figcaption>Dodge the lava bombs</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-worlds.png" download><img src="/assets/images/landtheplane/store/iphone-worlds.jpg" alt="The world picker showing all 14 worlds, with the first three marked free." width="1600" height="736" loading="lazy"></a><figcaption>14 worlds, 154 levels</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-shop.png" download><img src="/assets/images/landtheplane/store/iphone-shop.jpg" alt="The plane shop with the legendary dragon selected." width="1600" height="736" loading="lazy"></a><figcaption>Unlock legendary planes</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/iphone-challenges.png" download><img src="/assets/images/landtheplane/store/iphone-challenges.jpg" alt="The daily challenges panel with an easy, a medium, and a hard mission." width="1600" height="736" loading="lazy"></a><figcaption>New challenges every day</figcaption></figure>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-launch.png" download><img src="/assets/images/landtheplane/store/ipad-launch.jpg" alt="Pulling back the slingshot on the first level, with the aim arc showing the launch path." width="1200" height="900" loading="lazy"></a><figcaption>Pull back and let go</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-haunted.png" download><img src="/assets/images/landtheplane/store/ipad-haunted.jpg" alt="The plane gliding under a glowing full moon in the Spooky Forest, with a ghost drifting nearby." width="1200" height="900" loading="lazy"></a><figcaption>Haunted moonlit nights</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-cave.png" download><img src="/assets/images/landtheplane/store/ipad-cave.jpg" alt="The plane flying past a flickering torch in a dark cave with glowing crystals below." width="1200" height="900" loading="lazy"></a><figcaption>Fly by torchlight</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-storm.png" download><img src="/assets/images/landtheplane/store/ipad-storm.jpg" alt="A forked bolt of lightning striking beside the plane in heavy rain." width="1200" height="900" loading="lazy"></a><figcaption>Fly through the storm</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-space.png" download><img src="/assets/images/landtheplane/store/ipad-space.jpg" alt="The plane gliding over the surface of Mars with a planet hanging in the sky." width="1200" height="900" loading="lazy"></a><figcaption>New planet, new gravity</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-carrier.png" download><img src="/assets/images/landtheplane/store/ipad-carrier.jpg" alt="The plane lining up its approach to a grey aircraft carrier with a glowing deck." width="1200" height="900" loading="lazy"></a><figcaption>Land on a moving carrier</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-volcano.png" download><img src="/assets/images/landtheplane/store/ipad-volcano.jpg" alt="The plane flying over a volcano with lava rivers and lava bombs in the air." width="1200" height="900" loading="lazy"></a><figcaption>Dodge the lava bombs</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-worlds.png" download><img src="/assets/images/landtheplane/store/ipad-worlds.jpg" alt="The world picker showing all 14 worlds, with the first three marked free." width="1200" height="900" loading="lazy"></a><figcaption>14 worlds, 154 levels</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-shop.png" download><img src="/assets/images/landtheplane/store/ipad-shop.jpg" alt="The plane shop with the legendary dragon selected." width="1200" height="900" loading="lazy"></a><figcaption>Unlock legendary planes</figcaption></figure>
+      <figure><a href="/assets/images/landtheplane/store/full/ipad-challenges.png" download><img src="/assets/images/landtheplane/store/ipad-challenges.jpg" alt="The daily challenges panel with an easy, a medium, and a hard mission." width="1200" height="900" loading="lazy"></a><figcaption>New challenges every day</figcaption></figure>
     </div>
   </section>
 
@@ -233,7 +274,7 @@ footer { color: var(--muted); font-size: 14px; }
       <div class="links">
         <p><a href="/assets/images/landtheplane/icon-1024.png" download>Download the icon, 1024 x 1024 PNG</a></p>
         <p><a href="/assets/images/landtheplane/icon-512.png" download>Download the icon, 512 x 512 PNG</a></p>
-        <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Gameplay screenshots will be added here closer to release. Contact below if you need something sooner.</p>
+        <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Screenshots are above. Contact below if you need anything else.</p>
       </div>
     </div>
   </section>
@@ -250,7 +291,7 @@ footer { color: var(--muted); font-size: 14px; }
       </div>
       <div class="copy">
         <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
-        <p id="c2">Land the Plane is a game for iPhone and iPad about one thing: landing. Players drag back to launch a little plane with a slingshot, then climb, dive, and use flaps to bring it down gently on the runway for up to three stars. 154 levels across 14 worlds mix in moving carriers, trains, and ice floes, lava bombs, ghosts, and asteroids, and even planets with their own gravity. The first three worlds are free, and a one-time purchase unlocks the rest along with daily challenges and a plane shop. There are no ads, no accounts, and no tracking. Land the Plane was built by independent developer Alexander Rohr, and the name comes from a real moment: a business call that would not end, and his wife, sitting next to him in the carpool line, saying &ldquo;land the plane.&rdquo;</p>
+        <p id="c2">Land the Plane is a game for iPhone and iPad about one thing: landing. Players drag back to launch a little plane with a slingshot, then climb, dive, and use flaps to bring it down gently on the runway for up to three stars. 154 levels across 14 worlds mix in moving carriers, trains, and ice floes, lava bombs, ghosts, and asteroids, and even planets with their own gravity. The first three worlds are free, and a one-time purchase unlocks the rest along with daily challenges, a plane shop, and Game Center achievements. There are no ads, no accounts, and no tracking. Land the Plane was built by independent developer Alexander Rohr, and the name comes from a real moment: a business call that would not end, and his wife, sitting next to him in the carpool line, saying &ldquo;land the plane.&rdquo;</p>
       </div>
     </div>
   </section>
@@ -270,10 +311,11 @@ footer { color: var(--muted); font-size: 14px; }
       <div class="fact"><span class="label">In-app purchase</span><span>Unlock All Worlds, $3.99 one time, no subscription</span></div>
       <div class="fact"><span class="label">Free</span><span>Countryside, Airport, and High Seas (33 levels)</span></div>
       <div class="fact"><span class="label">Content</span><span>14 worlds, 154 levels, 3 stars per level</span></div>
-      <div class="fact"><span class="label">Shop</span><span>41 plane skins, 13 smoke trails, 13 slingshots</span></div>
-      <div class="fact"><span class="label">Privacy</span><span>No account, no ads, no analytics, no network connections of its own. <a href="/landtheplane/privacy/">Privacy policy</a></span></div>
+      <div class="fact"><span class="label">Shop</span><span>More than 80 items: plane skins, smoke trails, and slingshots, common to legendary</span></div>
+      <div class="fact"><span class="label">Game Center</span><span>47 achievements, optional sign-in</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no ads, no analytics, no servers of its own. <a href="/landtheplane/privacy/">Privacy policy</a></span></div>
       <div class="fact"><span class="label">Terms</span><span><a href="/landtheplane/terms/">Terms &amp; Conditions</a></span></div>
-      <div class="fact"><span class="label">Built with</span><span>SpriteKit, StoreKit 2</span></div>
+      <div class="fact"><span class="label">Built with</span><span>SpriteKit, GameKit, StoreKit 2</span></div>
     </div>
   </section>
 

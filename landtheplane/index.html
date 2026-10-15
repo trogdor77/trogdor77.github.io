@@ -21,11 +21,18 @@
   :root { --accent: #1a6bc2; --accent-soft: #e1eefb; }
   @media (prefers-color-scheme: dark) { :root { --accent: #7cc0ff; --accent-soft: #13263d; } }
 
-  .hero { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 40px; align-items: center; }
-  .hero .appicon { width: 168px; height: 168px; border-radius: 38px; box-shadow: 0 14px 34px rgba(26, 107, 194, .3); }
+  .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr); gap: 48px; align-items: center; }
   .hero .text { display: grid; gap: 14px; justify-items: start; }
+  .hero .appicon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 28px rgba(26, 107, 194, .3); }
+  .hero .screen { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 14px 34px rgba(10, 30, 60, .28); }
   .price { font-size: 15px; color: var(--muted); }
-  @media (max-width: 640px) { .hero { grid-template-columns: 1fr; gap: 24px; } .hero .appicon { width: 112px; height: 112px; border-radius: 26px; } }
+  @media (max-width: 800px) { .hero { grid-template-columns: 1fr; gap: 28px; } }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 min(560px, 86%); scroll-snap-align: start; display: grid; gap: 8px; align-content: start; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(10, 30, 60, .22); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+  @media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
 
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: step; }
   .step { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 20px; display: grid; gap: 6px; align-content: start; counter-increment: step; }
@@ -69,8 +76,8 @@
 <main class="wrap">
 
   <header class="hero">
-    <img class="appicon" src="/assets/images/landtheplane/icon-512.png" alt="Land the Plane app icon">
     <div class="text">
+      <img class="appicon" src="/assets/images/landtheplane/icon-512.png" alt="Land the Plane app icon">
       <span class="label">Coming soon for iPhone and iPad</span>
       <h1>Land the Plane</h1>
       <p class="lede">Launch with a slingshot, glide over the hazards, and set the plane down gently on the runway. 14 worlds of trickier and trickier landings.</p>
@@ -80,6 +87,7 @@
       </div>
       <p class="price">First three worlds free · One-time unlock for the rest · iOS 17 or later · Works offline</p>
     </div>
+    <img class="screen" src="/assets/images/landtheplane/store/iphone-haunted.jpg" alt="Land the Plane gameplay: the plane gliding under a glowing full moon in the Spooky Forest." width="1600" height="736">
   </header>
 
   <section aria-labelledby="story-h">
@@ -141,9 +149,48 @@
       <div class="feature"><h3>Runways that move</h3><p>Land on a carrier at sea, a rolling train, a bobbing raft, or a floating ice floe, and catch the arrestor wire.</p></div>
       <div class="feature"><h3>New planets, new gravity</h3><p>In Space, each planet has its own gravity and air, so the same flying skills need a different touch.</p></div>
       <div class="feature"><h3>Daily challenges</h3><p>Three new challenges every day, easy, medium, and hard, that pay out points for finishing them.</p></div>
-      <div class="feature"><h3>Plane shop</h3><p>Spend your points on plane skins, smoke trails, and slingshots, from common to epic. Everything is earned by playing.</p></div>
+      <div class="feature"><h3>Plane shop</h3><p>Spend your points on more than 80 plane skins, smoke trails, and slingshots, from common to legendary. Fly a dragon, a UFO, or a rainbow unicorn.</p></div>
+      <div class="feature"><h3>47 achievements</h3><p>Earn Game Center achievements for perfect landings, long streaks, special runways, and night flights.</p></div>
       <div class="feature"><h3>Made for both screens</h3><p>Plays in landscape on iPhone and iPad, with settings for music, sound, vibration, and on-screen pitch buttons.</p></div>
       <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads, and no analytics. The game works fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">On iPhone</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><img src="/assets/images/landtheplane/store/iphone-launch.jpg" alt="Pulling back the slingshot on the first level, with the aim arc showing the launch path." width="1600" height="736" loading="lazy"><figcaption>Pull back and let go</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-haunted.jpg" alt="The plane gliding under a glowing full moon in the Spooky Forest, with a ghost drifting nearby." width="1600" height="736" loading="lazy"><figcaption>Haunted moonlit nights</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-cave.jpg" alt="The plane flying past a flickering torch in a dark cave with glowing crystals below." width="1600" height="736" loading="lazy"><figcaption>Fly by torchlight</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-storm.jpg" alt="A forked bolt of lightning striking beside the plane in heavy rain." width="1600" height="736" loading="lazy"><figcaption>Fly through the storm</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-space.jpg" alt="The plane gliding over the surface of Mars with a planet hanging in the sky." width="1600" height="736" loading="lazy"><figcaption>New planet, new gravity</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-carrier.jpg" alt="The plane lining up its approach to a grey aircraft carrier with a glowing deck." width="1600" height="736" loading="lazy"><figcaption>Land on a moving carrier</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-volcano.jpg" alt="The plane flying over a volcano with lava rivers and lava bombs in the air." width="1600" height="736" loading="lazy"><figcaption>Dodge the lava bombs</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-worlds.jpg" alt="The world picker showing all 14 worlds, with the first three marked free." width="1600" height="736" loading="lazy"><figcaption>14 worlds, 154 levels</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-shop.jpg" alt="The plane shop with the legendary dragon selected." width="1600" height="736" loading="lazy"><figcaption>Unlock legendary planes</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/iphone-challenges.jpg" alt="The daily challenges panel with an easy, a medium, and a hard mission." width="1600" height="736" loading="lazy"><figcaption>New challenges every day</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="ipad-h">
+    <div class="section-head">
+      <span class="label">On iPad</span>
+      <h2 id="ipad-h">Room to fly</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><img src="/assets/images/landtheplane/store/ipad-launch.jpg" alt="Pulling back the slingshot on the first level, with the aim arc showing the launch path." width="1200" height="900" loading="lazy"><figcaption>Pull back and let go</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-haunted.jpg" alt="The plane gliding under a glowing full moon in the Spooky Forest, with a ghost drifting nearby." width="1200" height="900" loading="lazy"><figcaption>Haunted moonlit nights</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-cave.jpg" alt="The plane flying past a flickering torch in a dark cave with glowing crystals below." width="1200" height="900" loading="lazy"><figcaption>Fly by torchlight</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-storm.jpg" alt="A forked bolt of lightning striking beside the plane in heavy rain." width="1200" height="900" loading="lazy"><figcaption>Fly through the storm</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-space.jpg" alt="The plane gliding over the surface of Mars with a planet hanging in the sky." width="1200" height="900" loading="lazy"><figcaption>New planet, new gravity</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-carrier.jpg" alt="The plane lining up its approach to a grey aircraft carrier with a glowing deck." width="1200" height="900" loading="lazy"><figcaption>Land on a moving carrier</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-volcano.jpg" alt="The plane flying over a volcano with lava rivers and lava bombs in the air." width="1200" height="900" loading="lazy"><figcaption>Dodge the lava bombs</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-worlds.jpg" alt="The world picker showing all 14 worlds, with the first three marked free." width="1200" height="900" loading="lazy"><figcaption>14 worlds, 154 levels</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-shop.jpg" alt="The plane shop with the legendary dragon selected." width="1200" height="900" loading="lazy"><figcaption>Unlock legendary planes</figcaption></figure>
+      <figure><img src="/assets/images/landtheplane/store/ipad-challenges.jpg" alt="The daily challenges panel with an easy, a medium, and a hard mission." width="1200" height="900" loading="lazy"><figcaption>New challenges every day</figcaption></figure>
     </div>
   </section>
 
@@ -180,7 +227,7 @@
       <h2 id="priv-h">Stays on your device</h2>
     </div>
     <div class="prose">
-      <p>Land the Plane has no account, no ads, and no third-party analytics. Your stars, points, and settings are saved on your device, and the game makes no network connections of its own.</p>
+      <p>Land the Plane has no account, no ads, and no third-party analytics. Your stars, points, and settings are saved on your device, and the game has no servers of its own. Game Center achievements are optional.</p>
       <p><a href="/landtheplane/privacy/">Read the privacy policy</a></p>
     </div>
   </section>
