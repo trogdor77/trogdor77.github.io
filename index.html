@@ -26,13 +26,15 @@
   .featured img { width: 96px; height: 96px; border-radius: 22px; }
   .featured .text { display: grid; gap: 10px; }
   @media (max-width: 600px) { .featured { grid-template-columns: 1fr; } .featured img { width: 72px; height: 72px; border-radius: 17px; } }
-  .featured-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .featured-row .featured { padding: 22px; gap: 18px; align-items: start; }
-  .featured-row .featured img { width: 72px; height: 72px; border-radius: 17px; }
-  .featured-row .featured h3 { font-size: 18px; }
-  .featured-row .featured .text { height: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-  .featured-row .featured .text .actions { margin-top: auto; padding-top: 6px; }
-  @media (max-width: 860px) { .featured-row { grid-template-columns: 1fr; } }
+  .featured-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .featured-row .featured { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 18px; border-radius: 18px; }
+  .featured-row .featured img { width: 56px; height: 56px; border-radius: 13px; }
+  .featured-row .featured .text { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%; }
+  .featured-row .featured h3 { font-size: 17px; line-height: 1.25; }
+  .featured-row .featured p { font-size: 15px; line-height: 1.5; }
+  .featured-row .featured .actions { margin-top: auto; padding-top: 8px; gap: 8px; }
+  .featured-row .featured .btn { padding: 9px 14px; font-size: 14px; border-radius: 10px; }
+  @media (max-width: 920px) { .featured-row { grid-template-columns: 1fr; } }
 </style>
 <link rel="stylesheet" href="/assets/css/nav.css">
 <script src="/assets/js/nav.js" defer></script>
@@ -64,7 +66,7 @@
   <section aria-labelledby="new-h">
     <div class="section-head">
       <span class="label">New</span>
-      <h2 id="new-h">Meduo and Scumble</h2>
+      <h2 id="new-h">Meduo, Scumble, and Land the Plane</h2>
     </div>
     <div class="featured-row">
       <div class="featured">
@@ -72,7 +74,7 @@
         <div class="text">
           <span class="label">Meduo · iPhone &amp; iPad</span>
           <h3>Private health records for your whole family</h3>
-          <p class="muted">Track medications, appointments, lab results, and symptoms for your kids, yourself, and the parents you care for. No accounts and no servers: your data stays in your own iCloud.</p>
+          <p class="muted">Medications, appointments, lab results, and symptoms for your kids, yourself, and your parents. No accounts, no servers: it all stays in your own iCloud.</p>
           <div class="actions">
             <a class="btn" href="/meduo/">Learn more</a>
             <a class="btn secondary" href="https://apps.apple.com/us/app/meduo/id6815359075">App Store</a>
@@ -84,10 +86,22 @@
         <div class="text">
           <span class="label">Scumble · Mac · Coming soon</span>
           <h3>A layered image editor for your Mac</h3>
-          <p class="muted">Paint, select, add text, adjust colors, and apply effects, with every edit undoable. No account and no internet connection needed.</p>
+          <p class="muted">Paint, select, add text, adjust colors, and apply effects, with every edit undoable. No account and no internet needed.</p>
           <div class="actions">
             <a class="btn" href="/scumble/">Learn more</a>
             <a class="btn secondary" href="/scumble/press/">Press kit</a>
+          </div>
+        </div>
+      </div>
+      <div class="featured">
+        <img src="/assets/images/landtheplane/icon-512.png" alt="Land the Plane app icon">
+        <div class="text">
+          <span class="label">iPhone &amp; iPad · Coming soon</span>
+          <h3>Launch with a slingshot, then land it gently</h3>
+          <p class="muted">Glide past lava, ghosts, and lightning across 14 worlds. The first three worlds are free, with no ads.</p>
+          <div class="actions">
+            <a class="btn" href="/landtheplane/">Learn more</a>
+            <a class="btn secondary" href="/landtheplane/press/">Press kit</a>
           </div>
         </div>
       </div>
