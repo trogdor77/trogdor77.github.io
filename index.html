@@ -33,8 +33,12 @@
   .featured-row .featured h3 { font-size: 17px; line-height: 1.25; }
   .featured-row .featured p { font-size: 15px; line-height: 1.5; }
   .featured-row .featured .actions { margin-top: auto; padding-top: 8px; gap: 8px; }
-  .featured-row .featured .btn { padding: 9px 14px; font-size: 14px; border-radius: 10px; }
-  @media (max-width: 920px) { .featured-row { grid-template-columns: 1fr; } }
+  .featured-row .featured .actions { align-items: center; }
+  .featured-row .featured .btn { height: 40px; padding: 0 16px; font-size: 14px; border-radius: 10px; align-items: center; justify-content: center; }
+  .featured-row .featured .badge img { width: auto; height: 40px; border-radius: 0; }   /* beats the app-icon rule above */
+  .featured-row .featured .badge.play { margin: -10px; }   /* the Google PNG carries about 10px of built-in margin at this size */
+  .featured-row .featured .badge.play img { height: 60px; }
+  @media (max-width: 1010px) { .featured-row { grid-template-columns: 1fr; } }   /* below this the Mac badge no longer fits beside Learn more in a card */
 </style>
 <link rel="stylesheet" href="/assets/css/nav.css">
 <script src="/assets/js/nav.js" defer></script>
@@ -77,7 +81,7 @@
           <p class="muted">Medications, appointments, lab results, and symptoms for your kids, yourself, and your parents. No accounts, no servers: it all stays in your own iCloud.</p>
           <div class="actions">
             <a class="btn" href="/meduo/">Learn more</a>
-            <a class="btn secondary" href="https://apps.apple.com/us/app/meduo/id6815359075">App Store</a>
+            <a class="badge" href="https://apps.apple.com/us/app/meduo/id6815359075" aria-label="Download on the App Store"><picture><source srcset="/assets/images/badges/app-store-white.svg" media="(prefers-color-scheme: dark)"><img src="/assets/images/badges/app-store-black.svg" alt="Download on the App Store" width="120" height="40"></picture></a>
           </div>
         </div>
       </div>
@@ -89,7 +93,7 @@
           <p class="muted">Paint, select, add text, adjust colors, and apply effects, with every edit undoable. No account and no internet needed.</p>
           <div class="actions">
             <a class="btn" href="/scumble/">Learn more</a>
-            <a class="btn secondary" href="https://apps.apple.com/us/app/scumble/id6815518006?mt=12">Mac App Store</a>
+            <a class="badge" href="https://apps.apple.com/us/app/scumble/id6815518006?mt=12" aria-label="Download on the Mac App Store"><picture><source srcset="/assets/images/badges/mac-app-store-white.svg" media="(prefers-color-scheme: dark)"><img src="/assets/images/badges/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40"></picture></a>
           </div>
         </div>
       </div>
