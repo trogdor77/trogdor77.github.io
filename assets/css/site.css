@@ -80,3 +80,12 @@ section { display: grid; gap: 24px; }
 footer.site { border-top: 1px solid var(--rule); }
 footer.site .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 14px; }
 footer.site a { color: var(--muted); }
+
+/* Official store badges (Apple and Google). Never recolor, redraw, crop, or distort these files; Apple wants a clear space of
+   a quarter of the badge height, and the Google file already carries its own margin. Black badge on light pages, white on dark. */
+.badge { display: inline-block; line-height: 0; border-radius: 8px; }
+.badge img { display: block; height: 52px; width: auto; }
+.badge.play { margin: -12px; }          /* the Google PNG has about 12px of built-in margin at this size */
+.badge.play img { height: 77px; }
+.badge:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.actions .badge + .badge { margin-left: 4px; }
