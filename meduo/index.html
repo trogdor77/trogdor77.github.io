@@ -54,6 +54,10 @@
   .shots.wide figure { flex: 0 0 min(560px, 86%); }
   .shots figcaption { font-size: 14px; color: var(--muted); }
 
+  .release { display: grid; gap: 10px; }
+  .release h3 { display: flex; align-items: baseline; gap: 12px; }
+  .release ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 16px; }
+
   .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
   .plan { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; }
   .plan .amount { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
@@ -111,12 +115,37 @@
     <div class="features">
       <div class="feature"><h3>Family profiles</h3><p>A separate record for each person you care for, with one-tap switching.</p></div>
       <div class="feature"><h3>Medication reminders</h3><p>Reminders say who the dose is for, and doses due at the same time arrive together. Scan a label's barcode to fill in details.</p></div>
-      <div class="feature"><h3>Health journal</h3><p>Daily entries in categories you choose: dizziness, sleep, mood, or anything else you need to track.</p></div>
+      <div class="feature"><h3>Health journal timeline</h3><p>Entries have a time and are grouped by day. Add symptoms, the medications you gave, and a temperature, then see the days since each symptom and a fever chart. Import an existing diary from Apple Notes.</p></div>
+      <div class="feature"><h3>As-needed medications</h3><p>Log a dose in a tap and see when it was last given, with an optional minimum time between doses.</p></div>
       <div class="feature"><h3>Lab results and vital trends</h3><p>Keep results over time and chart blood pressure, weight, glucose, and more.</p></div>
       <div class="feature"><h3>Appointments and procedures</h3><p>Upcoming and past visits with calendar sync, plus surgeries with facility, surgeon, and outcome.</p></div>
       <div class="feature"><h3>Vaccinations, conditions, allergies</h3><p>Searchable lists with dates, lot numbers, and providers.</p></div>
       <div class="feature"><h3>One-tap PDF summary</h3><p>Export a complete health record to share with a new doctor, a specialist, or the ER.</p></div>
+      <div class="feature"><h3>Doctor report</h3><p>Turn a journal into a PDF for the dates you choose, with entry times, symptoms, temperatures, and medications given.</p></div>
+      <div class="feature"><h3>Search and attachments</h3><p>Search your records for one person or the whole family, and attach photos and scanned documents to journal entries, medications, labs, and more.</p></div>
       <div class="feature"><h3>Widgets</h3><p>Today's medications and appointments on your Home Screen.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="new-h">
+    <div class="section-head">
+      <span class="label">What's new</span>
+      <h2 id="new-h">Latest update</h2>
+    </div>
+    <div class="release">
+      <h3>Version 1.5</h3>
+      <p class="muted">Your journal is now a timeline.</p>
+      <ul>
+        <li>Journal timeline. Entries have a time and are grouped by day, so you can see what happened and when.</li>
+        <li>Medications given. Record the medication in a journal entry and it is added to that medication's dose history, so the Dashboard's "Last given" and your doctor report include it.</li>
+        <li>Temperature. Add a temperature in °F or °C. Fevers are tagged for you and shown on a fever chart with the medications given marked.</li>
+        <li>Symptom tags and patterns. Tags are suggested from what you write, with the days since each symptom and a symptom timeline chart.</li>
+        <li>As-needed medications. Log a dose from the Dashboard, see when it was last given, and set an optional minimum time between doses.</li>
+        <li>Doctor report. Create a PDF of a journal for the dates you choose, or email it.</li>
+        <li>Import from Apple Notes. Bring an existing diary in as a journal, one entry per dated line.</li>
+        <li>Search, photos, and scanned documents, plus quicker new entries.</li>
+        <li>Fixes: lists refresh right after you add a record, Meduo remembers which family member you were viewing, and a new journal entry no longer closes and reopens while you write it.</li>
+      </ul>
     </div>
   </section>
 
@@ -165,7 +194,7 @@
       <figure><img src="/assets/images/meduo/store/iphone-lockscreen.jpg" alt="A Lock Screen reminder that names the person the dose is for, above a Medical ID card" width="660" height="1434" loading="lazy"><figcaption>Reminders</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/iphone-medications.jpg" alt="The medication list for one person, with doses, prescribers, pharmacies, and refill dates" width="660" height="1434" loading="lazy"><figcaption>Medications</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/iphone-conflict.jpg" alt="A new appointment form listing everything else scheduled that day, with a warning icon" width="660" height="1434" loading="lazy"><figcaption>Conflicts</figcaption></figure>
-      <figure><img src="/assets/images/meduo/store/iphone-journal.jpg" alt="A list of journals for symptoms, sleep, exercise, and mood, with entry counts" width="660" height="1434" loading="lazy"><figcaption>Health journal</figcaption></figure>
+      <figure><img src="/assets/images/meduo/store/iphone-journal.jpg" alt="Maya's Sick Log as a timeline: entries grouped by day with times, symptom tags, medications given, a temperature, and a photo" width="660" height="1434" loading="lazy"><figcaption>Journal timeline</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/iphone-vitals.jpg" alt="A blood pressure trend chart over 90 days with the list of readings behind it" width="660" height="1434" loading="lazy"><figcaption>Vitals</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/iphone-pdf.jpg" alt="A health summary PDF opened on iPhone, with the emergency contact and active medications" width="660" height="1434" loading="lazy"><figcaption>PDF summary</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/iphone-appearance.jpg" alt="The dashboard split down the middle, half in dark mode and half in light mode" width="660" height="1434" loading="lazy"><figcaption>Light and dark</figcaption></figure>
@@ -183,7 +212,10 @@
       <figure><img src="/assets/images/meduo/store/ipad-dashboard.jpg" alt="Meduo on iPad with a sidebar of four family members beside the dashboard" width="1600" height="1200" loading="lazy"><figcaption>Family dashboard</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/ipad-medications.jpg" alt="Six medications for one person in a wide list with doses, prescribers, and refill dates" width="1600" height="1200" loading="lazy"><figcaption>Medications</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/ipad-conflict.jpg" alt="Editing an appointment on iPad with another visit listed under That Day" width="1600" height="1200" loading="lazy"><figcaption>Conflicts</figcaption></figure>
-      <figure><img src="/assets/images/meduo/store/ipad-journal.jpg" alt="A journal with three dated entries and pattern statistics" width="1600" height="1200" loading="lazy"><figcaption>Health journal</figcaption></figure>
+      <figure><img src="/assets/images/meduo/store/ipad-journal.jpg" alt="Maya's Sick Log on iPad with a timeline of entries grouped by day, showing symptoms, medications given, and temperatures" width="1600" height="1200" loading="lazy"><figcaption>Journal timeline</figcaption></figure>
+      <figure><img src="/assets/images/meduo/store/ipad-journal-charts.jpg" alt="The top of a journal on iPad with days since each symptom and a symptom timeline chart" width="1600" height="1200" loading="lazy"><figcaption>Spot patterns</figcaption></figure>
+      <figure><img src="/assets/images/meduo/store/ipad-fever-chart.jpg" alt="A fever chart on iPad with the highest reading, a fever line, and each medication given marked, above the timeline" width="1600" height="1200" loading="lazy"><figcaption>Fever chart</figcaption></figure>
+      <figure><img src="/assets/images/meduo/store/ipad-as-needed.jpg" alt="The iPad dashboard with an As Needed section showing when each medication was last given and when the next dose is allowed" width="1600" height="1200" loading="lazy"><figcaption>As-needed doses</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/ipad-clinical.jpg" alt="Allergies, vitals, surgeries, and lab results for one person on iPad" width="1600" height="1200" loading="lazy"><figcaption>Clinical record</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/ipad-vitals.jpg" alt="A blood pressure trend chart and the full list of readings on iPad" width="1600" height="1200" loading="lazy"><figcaption>Vitals</figcaption></figure>
       <figure><img src="/assets/images/meduo/store/ipad-pdf.jpg" alt="The Clinical screen beside the exported health summary PDF on iPad" width="1600" height="1200" loading="lazy"><figcaption>PDF summary</figcaption></figure>
