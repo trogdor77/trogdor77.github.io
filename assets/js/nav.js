@@ -8,6 +8,7 @@
         { name: "Meduo", blurb: "Family health records", href: "/meduo/", icon: "/assets/images/icons/meduo.png" },
         { name: "BudgetXP+", blurb: "Personal finance", href: "/budgetxp/", icon: "/assets/images/icons/budgetxp-personal-finance.jpg" },
         { name: "MealBound", blurb: "Meal planning and grocery lists", href: "/mealbound/", icon: "/assets/images/icons/mealbound.jpg" },
+        { name: "Math Facts", blurb: "Math practice for kids, coming soon", href: "/mathfacts/", icon: "/assets/images/icons/mathfacts.png" },
       ],
     },
     {

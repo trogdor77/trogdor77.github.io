@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math Facts: The Game · Rohr Software</title>
+<meta name="description" content="Math Facts: The Game is an iPhone and iPad app for practicing addition, subtraction, times tables, and dividing in grades 1 to 4 and beyond, with a treasure map, super buddies, and rewards a grown-up sets.">
+<meta property="og:title" content="Math Facts: The Game">
+<meta property="og:description" content="Math fact practice for grades 1 to 4 and beyond, with a treasure map, super buddies, and rewards a grown-up sets. No ads, no tracking.">
+<meta property="og:image" content="/assets/images/mathfacts/icon-512.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #6a4be0; --accent-soft: #ece8fd; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #a99bff; --accent-soft: #231d4a; } }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .hero .text { display: grid; gap: 16px; justify-items: start; }
+  .hero .appicon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(106, 75, 224, .3); }
+  .hero .phone { justify-self: center; width: min(300px, 100%); height: auto; border-radius: 28px; box-shadow: 0 14px 34px rgba(40, 24, 110, .28); }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .phone { width: min(260px, 80%); } }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 20px; display: grid; gap: 6px; align-content: start; counter-increment: step; }
+  .step::before { content: "Step " counter(step); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .step p { color: var(--muted); font-size: 15.5px; }
+
+  .islands { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .island { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+  .island .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .island .t { font-weight: 700; }
+  .island .d { font-size: 14px; color: var(--muted); line-height: 1.4; }
+  .island.free { border-color: var(--accent); }
+  .island.free .n { color: var(--accent); }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 210px; scroll-snap-align: start; display: grid; gap: 8px; align-content: start; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(40, 24, 110, .2); }
+  .shots.wide figure { flex: 0 0 min(560px, 86%); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+  @media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .tier { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+  .tier.pro { border-color: var(--accent); }
+  .tier .amount { font-family: var(--font-display); font-weight: 800; font-size: 28px; letter-spacing: -.01em; }
+  .tier ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15.5px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="36" height="36"><span>Rohr Software</span></a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="text">
+      <img class="appicon" src="/assets/images/mathfacts/icon-512.png" alt="Math Facts: The Game app icon: addition, subtraction, multiplication, and division signs around a smiling face">
+      <span class="label">Coming soon for iPhone and iPad</span>
+      <h1>Math Facts: The Game</h1>
+      <p class="lede">Math fact practice that feels like a game, for grades 1 to 4 and beyond. Kids practice adding, taking away, times tables, and dividing, win super buddies on a treasure map, and earn rewards that a grown-up sets.</p>
+      <div class="actions">
+        <a class="btn secondary" href="/mathfacts/press/">Press kit</a>
+        <a class="btn secondary" href="/mathfacts/privacy/">Privacy policy</a>
+      </div>
+      <p class="price">Free to start · 14-day free trial of everything · iOS 17 or later · Works offline</p>
+    </div>
+    <img class="phone" src="/assets/images/mathfacts/store/iphone-title.jpg" alt="The Math Facts: The Game title screen with the colorful MATH FACTS the GAME logo and three animal buddies" width="660" height="1434">
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">Why Math Facts</span>
+      <h2 id="story-h">Practice that does not feel like a test</h2>
+    </div>
+    <div class="prose">
+      <p>I built Math Facts for my daughter, who finds her math facts hard. I wanted practice that would not make her feel bad about a wrong answer, so a miss gets a silly &ldquo;Not quite!&rdquo; and the right answer on screen, never a buzzer.</p>
+      <p>I also wanted her to see what she has learned, so every fact lives on a map that fills in as she masters it. And I wanted something real at the end of it, so grown-ups set the rewards, like an ice cream trip, and kids earn the stars. The treasure map was her idea.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="play-h">
+    <div class="section-head">
+      <span class="label">How it plays</span>
+      <h2 id="play-h">Short rounds, big rewards</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Pick a player</h3><p>Each child has their own player, with a buddy, a grade, a practice timer, and their own progress.</p></div>
+      <div class="step"><h3>Answer on a big number pad</h3><p>A round is 15 questions, with no timer unless you turn one on. The game learns which facts need more practice.</p></div>
+      <div class="step"><h3>Learn from a miss</h3><p>A wrong answer gets a gentle &ldquo;Not quite!&rdquo; and the right answer. Tap Show me how for a picture and steps.</p></div>
+      <div class="step"><h3>Collect and celebrate</h3><p>Earn stars, coins, level titles, achievements, and super buddies from the treasure map.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="map-h">
+    <div class="section-head">
+      <span class="label">Treasure map</span>
+      <h2 id="map-h">Eight islands, eight super buddies</h2>
+    </div>
+    <p class="muted">Each island is a trail of stops, easiest first. A stop opens when the one before it is passed with 85% right, and the last stop is a treasure chest that wins the island's super buddy. Rounds on the map also count toward fact mastery, and they are never timed.</p>
+    <div class="islands">
+      <div class="island free"><span class="n">ISLAND 1 · FREE</span><div class="t">Sandy Shore</div><div class="d">Adding up to 10. Win Captain Parrot.</div></div>
+      <div class="island"><span class="n">ISLAND 2</span><div class="t">Coconut Cove</div><div class="d">Taking away up to 10. Win Wally the Whale.</div></div>
+      <div class="island"><span class="n">ISLAND 3</span><div class="t">Jungle Falls</div><div class="d">Adding and taking away to 24. Win Jungle Jaguar.</div></div>
+      <div class="island"><span class="n">ISLAND 4</span><div class="t">Pirate Bay</div><div class="d">Times 0, 1, 2, 5 and 10. Win Number Ninja.</div></div>
+      <div class="island"><span class="n">ISLAND 5</span><div class="t">Volcano Peak</div><div class="d">Times 3, 4 and 6. Win Fire Dragon.</div></div>
+      <div class="island"><span class="n">ISLAND 6</span><div class="t">Frosty Caves</div><div class="d">Times 7, 8, 9, 11 and 12. Win Frost Wizard.</div></div>
+      <div class="island"><span class="n">ISLAND 7</span><div class="t">Desert Ruins</div><div class="d">Dividing. Win Math Genie.</div></div>
+      <div class="island"><span class="n">ISLAND 8</span><div class="t">Treasure Castle</div><div class="d">Big numbers, carrying and borrowing. Win Super Mathlete.</div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">Made to help a kid who finds this hard</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Practice that adapts</h3><p>Learns which facts each child knows and which need work, and spreads mastery over days so facts are remembered, not just answered.</p></div>
+      <div class="feature"><h3>Show me how</h3><p>After a wrong answer, a step-by-step strategy with a picture: make a ten, near doubles, the nines trick, think times, and more, for every fact up to 12.</p></div>
+      <div class="feature"><h3>Wrong answers are no big deal</h3><p>A missed fact gets a gentle &ldquo;Not quite!&rdquo; and the right answer on screen. Speed is a bonus, and there is no timer unless you turn one on.</p></div>
+      <div class="feature"><h3>Sign mix-up help</h3><p>Notices when a child answers with the wrong sign, like 11 for 8 &minus; 3, and points it out.</p></div>
+      <div class="feature"><h3>Big numbers in columns</h3><p>Adding and taking away in columns like on paper, with carrying, borrowing, and the mistake shown in the right column.</p></div>
+      <div class="feature"><h3>Missing numbers</h3><p>? + 5 = 12 and 3 &times; ? = 21: fact families the other way round.</p></div>
+      <div class="feature"><h3>Treasure map</h3><p>Eight islands of stops to pass with 85% right, each ending in a treasure chest with a super buddy inside.</p></div>
+      <div class="feature"><h3>Achievements and levels</h3><p>Nearly 100 achievements with progress to see, and level titles from Number Newbie to Grand Math Master.</p></div>
+      <div class="feature"><h3>Real rewards</h3><p>Grown-ups set rewards like an ice cream trip. Children earn stars and choose where to put them.</p></div>
+      <div class="feature"><h3>Progress report</h3><p>Practice time, accuracy, facts known, and the facts that need practice, for each child.</p></div>
+      <div class="feature"><h3>A profile for each child</h3><p>Their own buddy, background, grade, practice timer, and progress.</p></div>
+      <div class="feature"><h3>Made for iPhone and iPad</h3><p>Portrait on iPhone, and portrait or landscape on iPad, with the screens scaled up to fill the bigger display.</p></div>
+      <div class="feature"><h3>iCloud sync</h3><p>Progress syncs through your family's own private iCloud. No account, no ads, no tracking.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">On iPhone</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><img src="/assets/images/mathfacts/store/iphone-title.jpg" alt="The Math Facts: The Game title screen with the colorful MATH FACTS the GAME logo and three animal buddies" width="660" height="1434" loading="lazy"><figcaption>Math facts, made into a game</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-practice.jpg" alt="A times table question, 9 times 6, with the answer 54 typed on a big number pad" width="660" height="1434" loading="lazy"><figcaption>A big number pad</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-notquite.jpg" alt="A wrong answer shows Not quite with the right answer, and a Show me how button" width="660" height="1434" loading="lazy"><figcaption>Gentle wrong answers</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-hint.jpg" alt="A Show me how card for 7 times 8 with a picture of dots and three doubling steps" width="660" height="1434" loading="lazy"><figcaption>Show me how</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-adventure.jpg" alt="The Sandy Shore island on the treasure map with passed stops, stars, and a treasure chest" width="660" height="1434" loading="lazy"><figcaption>The treasure map</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-summary.jpg" alt="The All done screen with a level up, a new achievement, three stars, and coins earned" width="660" height="1434" loading="lazy"><figcaption>Celebrate every round</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-columns.jpg" alt="A column subtraction, 402 minus 114, with the answer 288 entered in boxes" width="660" height="1434" loading="lazy"><figcaption>Big numbers, in columns</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-missing.jpg" alt="A missing number question, 2 times a box equals 20, with 10 entered" width="660" height="1434" loading="lazy"><figcaption>Missing numbers</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-factmap.jpg" alt="A grid of times table facts colored new, learning, or got it, below the big number skills" width="660" height="1434" loading="lazy"><figcaption>The fact map</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-rewards.jpg" alt="Rewards a grown-up set, Ice cream trip, Movie night, and Sleepover, with star progress and achievements" width="660" height="1434" loading="lazy"><figcaption>Rewards kids want</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-dashboard.jpg" alt="A player's page with level, stars, coins, what to practice, the practice timer, and the play and adventure buttons" width="660" height="1434" loading="lazy"><figcaption>A player's page</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-report.jpg" alt="A progress report with practice minutes, rounds, right answers, accuracy, and weekly charts" width="660" height="1434" loading="lazy"><figcaption>Progress reports</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-focus.jpg" alt="Grown-up settings for choosing the grade and which times table and division facts to focus on" width="660" height="1434" loading="lazy"><figcaption>Grown-ups choose</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="ipad-h">
+    <div class="section-head">
+      <span class="label">On iPad</span>
+      <h2 id="ipad-h">Room for the whole map</h2>
+    </div>
+    <div class="shots wide" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><img src="/assets/images/mathfacts/store/ipad-title.jpg" alt="The Math Facts: The Game title screen on iPad" width="1600" height="1200" loading="lazy"><figcaption>Title screen</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-dashboard.jpg" alt="An iPad player page with rewards, achievements, and facts known beside the play and adventure buttons" width="1600" height="1200" loading="lazy"><figcaption>Everything in one place</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-practice.jpg" alt="A times table question, 7 times 8, with the answer 56 beside a big number pad on iPad" width="1600" height="1200" loading="lazy"><figcaption>A big number pad</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-adventure.jpg" alt="The treasure map on iPad with passed stops and a treasure chest" width="1600" height="1200" loading="lazy"><figcaption>The treasure map</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-summary.jpg" alt="The All done screen on iPad with two new achievements and three stars" width="1600" height="1200" loading="lazy"><figcaption>Celebrate every round</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-achievements.jpg" alt="The achievements page showing 22 of 98 earned, with earned and locked badges" width="1600" height="1200" loading="lazy"><figcaption>Achievements</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-columns.jpg" alt="A column subtraction, 71 minus 25, with the answer 46 entered beside a number pad on iPad" width="1600" height="1200" loading="lazy"><figcaption>Big numbers, in columns</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-factmap.jpg" alt="An iPad player page with the fact map grid of times table facts beside it" width="1600" height="1200" loading="lazy"><figcaption>The fact map</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-report.jpg" alt="A progress report on iPad with practice time, accuracy, and weekly charts" width="1600" height="1200" loading="lazy"><figcaption>Progress reports</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="grown-h">
+    <div class="section-head">
+      <span class="label">For grown-ups</span>
+      <h2 id="grown-h">You steer, they play</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Choose what to practice</h3><p>Pick a starting grade from 1 to 4, then fine-tune which operations and which times tables or divisors to focus on. Changing these never erases progress.</p></div>
+      <div class="feature"><h3>Set the rewards</h3><p>Create rewards with a star goal, like an ice cream trip or a movie night. The child sees progress on their page, and you mark it given.</p></div>
+      <div class="feature"><h3>See the progress</h3><p>A report for each child shows practice time, accuracy, week-by-week growth, facts known, and the facts that keep tripping them up.</p></div>
+      <div class="feature"><h3>Behind a parental gate</h3><p>The Grown-ups area, the purchase screen, and links out of the app are behind a gate: type a big number from its spelled-out words. Children never see prices or buy buttons.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Free to start, with a free trial of everything</h2>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Free</h3>
+        <p class="amount">$0</p>
+        <ul>
+          <li>One player</li>
+          <li>Adding and taking away, with the Sandy Shore island</li>
+          <li>Show me how hints, achievements, and rewards</li>
+          <li>The first part of the progress report</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>14-day free trial</h3>
+        <p class="amount">$0</p>
+        <ul>
+          <li>Everything in the full version for 14 days</li>
+          <li>No payment needed, and nothing renews</li>
+          <li>When it ends, the game goes back to the free version and nothing is lost</li>
+        </ul>
+      </div>
+      <div class="tier pro">
+        <h3>Full version</h3>
+        <p class="amount">$19.99 <span class="muted" style="font-size:15px;font-weight:600">once, or $0.99 a month</span></p>
+        <ul>
+          <li>Times tables and dividing, big numbers, and missing numbers</li>
+          <li>The whole treasure map, a player for every child, and the full progress report</li>
+          <li>Both options use Family Sharing, so one purchase covers the family</li>
+          <li>The monthly plan renews until you cancel in your Apple Account settings</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="font-size:14px">Prices shown are in US dollars. The App Store shows the price for your country at purchase.</p>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Stays in your family's iCloud</h2>
+    </div>
+    <div class="prose">
+      <p>Math Facts has no account, no ads, no third-party analytics, and no servers of its own. Player names, buddies, and progress stay on your devices and sync only through your own private iCloud, where the developer cannot see them.</p>
+      <p><a href="/mathfacts/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/mathfacts/press/">Press kit</a>
+      <a class="btn secondary" href="/mathfacts/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/mathfacts/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
