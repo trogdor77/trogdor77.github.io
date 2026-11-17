@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take the Crown · Rohr Software</title>
+<meta name="description" content="Take the Crown is a side-scrolling action RPG for iPhone and iPad. The King took your cat, Sir Leo. Fight through six regions and 21 levels, beat the bosses, and take back the crown.">
+<meta property="og:title" content="Take the Crown">
+<meta property="og:description" content="The King took your cat. Fight through six regions, beat the bosses, and take back the crown. No ads.">
+<meta property="og:image" content="/assets/images/takethecrown/icon-512.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  :root { --accent: #7a3a9e; --accent-soft: #f1e6f8; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #d2a6f2; --accent-soft: #2a1838; } }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr); gap: 48px; align-items: center; }
+  .hero .text { display: grid; gap: 14px; justify-items: start; }
+  .hero .appicon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 28px rgba(122, 58, 158, .32); }
+  .hero .screen { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 14px 34px rgba(30, 16, 50, .3); }
+  .price { font-size: 15px; color: var(--muted); }
+  @media (max-width: 800px) { .hero { grid-template-columns: 1fr; gap: 28px; } }
+
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+  .shots figure { margin: 0; flex: 0 0 min(560px, 86%); scroll-snap-align: start; display: grid; gap: 8px; align-content: start; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(30, 16, 50, .22); }
+  .shots figcaption { font-size: 14px; color: var(--muted); }
+  @media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 20px; display: grid; gap: 6px; align-content: start; counter-increment: step; }
+  .step::before { content: "Step " counter(step); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .step p { color: var(--muted); font-size: 15.5px; }
+
+  .worlds { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .world { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+  .world .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .world .t { font-weight: 700; }
+  .world .d { font-size: 14px; color: var(--muted); line-height: 1.4; }
+  .world.free { border-color: var(--accent); }
+  .world.free .n { color: var(--accent); }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+  .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .feature p { color: var(--muted); font-size: 15.5px; }
+
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .tier { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+  .tier.pro { border-color: var(--accent); }
+  .tier .amount { font-family: var(--font-display); font-weight: 800; font-size: 28px; letter-spacing: -.01em; }
+  .tier ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15.5px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="36" height="36"><span>Rohr Software</span></a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="text">
+      <img class="appicon" src="/assets/images/takethecrown/icon-512.png" alt="Take the Crown app icon: Sir Leo, an orange tabby cat, wearing a crown">
+      <span class="label">Coming soon for iPhone and iPad</span>
+      <h1>Take the Crown</h1>
+      <p class="lede">The King took your cat. Fight your way across the kingdom, beat the bosses that stand in your way, and take back Sir Leo, and the crown.</p>
+      <div class="actions">
+        <a class="btn secondary" href="/takethecrown/press/">Press kit</a>
+        <a class="btn secondary" href="/takethecrown/privacy/">Privacy policy</a>
+      </div>
+      <p class="price">First region free · One-time unlock for the rest · iOS 17 or later · Works offline</p>
+    </div>
+    <img class="screen" src="/assets/images/takethecrown/store/iphone-werewolf.jpg" alt="Take the Crown gameplay: the hero faces the Werewolf in a moonlit forest clearing." width="1600" height="736">
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">The story</span>
+      <h2 id="story-h">A King who wants the finest of everything</h2>
+    </div>
+    <div class="prose">
+      <p>It's a quiet morning in your cottage. You're rolling a ball of yarn for Sir Leo, your cat, when the door bursts open and the King's guards march in. The King wants the finest of everything, and he's decided that includes your cat.</p>
+      <p>So you pick up a sword. From the Rolling Hills to the King's own castle, you fight goblins, bandits and the King's knights, take on a boss at the end of every region, and come home stronger each time.</p>
+      <p>Sir Leo is our real cat. The meows and purrs you hear in the game are recordings of him, and the family's other pets make an appearance too.</p>
+      <p class="muted">Alexander Rohr, developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="play-h">
+    <div class="section-head">
+      <span class="label">How it plays</span>
+      <h2 id="play-h">Fight, grow, go home</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Pick your hero</h3><p>Play as Torvald or Brynja, name them, and spend your first points on strength, endurance, stamina and dexterity.</p></div>
+      <div class="step"><h3>Fight</h3><p>Swing, charge heavy attacks and block. Perfect-block a blow to stun the enemy, then hit back twice as hard.</p></div>
+      <div class="step"><h3>Beat the boss</h3><p>Every region ends in a boss fight. At half health each boss gets angrier and fights a second phase.</p></div>
+      <div class="step"><h3>Gear up in the village</h3><p>Spend your gold on weapons, shields, armor and potions, take jobs from the board, rest at home, and head back out.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="worlds-h">
+    <div class="section-head">
+      <span class="label">Six regions, 21 levels</span>
+      <h2 id="worlds-h">The road to the King</h2>
+    </div>
+    <div class="worlds">
+      <div class="world free"><span class="n">REGION 1 · FREE</span><div class="t">Rolling Hills</div><div class="d">Goblins, slimes and the Goblin Chief</div></div>
+      <div class="world"><span class="n">REGION 2</span><div class="t">Whispering Woods</div><div class="d">Dark woods, wolves, fog and the Werewolf</div></div>
+      <div class="world"><span class="n">REGION 3</span><div class="t">Badlands</div><div class="d">Bandits, scorpions, quicksand and the Warlord</div></div>
+      <div class="world"><span class="n">REGION 4</span><div class="t">Frostpeak Mountains</div><div class="d">Blizzards, a rope bridge and the Frost Troll</div></div>
+      <div class="world"><span class="n">REGION 5</span><div class="t">Castle Outskirts</div><div class="d">The King's knights, riders and his Champion</div></div>
+      <div class="world"><span class="n">REGION 6</span><div class="t">The King's Castle</div><div class="d">The Great Hall, the dungeons and the throne room</div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2 id="feat-h">A whole kingdom to fight through</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Bosses with a second phase</h3><p>The Goblin Chief, the Werewolf, the Frost Troll, the Warlord and the King's Champion each stop the fight at half health, roar, and come back angrier with new moves.</p></div>
+      <div class="feature"><h3>Blocking that matters</h3><p>Block to soak up a hit, or time it perfectly to stun the enemy and turn the fight around. Arrows can be deflected right back.</p></div>
+      <div class="feature"><h3>29 weapons</h3><p>Swords, axes, greatswords and bows, each with its own ability, plus 15 shields and 13 suits of armor. Show them off on the rack at home.</p></div>
+      <div class="feature"><h3>A village to call home</h3><p>Visit the blacksmith and the armorer, brew potions, eat at the inn, take daily jobs from the board, and follow the innkeeper's stories for rare rewards.</p></div>
+      <div class="feature"><h3>Mini games</h3><p>Joust against five rival knights, fish at the mill pond, work the forge, brew at the cauldron, and play with Sir Leo when you're home.</p></div>
+      <div class="feature"><h3>Collect every enemy card</h3><p>Every enemy you meet adds a card to your collection. Flip it to learn its strengths and its weak spots.</p></div>
+      <div class="feature"><h3>Achievements</h3><p>Earn 36 Game Center achievements, with progress shown as you go.</p></div>
+      <div class="feature"><h3>Made for both screens</h3><p>Plays in landscape on iPhone and iPad, with settings for music, sound and vibration. The game pauses itself if a call comes in.</p></div>
+      <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads and no analytics. The game works fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">On iPhone</span>
+      <h2 id="shots-h">A look inside</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><img src="/assets/images/takethecrown/store/iphone-title.jpg" alt="The title screen: the Take the Crown logo over the King's castle at dusk, with the heroes Torvald and Brynja on either side." width="1600" height="736" loading="lazy"><figcaption>The King took your cat</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-battle.jpg" alt="The hero swinging his sword at goblins in the Goblin Camp." width="1600" height="736" loading="lazy"><figcaption>Block, parry, strike back</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-werewolf.jpg" alt="The Werewolf leaping in a moonlit forest clearing as the hero stands ready." width="1600" height="736" loading="lazy"><figcaption>Bosses with a second phase</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-village.jpg" alt="The village street with the armorer's shop, villagers and the mill pond sign." width="1600" height="736" loading="lazy"><figcaption>A village to call home</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-bridge.jpg" alt="The hero fighting a skeleton on a rope bridge in the snowy Frostpeak Mountains." width="1600" height="736" loading="lazy"><figcaption>Six regions, 21 levels</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-champion.jpg" alt="The King's Champion in silver armor facing the hero in the rain, the King watching from his royal box." width="1600" height="736" loading="lazy"><figcaption>Face the King's champion</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-joust.jpg" alt="Jousting in the lists in front of a packed crowd, with the aim bar showing." width="1600" height="736" loading="lazy"><figcaption>Joust, fish and play</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-armory.jpg" alt="The hero's home with a wall rack full of weapons and shields beside the trophy board." width="1600" height="736" loading="lazy"><figcaption>29 weapons to master</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-cards.jpg" alt="The pause menu's cards tab, with a grid of collected enemy cards." width="1600" height="736" loading="lazy"><figcaption>Collect every enemy card</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/iphone-throne.jpg" alt="The hero confronting the startled King in his throne room, with caged cats beside the throne." width="1600" height="736" loading="lazy"><figcaption>Storm the King's castle</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="ipad-h">
+    <div class="section-head">
+      <span class="label">On iPad</span>
+      <h2 id="ipad-h">The whole kingdom, bigger</h2>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><img src="/assets/images/takethecrown/store/ipad-title.jpg" alt="The title screen: the Take the Crown logo over the King's castle at dusk, with the heroes Torvald and Brynja on either side." width="1200" height="900" loading="lazy"><figcaption>The King took your cat</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-battle.jpg" alt="The hero swinging his sword at goblins in the Goblin Camp." width="1200" height="900" loading="lazy"><figcaption>Block, parry, strike back</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-werewolf.jpg" alt="The Werewolf howling in a moonlit forest clearing as the hero stands ready." width="1200" height="900" loading="lazy"><figcaption>Bosses with a second phase</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-village.jpg" alt="The village street with the armorer's shop and villagers." width="1200" height="900" loading="lazy"><figcaption>A village to call home</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-bridge.jpg" alt="The hero fighting a skeleton on a rope bridge in the snowy Frostpeak Mountains." width="1200" height="900" loading="lazy"><figcaption>Six regions, 21 levels</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-champion.jpg" alt="The King's Champion facing the hero in the rain, the King watching from his royal box." width="1200" height="900" loading="lazy"><figcaption>Face the King's champion</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-joust.jpg" alt="Jousting in the lists in front of a packed crowd." width="1200" height="900" loading="lazy"><figcaption>Joust, fish and play</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-armory.jpg" alt="The hero's home with a wall rack full of weapons and shields beside the trophy board." width="1200" height="900" loading="lazy"><figcaption>29 weapons to master</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-cards.jpg" alt="The pause menu's cards tab, with a grid of collected enemy cards." width="1200" height="900" loading="lazy"><figcaption>Collect every enemy card</figcaption></figure>
+      <figure><img src="/assets/images/takethecrown/store/ipad-throne.jpg" alt="The hero confronting the startled King in his throne room, with caged cats beside the throne." width="1200" height="900" loading="lazy"><figcaption>Storm the King's castle</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-h">
+    <div class="section-head">
+      <span class="label">Pricing</span>
+      <h2 id="price-h">Free to start, one purchase to unlock</h2>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Free</h3>
+        <p class="amount">$0</p>
+        <ul>
+          <li>The prologue and the Rolling Hills, with the Goblin Chief</li>
+          <li>The village, its shops, mini games and job board</li>
+          <li>Achievements and every setting</li>
+        </ul>
+      </div>
+      <div class="tier pro">
+        <h3>Unlock the Kingdom</h3>
+        <p class="amount">$3.99 <span class="muted" style="font-size:15px;font-weight:600">one time</span></p>
+        <ul>
+          <li>The other five regions, all the way to the King's throne room</li>
+          <li>No subscription, restorable on any device with the same Apple Account</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="priv-h">
+    <div class="section-head">
+      <span class="label">Privacy</span>
+      <h2 id="priv-h">Stays on your device</h2>
+    </div>
+    <div class="prose">
+      <p>Take the Crown has no account, no ads and no third-party analytics. Your hero, gear and progress are saved on your device, and the game has no servers of its own. Game Center achievements are optional.</p>
+      <p><a href="/takethecrown/privacy/">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="section-head">
+      <span class="label">More</span>
+      <h2 id="more-h">Questions, press, and support</h2>
+    </div>
+    <div class="actions">
+      <a class="btn secondary" href="/support/">Get support</a>
+      <a class="btn secondary" href="/takethecrown/press/">Press kit</a>
+      <a class="btn secondary" href="/takethecrown/privacy/">Privacy policy</a>
+      <a class="btn secondary" href="/takethecrown/terms/">Terms</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Alexander Rohr</span>
+    <span><a href="/">Rohr Software</a> · <a href="/support/">Support</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
