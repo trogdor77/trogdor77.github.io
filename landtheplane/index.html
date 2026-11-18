@@ -48,6 +48,11 @@
   .world.free { border-color: var(--accent); }
   .world.free .n { color: var(--accent); }
 
+  .release { display: grid; gap: 8px; }
+  .release h3 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .release h3 .date { font-family: var(--font-mono); font-size: 12px; font-weight: 400; color: var(--muted); }
+  .release ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 16px; }
+
   .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
   .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
   .feature p { color: var(--muted); font-size: 15.5px; }
@@ -157,6 +162,25 @@
       <div class="feature"><h3>Achievements and leaderboards</h3><p>Earn 46 Game Center achievements and compete on leaderboards for total stars, endurance distance, and daily challenges.</p></div>
       <div class="feature"><h3>Made for both screens</h3><p>Plays in landscape on iPhone and iPad, with settings for music, sound, vibration, and on-screen pitch buttons.</p></div>
       <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads, and no analytics. The game works fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="new-h">
+    <div class="section-head">
+      <span class="label">What's new</span>
+      <h2 id="new-h">Latest update</h2>
+    </div>
+    <div class="release">
+      <h3>Version 1.1 <span class="date">November 16, 2026</span></h3>
+      <ul>
+        <li>Frozen North and Pirates levels are now two to three times longer, with updrafts to ride across the ice and open sea.</li>
+        <li>Pirate forts fight back: the watchtowers now fire cannonballs.</li>
+        <li>Endurance flights start with a 3-2-1 countdown, and high-flying birds (and asteroids in space) keep you from cruising over everything.</li>
+        <li>Endurance is more of a challenge: the plane starts descending as soon as you let go of the throttle, fuel burns while you fly, and fuel cans are rarer.</li>
+        <li>The results screen now tells you when you've unlocked a world's endurance flight.</li>
+        <li>A spookier laugh for the haunted tree and a new roar for the yeti.</li>
+        <li>Enjoying the game? Rate it from Settings.</li>
+      </ul>
     </div>
   </section>
 
