@@ -41,6 +41,11 @@
   .island .d { font-size: 14px; color: var(--muted); line-height: 1.4; }
   .island.free { border-color: var(--accent); }
   .island.free .n { color: var(--accent); }
+  .island.side { border-style: dashed; }
+  .release { display: grid; gap: 8px; }
+  .release h3 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .release h3 .date { font-family: var(--font-mono); font-size: 12px; font-weight: 400; color: var(--muted); }
+  .release ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 16px; }
 
   .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
   .feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
@@ -82,7 +87,7 @@
       <img class="appicon" src="/assets/images/mathfacts/icon-512.png" alt="Math Facts: The Game app icon: addition, subtraction, multiplication, and division signs around a smiling face">
       <span class="label">Now on the App Store for iPhone and iPad</span>
       <h1>Math Facts: The Game</h1>
-      <p class="lede">Math fact practice that feels like a game, for grades 1 to 4 and beyond. Kids practice addition, subtraction, times tables, and dividing, win super buddies on a treasure map, and earn rewards that a grown-up sets.</p>
+      <p class="lede">Math fact practice that feels like a game, for grades 1 to 4 and beyond. Kids practice addition, subtraction, times tables, and dividing, tell time and count money, win super buddies on a treasure map, and earn rewards that a grown-up sets.</p>
       <div class="actions">
         <a class="badge" href="https://apps.apple.com/us/app/math-facts-the-game/id6831893957" aria-label="Download on the App Store"><picture><source srcset="/assets/images/badges/app-store-white.svg" media="(prefers-color-scheme: dark)"><img src="/assets/images/badges/app-store-black.svg" alt="Download on the App Store" width="120" height="40"></picture></a>
         <a class="btn secondary" href="/mathfacts/press/">Press kit</a>
@@ -99,7 +104,7 @@
       <h2 id="story-h">Practice that does not feel like a test</h2>
     </div>
     <div class="prose">
-      <p>I built Math Facts for my daughter, who finds her math facts hard. I wanted practice that would not make her feel bad about a wrong answer, so a miss gets a silly &ldquo;Not quite!&rdquo; and the right answer on screen, never a buzzer.</p>
+      <p>I built Math Facts for my daughter, who finds her math facts hard. I wanted practice that would not make her feel bad about a wrong answer, so a miss gets a friendly &ldquo;Oops, you missed it! Try again!&rdquo; and help when she needs it, never a buzzer.</p>
       <p>I also wanted her to see what she has learned, so every fact lives on a map that fills in as she masters it. And I wanted something real at the end of it, so grown-ups set the rewards, like an ice cream trip, and kids earn the stars. The treasure map was her idea.</p>
       <p class="muted">Alexander Rohr, developer</p>
     </div>
@@ -113,7 +118,7 @@
     <div class="steps">
       <div class="step"><h3>Pick a player</h3><p>Each child has their own player, with a buddy, a grade, a practice timer, and their own progress.</p></div>
       <div class="step"><h3>Answer on a big number pad</h3><p>A round is 15 questions, with no timer unless you turn one on. The game learns which facts need more practice.</p></div>
-      <div class="step"><h3>Learn from a miss</h3><p>A wrong answer gets a gentle &ldquo;Not quite!&rdquo; and the right answer. Tap Show me how for a picture and steps.</p></div>
+      <div class="step"><h3>Learn from a miss</h3><p>A first miss gets &ldquo;Try again!&rdquo;. A second shows the right answer, and Show me how gives a picture and steps.</p></div>
       <div class="step"><h3>Collect and celebrate</h3><p>Earn stars, coins, level titles, achievements, and super buddies from the treasure map.</p></div>
     </div>
   </section>
@@ -121,11 +126,13 @@
   <section aria-labelledby="map-h">
     <div class="section-head">
       <span class="label">Treasure map</span>
-      <h2 id="map-h">Eight islands, eight super buddies</h2>
+      <h2 id="map-h">Ten islands, ten super buddies</h2>
     </div>
     <p class="muted">Each island is a trail of stops, easiest first. A stop opens when the one before it is passed with 85% right, and the last stop is a treasure chest that wins the island's super buddy. Rounds on the map also count toward fact mastery, and they are never timed.</p>
     <div class="islands">
       <div class="island free"><span class="n">ISLAND 1 · FREE</span><div class="t">Sandy Shore</div><div class="d">Adding up to 10. Win Captain Parrot.</div></div>
+      <div class="island side"><span class="n">SIDE TRIP · NEW</span><div class="t">Clock Tower Town</div><div class="d">Telling time, from o'clock to the minute. Win Professor Hoot.</div></div>
+      <div class="island side"><span class="n">SIDE TRIP · NEW</span><div class="t">Market Harbor</div><div class="d">Coins, dollars, and making change. Win Penny Pig.</div></div>
       <div class="island"><span class="n">ISLAND 2</span><div class="t">Coconut Cove</div><div class="d">Subtraction up to 10. Win Wally the Whale.</div></div>
       <div class="island"><span class="n">ISLAND 3</span><div class="t">Jungle Falls</div><div class="d">Addition and subtraction to 24. Win Jungle Jaguar.</div></div>
       <div class="island"><span class="n">ISLAND 4</span><div class="t">Pirate Bay</div><div class="d">Times 0, 1, 2, 5 and 10. Win Number Ninja.</div></div>
@@ -144,17 +151,37 @@
     <div class="features">
       <div class="feature"><h3>Practice that adapts</h3><p>Learns which facts each child knows and which need work, and spreads mastery over days so facts are remembered, not just answered.</p></div>
       <div class="feature"><h3>Show me how</h3><p>After a wrong answer, a step-by-step strategy with a picture: make a ten, near doubles, the nines trick, think times, and more, for every fact up to 12.</p></div>
-      <div class="feature"><h3>Wrong answers are no big deal</h3><p>A missed fact gets a gentle &ldquo;Not quite!&rdquo; and the right answer on screen. Speed is a bonus, and there is no timer unless you turn one on.</p></div>
+      <div class="feature"><h3>Wrong answers are no big deal</h3><p>A first miss gets &ldquo;Oops, you missed it! Try again!&rdquo;, and a second shows the right answer and how to get it. Speed is a bonus, and there is no timer unless you turn one on.</p></div>
       <div class="feature"><h3>Sign mix-up help</h3><p>Notices when a child answers with the wrong sign, like 11 for 8 &minus; 3, and points it out.</p></div>
       <div class="feature"><h3>Big numbers in columns</h3><p>Addition and subtraction in columns like on paper, with carrying, borrowing, and the mistake shown in the right column.</p></div>
       <div class="feature"><h3>Missing numbers</h3><p>? + 5 = 12 and 3 &times; ? = 21: fact families the other way round.</p></div>
-      <div class="feature"><h3>Treasure map</h3><p>Eight islands of stops to pass with 85% right, each ending in a treasure chest with a super buddy inside.</p></div>
-      <div class="feature"><h3>Achievements and levels</h3><p>Nearly 100 achievements with progress to see, and level titles from Number Newbie to Grand Math Master.</p></div>
+      <div class="feature"><h3>Telling time</h3><p>Read a clock with hands, drag the hands to set a time, and work out what time it will be later, from o'clock and half past up to the exact minute.</p></div>
+      <div class="feature"><h3>Counting money</h3><p>Real US coins, heads and tails: count coins and dollars, make an amount by dropping coins in a piggy bank, and make change.</p></div>
+      <div class="feature"><h3>Treasure map</h3><p>Eight islands and two side trips of stops to pass with 85% right, each ending in a treasure chest with a super buddy inside.</p></div>
+      <div class="feature"><h3>Achievements and levels</h3><p>Over 100 achievements with progress to see, and level titles from Number Newbie to Grand Math Master.</p></div>
       <div class="feature"><h3>Real rewards</h3><p>Grown-ups set rewards like an ice cream trip. Children earn stars and choose where to put them.</p></div>
       <div class="feature"><h3>Progress report</h3><p>Practice time, accuracy, facts known, and the facts that need practice, for each child.</p></div>
       <div class="feature"><h3>A profile for each child</h3><p>Their own buddy, background, grade, practice timer, and progress.</p></div>
       <div class="feature"><h3>Made for iPhone and iPad</h3><p>Portrait on iPhone, and portrait or landscape on iPad, with the screens scaled up to fill the bigger display.</p></div>
       <div class="feature"><h3>iCloud sync</h3><p>Progress syncs through your family's own private iCloud. No account, no ads, no tracking.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="new-h">
+    <div class="section-head">
+      <span class="label">What's new</span>
+      <h2 id="new-h">Latest update</h2>
+    </div>
+    <div class="release">
+      <h3>Version 1.1</h3>
+      <ul>
+        <li>Telling time: read a clock with hands, set the hands yourself, and work out what time it will be later, from o'clock and half past up to the exact minute.</li>
+        <li>Counting money: count coins and dollars, make an amount by dropping coins in a piggy bank, and make change. The coins are photos of real US coins, heads and tails.</li>
+        <li>Two new islands on the treasure map, Clock Tower Town and Market Harbor, with two new super buddies to win.</li>
+        <li>Show me how help for clocks and coins, with tips for common mix-ups like reading the 3 on the clock as 3 minutes.</li>
+        <li>A first miss now says &ldquo;Try again!&rdquo;, and the right answer comes after a second try.</li>
+        <li>New achievements, and Telling time and Counting money in the progress report.</li>
+      </ul>
     </div>
   </section>
 
@@ -168,13 +195,19 @@
       <figure><img src="/assets/images/mathfacts/store/iphone-practice.jpg" alt="A times table question, 9 times 6, with the answer 54 typed on a big number pad" width="660" height="1434" loading="lazy"><figcaption>A big number pad</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-notquite.jpg" alt="A wrong answer shows Not quite with the right answer, and a Show me how button" width="660" height="1434" loading="lazy"><figcaption>Gentle wrong answers</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-hint.jpg" alt="A Show me how card for 7 times 8 with a picture of dots and three doubling steps" width="660" height="1434" loading="lazy"><figcaption>Show me how</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-time.jpg" alt="A set the clock question, 12:40, with a clock whose hands the child drags" width="660" height="1434" loading="lazy"><figcaption>Tell time on a real clock</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-clockhint.jpg" alt="A Show me how card for setting the clock to 12:20, counting by 5s around the clock" width="660" height="1434" loading="lazy"><figcaption>Count by 5s around the clock</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-money.jpg" alt="A make 83 cents question with real US coins dropped into a piggy bank" width="660" height="1434" loading="lazy"><figcaption>Count coins and make change</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-coins.jpg" alt="A how much money is this question with real US coins and the answer 86 cents" width="660" height="1434" loading="lazy"><figcaption>Real coins, heads and tails</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-adventure.jpg" alt="The Sandy Shore island on the treasure map with passed stops, stars, and a treasure chest" width="660" height="1434" loading="lazy"><figcaption>The treasure map</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-islands.jpg" alt="Clock Tower Town, a new side trip island on the treasure map, with its time stops" width="660" height="1434" loading="lazy"><figcaption>Two new islands</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-summary.jpg" alt="The All done screen with a level up, a new achievement, three stars, and coins earned" width="660" height="1434" loading="lazy"><figcaption>Celebrate every round</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-columns.jpg" alt="A column subtraction, 402 minus 114, with the answer 288 entered in boxes" width="660" height="1434" loading="lazy"><figcaption>Big numbers, in columns</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-missing.jpg" alt="A missing number question, 2 times a box equals 20, with 10 entered" width="660" height="1434" loading="lazy"><figcaption>Missing numbers</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-factmap.jpg" alt="A grid of times table facts colored new, learning, or got it, below the big number skills" width="660" height="1434" loading="lazy"><figcaption>The fact map</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-rewards.jpg" alt="Rewards a grown-up set, Ice cream trip, Movie night, and Sleepover, with star progress and achievements" width="660" height="1434" loading="lazy"><figcaption>Rewards kids want</figcaption></figure>
-      <figure><img src="/assets/images/mathfacts/store/iphone-dashboard.jpg" alt="A player's page with level, stars, coins, what to practice, the practice timer, and the play and adventure buttons" width="660" height="1434" loading="lazy"><figcaption>A player's page</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-whatsnew.jpg" alt="The Who's playing screen with a New Time and Money card above the players" width="660" height="1434" loading="lazy"><figcaption>New: Time and Money</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/iphone-dashboard.jpg" alt="A player's page with level, stars, coins, and what to practice, including the new Time and Money" width="660" height="1434" loading="lazy"><figcaption>A player's page</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-report.jpg" alt="A progress report with practice minutes, rounds, right answers, accuracy, and weekly charts" width="660" height="1434" loading="lazy"><figcaption>Progress reports</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/iphone-focus.jpg" alt="Grown-up settings for choosing the grade and which times table and division facts to focus on" width="660" height="1434" loading="lazy"><figcaption>Grown-ups choose</figcaption></figure>
     </div>
@@ -189,9 +222,11 @@
       <figure><img src="/assets/images/mathfacts/store/ipad-title.jpg" alt="The Math Facts: The Game title screen on iPad" width="1600" height="1200" loading="lazy"><figcaption>Title screen</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/ipad-dashboard.jpg" alt="An iPad player page with rewards, achievements, and facts known beside the play and adventure buttons" width="1600" height="1200" loading="lazy"><figcaption>Everything in one place</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/ipad-practice.jpg" alt="A times table question, 7 times 8, with the answer 56 beside a big number pad on iPad" width="1600" height="1200" loading="lazy"><figcaption>A big number pad</figcaption></figure>
-      <figure><img src="/assets/images/mathfacts/store/ipad-adventure.jpg" alt="The treasure map on iPad with passed stops and a treasure chest" width="1600" height="1200" loading="lazy"><figcaption>The treasure map</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-time.jpg" alt="A set the clock question, 5:35, with the clock hands set on iPad" width="1600" height="1200" loading="lazy"><figcaption>Tell time on a real clock</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-money.jpg" alt="A make 18 cents question with a dime, a nickel, and three pennies in the piggy bank on iPad" width="1600" height="1200" loading="lazy"><figcaption>Count coins and make change</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-adventure.jpg" alt="Coconut Cove on the treasure map on iPad, with the player at the next stop" width="1600" height="1200" loading="lazy"><figcaption>The treasure map</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/ipad-summary.jpg" alt="The All done screen on iPad with two new achievements and three stars" width="1600" height="1200" loading="lazy"><figcaption>Celebrate every round</figcaption></figure>
-      <figure><img src="/assets/images/mathfacts/store/ipad-achievements.jpg" alt="The achievements page showing 22 of 98 earned, with earned and locked badges" width="1600" height="1200" loading="lazy"><figcaption>Achievements</figcaption></figure>
+      <figure><img src="/assets/images/mathfacts/store/ipad-achievements.jpg" alt="The achievements page showing 25 of 104 earned, with earned and locked badges" width="1600" height="1200" loading="lazy"><figcaption>Achievements</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/ipad-columns.jpg" alt="A column subtraction, 71 minus 25, with the answer 46 entered beside a number pad on iPad" width="1600" height="1200" loading="lazy"><figcaption>Big numbers, in columns</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/ipad-factmap.jpg" alt="An iPad player page with the fact map grid of times table facts beside it" width="1600" height="1200" loading="lazy"><figcaption>The fact map</figcaption></figure>
       <figure><img src="/assets/images/mathfacts/store/ipad-report.jpg" alt="A progress report on iPad with practice time, accuracy, and weekly charts" width="1600" height="1200" loading="lazy"><figcaption>Progress reports</figcaption></figure>
@@ -241,6 +276,7 @@
         <p class="amount">$19.99 <span class="muted" style="font-size:15px;font-weight:600">once, or $0.99 a month</span></p>
         <ul>
           <li>Times tables and dividing, big numbers, and missing numbers</li>
+          <li>Telling time and counting money</li>
           <li>The whole treasure map, a player for every child, and the full progress report</li>
           <li>Both options use Family Sharing, so one purchase covers the family</li>
           <li>The monthly plan renews until you cancel in your Apple Account settings</li>
