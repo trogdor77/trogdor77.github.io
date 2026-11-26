@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scorchlings Press Kit · Rohr Software</title>
+<meta name="description" content="Press kit for Scorchlings, a pixel puzzle game for iPhone and iPad with baby dragons and colored fire.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column in the Take the Crown press kit's shape, recolored as a dragon's lair: ember orange on warm cream, deep plum at night. */
+:root {
+  --bg: #fff8f2;
+  --surface: #ffffff;
+  --ink: #2a1426;
+  --muted: #6b5060;
+  --rule: #f0ddd0;
+  --accent: #c4501a;
+  --accent-soft: #fbe9df;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a0f1c; --surface: #261726; --ink: #fbeee6; --muted: #c9aab4; --rule: #43293d;
+    --accent: #ff9a5c; --accent-soft: #3a1d12;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a0f1c; --surface: #261726; --ink: #fbeee6; --muted: #c9aab4; --rule: #43293d;
+  --accent: #ff9a5c; --accent-soft: #3a1d12;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding: 0 20px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 48px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h2 { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+section { display: grid; gap: 24px; }
+.section-head { display: grid; gap: 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hero img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(196, 80, 26, .32); }
+.hero h1 { font-size: clamp(44px, 8vw, 72px); font-weight: 800; letter-spacing: -.03em; }
+.hero .tagline { font-size: 21px; color: var(--muted); margin-top: 6px; max-width: 36ch; }
+.hero .meta { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; gap: 18px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; }
+}
+
+/* Story */
+.story-text { display: grid; gap: 16px; max-width: 62ch; }
+.story-text p:first-child { font-size: 21px; line-height: 1.5; }
+.byline { color: var(--muted); font-style: italic; }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; counter-reset: step; }
+.step { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; display: grid; gap: 6px; align-content: start; counter-increment: step; }
+.step::before { content: "Step " counter(step); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.step p { color: var(--muted); font-size: 15.5px; }
+
+/* World grid */
+.worlds { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.world { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+.world .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.world .t { font-weight: 700; }
+.world .d { font-size: 14px; color: var(--muted); line-height: 1.4; }
+.world.free { border-color: var(--accent); }
+.world.free .n { color: var(--accent); }
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; }
+.feature { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature p { color: var(--muted); font-size: 15.5px; }
+
+/* Screenshots */
+.shots { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+.shots figure { margin: 0; flex: 0 0 min(240px, 62%); scroll-snap-align: start; display: grid; gap: 8px; align-content: start; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 10px 24px rgba(30, 16, 50, .22); }
+.shots a { display: block; }
+.shots.tablet figure { flex-basis: min(330px, 76%); }
+.shots figcaption { font-size: 14px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .shots { scroll-behavior: smooth; } }
+
+/* Assets */
+.assets { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.assets img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 8px 20px rgba(20, 35, 58, .2); }
+.assets .links { display: grid; gap: 8px; flex: 1 1 280px; }
+
+/* Copy blocks */
+.copyblocks { display: grid; gap: 16px; }
+.copy {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 18px 20px; display: grid; gap: 10px;
+}
+.copy-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.copy p { font-size: 16px; }
+.copy button {
+  font: 600 13px var(--font-body); color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.copy button:hover { filter: brightness(.96); }
+
+/* Fact sheet */
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.fact { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.fact .label { padding-top: 3px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .fact { grid-template-columns: 1fr; gap: 2px; } }
+
+.contact { display: grid; gap: 10px; }
+.contact .email { font-family: var(--font-mono); font-size: 18px; user-select: all; }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+<link rel="stylesheet" href="/assets/css/nav.css">
+<script src="/assets/js/nav.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/"><img src="/assets/images/logo/logo.svg" alt="" width="36" height="36"><span>Rohr Software</span></a>
+    <ul class="nav-links">
+      <li><a href="/#apps">Products</a></li>
+      <li><a href="/meduo/">Meduo</a></li>
+      <li><a href="/support/">Support</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="/assets/images/scorchlings/icon-512.png" alt="Scorchlings app icon">
+    <div>
+      <span class="label">Press kit</span>
+      <h1>Scorchlings</h1>
+      <p class="tagline">Send baby dragons to burn away pixel pictures, one color at a time. 1,000 levels, and no ads, ever.</p>
+      <div class="meta">
+        <span class="label">iPhone &amp; iPad</span>
+        <span class="label">iOS 17+</span>
+        <span class="label">Coming soon to the App Store</span>
+        <a href="/scorchlings/" class="label">Product page</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="story-h">
+    <div class="section-head">
+      <span class="label">The spark</span>
+      <h2 id="story-h">Why Scorchlings exists</h2>
+    </div>
+    <div class="story-text">
+      <p>Scorchlings is a color shooter puzzle made to be played without interruptions: no ads between levels, no ads to continue, and no ads ever.</p>
+      <p>The dragons tie in with the Rohr Software logo, a dragon's eye. Every one of the 1,000 levels was generated and then checked by a solver that plays it with the game's own rules, so every level can be won without power-ups. All of the art is drawn in code.</p>
+      <p class="byline">Alexander Rohr, founder and developer</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="play-h">
+    <div class="section-head">
+      <span class="label">The flight</span>
+      <h2 id="play-h">How it plays</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Send a dragon</h3><p>Tap the dragon at the front of a column to send it around the picture on the belt.</p></div>
+      <div class="step"><h3>Burn its color</h3><p>At each spot it breathes at the first tile it can see, burning it if the colors match.</p></div>
+      <div class="step"><h3>Roost or fly home</h3><p>Dragons out of fire fly home. Dragons with fire left land in a roost to go again later.</p></div>
+      <div class="step"><h3>Clear the picture</h3><p>Burn every tile to win. Run out of roosts and the level is lost.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="worlds-h">
+    <div class="section-head">
+      <span class="label">The map</span>
+      <h2 id="worlds-h">Six regions, 1,000 levels</h2>
+    </div>
+    <div class="worlds">
+      <div class="world free"><span class="n">LEVELS 1 TO 100 · FREE</span><div class="t">Ember Meadows</div><div class="d">Green fields, flowers, nests and a castle</div></div>
+      <div class="world"><span class="n">REGION 2</span><div class="t">Dragon Peaks</div><div class="d">Mountains and a lookout tower</div></div>
+      <div class="world"><span class="n">REGION 3</span><div class="t">Smolder Volcano</div><div class="d">Lava pools and a glowing volcano</div></div>
+      <div class="world"><span class="n">REGION 4</span><div class="t">Frostfang Spires</div><div class="d">Snowy pines and ice crystals</div></div>
+      <div class="world"><span class="n">REGION 5</span><div class="t">Crystal Hollow</div><div class="d">Glowing crystals and giant mushrooms</div></div>
+      <div class="world"><span class="n">REGION 6</span><div class="t">Sky Castle</div><div class="d">Clouds, towers and a golden road</div></div>
+    </div>
+    <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Each region is ten levels long, and the six repeat as the road climbs. The first 100 levels are free.</p>
+  </section>
+
+  <section aria-labelledby="feat-h">
+    <div class="section-head">
+      <span class="label">The hoard</span>
+      <h2 id="feat-h">What it does</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>1,000 solver-checked levels</h3><p>Pictures grow from small sprites to full boards with light and dark shades of the same color. Hard and super hard levels are marked on the map.</p></div>
+      <div class="feature"><h3>Twists</h3><p>Chained dragons that fly together, mystery dragons that hide their color, frozen dragons that thaw as you play, and stone walls that block fire.</p></div>
+      <div class="feature"><h3>Five power-ups</h3><p>Undo, Pluck (send any queued dragon next), Fireball (a meteor that blasts a 3×3 patch), Unchain and Extra Roost.</p></div>
+      <div class="feature"><h3>Daily Treasure</h3><p>A seven-day gift calendar that pauses instead of resetting, Hearth Fire for unlimited lives, and double embers on the first win of each day.</p></div>
+      <div class="feature"><h3>Game Center</h3><p>Three leaderboards (levels cleared, embers earned and best win streak) and 28 achievements. Bought embers never count.</p></div>
+      <div class="feature"><h3>No ads, no tracking</h3><p>No account, no ads, no analytics, and it plays fully offline.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="shots-h">
+    <div class="section-head">
+      <span class="label">Scenes</span>
+      <h2 id="shots-h">Screenshots</h2>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Click any image to download the full-resolution PNG. iPhone files are 1320 x 2868, iPad files are 2064 x 2752.</p>
+    </div>
+    <div class="shots" tabindex="0" aria-label="iPhone screenshots, scroll sideways">
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-title.png" download><img src="/assets/images/scorchlings/store/iphone-title.jpg" alt="The title screen: the Scorchlings logo over a night sky with a volcano and a castle, and three baby dragons peeking over a pile of colored tiles." width="660" height="1434" loading="lazy"></a><figcaption>Baby dragons, big puzzles</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-match.png" download><img src="/assets/images/scorchlings/store/iphone-match.jpg" alt="Level 14: a pixel picture of a crowned cat, with a dragon riding the belt around it and rows of numbered dragons waiting below." width="660" height="1434" loading="lazy"></a><figcaption>Match the fire to the color</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-fireball.png" download><img src="/assets/images/scorchlings/store/iphone-fireball.jpg" alt="A Fireball blasting a glowing hole in the middle of the picture with a big BOOM." width="660" height="1434" loading="lazy"></a><figcaption>Drop a Fireball anywhere</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-levels.png" download><img src="/assets/images/scorchlings/store/iphone-levels.jpg" alt="Level 505: a shaded campfire under a teal sky between green hills, filling the whole board." width="660" height="1434" loading="lazy"></a><figcaption>1,000 levels to burn through</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-win.png" download><img src="/assets/images/scorchlings/store/iphone-win.jpg" alt="The Level complete panel with the finished rainbow picture and a happy green dragon breathing fireworks." width="660" height="1434" loading="lazy"></a><figcaption>Cheer every finished picture</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-linked.png" download><img src="/assets/images/scorchlings/store/iphone-linked.jpg" alt="A rainbow picture half burned, with two dragons joined by a gold chain waiting at the front." width="660" height="1434" loading="lazy"></a><figcaption>Chained dragons fly together</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-twists.png" download><img src="/assets/images/scorchlings/store/iphone-twists.jpg" alt="Level 230: a purple dragon head with stone walls on the board and grey mystery dragons in the queue." width="660" height="1434" loading="lazy"></a><figcaption>New twists keep coming</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-map.png" download><img src="/assets/images/scorchlings/store/iphone-map.jpg" alt="The level map winding through snowy Crystal Hollow, with Hard levels marked in red." width="660" height="1434" loading="lazy"></a><figcaption>Explore dragon country</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-daily.png" download><img src="/assets/images/scorchlings/store/iphone-daily.jpg" alt="The Daily Treasure calendar on Day 4, with gifts for each day and the Day 7 hoard chest." width="660" height="1434" loading="lazy"></a><figcaption>A gift for every day</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/iphone-noads.png" download><img src="/assets/images/scorchlings/store/iphone-noads.jpg" alt="Level 120: a yellow scroll inside a blue frame, with the five power-up buttons along the bottom." width="660" height="1434" loading="lazy"></a><figcaption>No ads, ever</figcaption></figure>
+    </div>
+    <div class="shots tablet" tabindex="0" aria-label="iPad screenshots, scroll sideways">
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-title.png" download><img src="/assets/images/scorchlings/store/ipad-title.jpg" alt="The title screen: the Scorchlings logo over a night sky with a volcano and a castle, and three baby dragons peeking over a pile of colored tiles." width="1200" height="1600" loading="lazy"></a><figcaption>Baby dragons, big puzzles</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-match.png" download><img src="/assets/images/scorchlings/store/ipad-match.jpg" alt="Level 14: a pixel picture of a crowned cat, with a dragon riding the belt around it and rows of numbered dragons waiting below." width="1200" height="1600" loading="lazy"></a><figcaption>Match the fire to the color</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-fireball.png" download><img src="/assets/images/scorchlings/store/ipad-fireball.jpg" alt="A Fireball blasting a glowing hole in the middle of the picture with a big BOOM." width="1200" height="1600" loading="lazy"></a><figcaption>Drop a Fireball anywhere</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-levels.png" download><img src="/assets/images/scorchlings/store/ipad-levels.jpg" alt="Level 505: a shaded campfire under a teal sky between green hills, filling the whole board." width="1200" height="1600" loading="lazy"></a><figcaption>1,000 levels to burn through</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-win.png" download><img src="/assets/images/scorchlings/store/ipad-win.jpg" alt="The Level complete panel with the finished rainbow picture and a happy green dragon breathing fireworks." width="1200" height="1600" loading="lazy"></a><figcaption>Cheer every finished picture</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-linked.png" download><img src="/assets/images/scorchlings/store/ipad-linked.jpg" alt="A rainbow picture half burned, with two dragons joined by a gold chain waiting at the front." width="1200" height="1600" loading="lazy"></a><figcaption>Chained dragons fly together</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-twists.png" download><img src="/assets/images/scorchlings/store/ipad-twists.jpg" alt="Level 230: a purple dragon head with stone walls on the board and grey mystery dragons in the queue." width="1200" height="1600" loading="lazy"></a><figcaption>New twists keep coming</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-map.png" download><img src="/assets/images/scorchlings/store/ipad-map.jpg" alt="The level map winding through snowy Crystal Hollow, with Hard levels marked in red." width="1200" height="1600" loading="lazy"></a><figcaption>Explore dragon country</figcaption></figure>
+      <figure><a href="/assets/images/scorchlings/store/full/ipad-daily.png" download><img src="/assets/images/scorchlings/store/ipad-daily.jpg" alt="The Daily Treasure calendar on Day 4, with gifts for each day and the Day 7 hoard chest." width="1200" height="1600" loading="lazy"></a><figcaption>A gift for every day</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="assets-h">
+    <div class="section-head">
+      <span class="label">Assets</span>
+      <h2 id="assets-h">App icon</h2>
+    </div>
+    <div class="assets">
+      <img src="/assets/images/scorchlings/icon-512.png" alt="Scorchlings app icon: a red baby dragon breathing fire into a colorful tile mosaic" width="128" height="128">
+      <div class="links">
+        <p><a href="/assets/images/scorchlings/icon-1024.png" download>Download the icon, 1024 x 1024 PNG</a></p>
+        <p><a href="/assets/images/scorchlings/icon-512.png" download>Download the icon, 512 x 512 PNG</a></p>
+        <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Screenshots are above. Contact below if you need anything else.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="copy-h">
+    <div class="section-head">
+      <span class="label">Ready to use</span>
+      <h2 id="copy-h">Descriptions</h2>
+    </div>
+    <div class="copyblocks">
+      <div class="copy">
+        <div class="copy-top"><span class="label">One line</span><button type="button" data-copy="c1">Copy</button></div>
+        <p id="c1">Scorchlings is a pixel puzzle game for iPhone and iPad where baby dragons burn away pictures one color at a time, across 1,000 levels and with no ads, ever.</p>
+      </div>
+      <div class="copy">
+        <div class="copy-top"><span class="label">Short paragraph</span><button type="button" data-copy="c2">Copy</button></div>
+        <p id="c2">Scorchlings is a color puzzle game for iPhone and iPad. Each baby dragon breathes one color of fire: players send dragons around a pixel picture, and each one burns the tiles of its color it can see, while leftover dragons wait in a small number of roosts. Over 1,000 levels the pictures grow into full boards with tricky shades, and new twists arrive: chained dragons, mystery dragons, frozen dragons and stone walls. Five power-ups, a daily gift calendar and Game Center leaderboards round it out. The first 100 levels are free, and one purchase opens the rest. There are no ads, no accounts and no tracking. Scorchlings was built by independent developer Alexander Rohr.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <div class="section-head">
+      <span class="label">The ledger</span>
+      <h2 id="facts-h">Fact sheet</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Developer</span><span>Alexander Rohr, independent</span></div>
+      <div class="fact"><span class="label">Platforms</span><span>iPhone and iPad, portrait</span></div>
+      <div class="fact"><span class="label">Requires</span><span>iOS 17.0 and iPadOS 17.0 or later</span></div>
+      <div class="fact"><span class="label">Version</span><span>1.0, coming soon</span></div>
+      <div class="fact"><span class="label">Category</span><span>Games, Puzzle</span></div>
+      <div class="fact"><span class="label">Price</span><span>Free download</span></div>
+      <div class="fact"><span class="label">Free</span><span>Levels 1 to 100, all power-ups, the Daily Treasure and Game Center</span></div>
+      <div class="fact"><span class="label">Full game</span><span>Levels 101 to 1,000, $2.99 one time, Family Sharing, no subscription</span></div>
+      <div class="fact"><span class="label">Ember packs</span><span>Optional consumables, $0.99, $2.99 and $4.99</span></div>
+      <div class="fact"><span class="label">Content</span><span>1,000 levels, 6 map regions, 5 power-ups</span></div>
+      <div class="fact"><span class="label">Game Center</span><span>3 leaderboards and 28 achievements, optional sign-in</span></div>
+      <div class="fact"><span class="label">Privacy</span><span>No account, no ads, no analytics, no servers of its own. <a href="/scorchlings/privacy/">Privacy policy</a></span></div>
+      <div class="fact"><span class="label">Terms</span><span><a href="/scorchlings/terms/">Terms &amp; Conditions</a></span></div>
+      <div class="fact"><span class="label">Built with</span><span>SpriteKit, GameKit, StoreKit 2, all art drawn in code</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="credits-h">
+    <div class="section-head">
+      <span class="label">Attribution</span>
+      <h2 id="credits-h">Credits</h2>
+    </div>
+    <div class="contact">
+      <p>Title music: &ldquo;Epic Fantasy Trailer Cue: Relics of the First Age&rdquo; by OpenMindAudio, from Pixabay, under the Pixabay Content License.</p>
+      <p>Sound effects: the Fireball's whoosh is &ldquo;Fireball Whoosh 2&rdquo; by floraphonic, from Pixabay, under the Pixabay Content License. Every other sound is synthesized in code.</p>
+      <p>Art: all drawn in code by the developer. A few level pictures come from his game Take the Crown.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="logo-h">
+    <div class="section-head">
+      <span class="label">Developer</span>
+      <h2 id="logo-h">Rohr Software logo</h2>
+    </div>
+    <div class="contact">
+      <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+        <img src="/assets/images/logo/logo-512.png" alt="Rohr Software logo, a dragon eye" width="128" height="128">
+        <div style="display:grid;gap:10px;flex:1 1 280px">
+          <p>The logo of Rohr Software, Alexander Rohr's independent company and the developer of Scorchlings. You are welcome to use it alongside coverage of Scorchlings. Please don't recolor or stretch it.</p>
+          <p><a href="/assets/images/logo/logo.svg" download>Download SVG</a> · <a href="/assets/images/logo/logo-512.png" download>Download PNG, 512 x 512</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <div class="section-head">
+      <span class="label">The roost</span>
+      <h2 id="contact-h">Press contact</h2>
+    </div>
+    <div class="contact">
+      <p>For interviews, promo codes, or full-resolution assets:</p>
+      <p class="email">alex@rohrsoftware.dev</p>
+      <p class="label" style="text-transform:none;letter-spacing:normal;font-size:14px">Alexander is available to talk about building an ad-free puzzle game as a solo developer, generating and solving 1,000 levels, and drawing every piece of art in code.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Alexander Rohr. Scorchlings is a trademark of its developer.</footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press ⌘C';
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>

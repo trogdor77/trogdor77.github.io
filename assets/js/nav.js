@@ -24,6 +24,7 @@
         { name: "Fox Dash", blurb: "Endless runner for iPhone and iPad", href: "/foxdash/", icon: "/assets/images/icons/fox-dash.jpg" },
         { name: "Land the Plane", blurb: "Slingshot landing game", href: "/landtheplane/", icon: "/assets/images/icons/landtheplane.png" },
         { name: "Take the Crown", blurb: "Action RPG, coming soon", href: "/takethecrown/", icon: "/assets/images/icons/takethecrown.png" },
+        { name: "Scorchlings", blurb: "Dragon pixel puzzle, coming soon", href: "/scorchlings/", icon: "/assets/images/icons/scorchlings.png" },
       ],
     },
     // {
